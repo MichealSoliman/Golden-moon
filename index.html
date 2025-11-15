@@ -1952,7 +1952,364 @@
         </div>
     </div>
 </section>
-  
+
+
+
+
+
+  <!-- Services Section with Different Layout -->
+<section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+    <div class="container mx-auto px-4">
+        <!-- Header Section -->
+        <div class="text-center mb-16 fade-in">
+            <div class="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full mb-4">
+                <i class="fas fa-star text-accent icon-float"></i>
+                <span class="text-primary font-semibold">خدماتنا المتكاملة</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                خدماتنا <span class="text-accent">المميزة</span>
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                نقدم لكم مجموعة متكاملة من الخدمات المهنية التي تلبي جميع احتياجاتكم بأعلى معايير الجودة والاحترافية
+            </p>
+        </div>
+
+        <!-- New Layout: 4 Small Cards on Left, Big Image on Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Left Column - 4 Small Cards Stacked -->
+            <div class="lg:col-span-1 space-y-6">
+                
+                <!-- Card 1 -->
+                <a href="/services/service-1" class="block group slide-in-right">
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                        <div class="grid grid-cols-3 gap-0 h-32">
+                            <div class="relative col-span-1 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300" 
+                                     alt="خدمة الصيانة" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                            </div>
+                            <div class="col-span-2 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold text-primary mb-2">خدمة الصيانة</h4>
+                                <p class="text-gray-600 text-sm">صيانة شاملة باحترافية عالية</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="/services/service-2" class="block group slide-in-right delay-1">
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                        <div class="grid grid-cols-3 gap-0 h-32">
+                            <div class="relative col-span-1 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300" 
+                                     alt="خدمة الاستشارات" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                            </div>
+                            <div class="col-span-2 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold text-primary mb-2">الاستشارات</h4>
+                                <p class="text-gray-600 text-sm">استشارات متخصصة لتطوير الأعمال</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="/services/service-3" class="block group slide-in-right delay-2">
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                        <div class="grid grid-cols-3 gap-0 h-32">
+                            <div class="relative col-span-1 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=300" 
+                                     alt="خدمة التطوير" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                            </div>
+                            <div class="col-span-2 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold text-primary mb-2">التطوير</h4>
+                                <p class="text-gray-600 text-sm">حلول تطوير متكاملة</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="/services/service-4" class="block group slide-in-right delay-3">
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                        <div class="grid grid-cols-3 gap-0 h-32">
+                            <div class="relative col-span-1 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=300" 
+                                     alt="خدمة الحماية" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                            </div>
+                            <div class="col-span-2 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold text-primary mb-2">الحماية</h4>
+                                <p class="text-gray-600 text-sm">أنظمة حماية متكاملة</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Right Column - Big Image Card -->
+            <div class="lg:col-span-2 slide-in-left">
+                <a href="/services/main-service" class="block group h-full">
+                    <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[550px]">
+                        <img src="./img/B 10.png" 
+                             alt="الخدمة الرئيسية" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        
+                      
+                        
+                        <!-- Badge -->
+                        <div class="absolute top-6 left-6">
+                            <span class="bg-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
+                                <i class="fas fa-star ml-2"></i>
+                                خدمة مميزة
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-center text-white slide-in-left">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">مستعد لبدء مشروعك؟</h3>
+                <p class="text-gray-200 text-lg mb-8">فريقنا متاح دائماً لمساعدتك في اختيار الحلول المناسبة لمتطلباتك</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 justify-center">
+                        <i class="fas fa-headset"></i>
+                        تواصل معنا الآن
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-download ml-2"></i>
+                        حمل الكتيب
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services Section with 2 Text Cards Below Big Image -->
+<section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+    <div class="container mx-auto px-4">
+        <!-- Header Section -->
+        <div class="text-center mb-16 fade-in">
+            <div class="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full mb-4">
+                <i class="fas fa-cogs text-accent icon-float"></i>
+                <span class="text-primary font-semibold">خدماتنا المتخصصة</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                حلول متكاملة <span class="text-accent">لجميع احتياجاتك</span>
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                نقدم مجموعة شاملة من الخدمات المتخصصة التي تلبي متطلباتكم بأعلى معايير الجودة والكفاءة
+            </p>
+        </div>
+
+<!-- Big Image at Top - Custom Height without Cropping -->
+<div class="mb-12 slide-in-right">
+    <a href="/services/main-service" class="block group">
+        <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[40vh] min-h-[400px] max-h-[600px]">
+            <img src="./img/B 11.png" 
+                 alt="الخدمة الرئيسية" 
+                 class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+            
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+            
+            <!-- Badge -->
+            <div class="absolute top-6 right-6">
+                <span class="bg-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
+                    <i class="fas fa-star ml-2"></i>
+                    خدمة مميزة
+                </span>
+            </div>
+        </div>
+    </a>
+</div>
+
+        <!-- 2 Text Cards Below Image -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            
+            <!-- Text Card 1 -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 card-hover">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-toolbox text-blue-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary mb-2">خدمة الصيانة الشاملة</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                جديد
+                            </span>
+                            <span class="text-blue-500 text-sm font-bold">● خدمة سريعة</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    نقدم خدمات صيانة شاملة لجميع الأجهزة والمعدات بأعلى معايير الجودة والاحترافية. فريقنا المدرب جاهز لتقديم الدعم الفني المتكامل مع ضمان جودة الخدمة وسرعة الاستجابة.
+                </p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <span class="text-blue-500 font-bold">خطط متنوعة</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-sm text-gray-500">دعم فني 24/7</span>
+                    </div>
+                    <a href="/services/service-1" class="text-blue-500 hover:text-blue-600 font-bold flex items-center gap-2">
+                        اكتشف المزيد
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Text Card 2 -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 card-hover">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-cogs text-green-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary mb-2">حلول التطوير المتكاملة</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                حصري
+                            </span>
+                            <span class="text-green-500 text-sm font-bold">● حلول مبتكرة</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    نطور حلول تقنية متكاملة باستخدام أحدث التقنيات والأساليب المبتكرة. نعمل على تحديث وتحسين أنظمتك لمواكبة التطور التكنولوجي وزيادة كفاءة عملياتك.
+                </p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <span class="text-green-500 font-bold">عروض خاصة</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-sm text-gray-500">أحدث التقنيات</span>
+                    </div>
+                    <a href="/services/service-3" class="text-green-500 hover:text-green-600 font-bold flex items-center gap-2">
+                        اكتشف المزيد
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 2 Image Cards with Hover Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Card 2 -->
+            <a href="/services/service-2" class="block group">
+                <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" 
+                         alt="خدمة الاستشارات" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    
+                    <!-- Hover Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold">الاستشارات</h4>
+                            </div>
+                            <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                استشارات متخصصة لتطوير أعمالك وزيادة كفاءتها مع خبراء معتمدين
+                            </p>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-user-tie text-accent"></i>
+                                    خبراء معتمدون
+                                </span>
+                                <span class="text-accent font-bold">جلسة مجانية</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Default Badge -->
+                    <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متميز
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="/services/service-4" class="block group">
+                <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400" 
+                         alt="خدمة الحماية" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    
+                    <!-- Hover Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold">الحماية</h4>
+                            </div>
+                            <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                أنظمة حماية متكاملة لأصولك وبياناتك مع ضمان شامل وأمن متكامل
+                            </p>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-lock text-accent"></i>
+                                    آمنة
+                                </span>
+                                <span class="text-accent font-bold">ضمان شامل</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Default Badge -->
+                    <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
+                        شعبي
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-center text-white slide-in-left">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">مستعد لبدء مشروعك؟</h3>
+                <p class="text-gray-200 text-lg mb-8">فريقنا متاح دائماً لمساعدتك في اختيار الحلول المناسبة لمتطلباتك</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 justify-center">
+                        <i class="fas fa-calendar-check"></i>
+                        احجز استشارة مجانية
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-phone ml-2"></i>
+                        اتصل بنا الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 
       <!-- Footer المطور -->
     <footer class="footer-bg text-white relative">

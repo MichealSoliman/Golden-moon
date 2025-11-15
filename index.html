@@ -14,13 +14,187 @@
                         primary: '#008080',
                         'primary-dark': '#006666',
                         'primary-light': '#00a0a0',
-                        accent: '#FF5733',
+                        accent: '#f59f0a',
                         'accent-hover': '#E64525',
                     }
                 }
             }
         }
     </script>
+        <!-- style hero section -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+        
+        :root {
+            --primary: #197e8a;
+            --primary-dark: #146974;
+            --primary-light: #e8f4f6;
+            --accent: #f59e0b;
+            --accent-hover: #eab308;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #0f4a52 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(25, 126, 138, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 1s ease forwards 0.5s;
+        }
+        
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(245, 158, 11, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+            }
+        }
+        
+        .moon-float {
+            animation: moonFloat 8s ease-in-out infinite;
+        }
+        
+        @keyframes moonFloat {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+            66% {
+                transform: translateY(10px) rotate(-3deg);
+            }
+        }
+        
+        .star-twinkle {
+            animation: twinkle 3s ease-in-out infinite;
+        }
+        
+        .star-twinkle:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        .star-twinkle:nth-child(3) {
+            animation-delay: 2s;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: right 0.5s ease;
+        }
+        
+        .btn-hover-effect:hover::before {
+            right: 100%;
+        }
+        
+        .bg-accent {
+            background-color: var(--accent);
+        }
+        
+        .bg-accent-hover:hover {
+            background-color: var(--accent-hover);
+        }
+        
+        .text-accent {
+            color: var(--accent);
+        }
+    </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
         
@@ -278,9 +452,8 @@
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center gap-3 text-2xl font-bold">
-                    <div class="flex items-center">
-                        <i class="fas fa-moon text-accent text-3xl"></i>
-                        <i class="fas fa-star text-yellow-300 text-sm -ml-2"></i>
+                    <div class="flex items-center w-14 h-15 bg-white ">
+                        <img src="./img/mainlogo.png" alt="">
                     </div>
                     <span>قمر الخليج الذهبي</span>
                 </div>
@@ -321,253 +494,343 @@
     <div class="h-20"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center fade-in">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 float-animation">
-                    قمر الخليج الذهبي لخدمات الإعلانات
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-100">
-                    منصتك المتكاملة لجميع الخدمات والإعلانات بجودة عالية واحترافية
-                </p>
-                <a href="#services" class="inline-block px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    اكتشف خدماتنا <i class="fas fa-arrow-down mr-2"></i>
-                </a>
-            </div>
+    <section id="home" class="hero-gradient text-white py-24 md:py-32 relative">
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-10 w-4 h-4 bg-white rounded-full star-twinkle opacity-40"></div>
+            <div class="absolute top-1/3 right-20 w-3 h-3 bg-white rounded-full star-twinkle opacity-60"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-white rounded-full star-twinkle opacity-50"></div>
         </div>
-    </section>
-
-       <!-- Main Services Section -->
-    <section id="services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
-        <div class="container mx-auto px-4">
-            <!-- Header Section -->
-            <div class="text-center mb-16 fade-in">
-                <div class="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full mb-4">
-                    <i class="fas fa-star text-accent icon-float"></i>
-                    <span class="text-primary font-semibold">خدماتنا المتكاملة</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                    خدماتنا <span class="text-accent">المميزة</span>
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                    نقدم لكم مجموعة متكاملة من الخدمات المهنية التي تلبي جميع احتياجاتكم بأعلى معايير الجودة والاحترافية
-                </p>
-            </div>
-
-            <!-- Stats Counter -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 stagger-animation">
-                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <div class="text-3xl font-bold text-primary stats-counter" data-target="1500">0</div>
-                    <div class="text-gray-600 mt-2">عميل راضي</div>
-                </div>
-                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <div class="text-3xl font-bold text-primary stats-counter" data-target="500">0</div>
-                    <div class="text-gray-600 mt-2">مشروع مكتمل</div>
-                </div>
-                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <div class="text-3xl font-bold text-primary stats-counter" data-target="24">0</div>
-                    <div class="text-gray-600 mt-2">خدمة متاحة</div>
-                </div>
-                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <div class="text-3xl font-bold text-primary stats-counter" data-target="98">0</div>
-                    <div class="text-gray-600 mt-2">نسبة الرضا</div>
-                </div>
-            </div>
-
-            <!-- Large Service Card - AC Services -->
-            <div class="mb-20 slide-in-right">
-                <a href="/services/ac-maintenance" class="block group">
-                    <div class="service-card-large rounded-3xl shadow-2xl overflow-hidden card-hover">
-                        <div class="grid lg:grid-cols-2 gap-0">
-                            <!-- Image Side -->
-                            <div class="relative h-80 lg:h-auto">
-                                <img src="https://images.unsplash.com/photo-1631545806609-674b6df0bdc6?w=800" 
-                                     alt="خدمات صيانة المكيفات" 
-                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                                <div class="absolute inset-0 gradient-overlay"></div>
-                                <div class="absolute bottom-6 right-6">
-                                    <span class="badge-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
-                                        <i class="fas fa-bolt ml-2"></i>
-                                        خدمة سريعة
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Content Side -->
-                            <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-primary-light to-white relative">
-                                <!-- Floating Icons -->
-                                <div class="absolute top-6 left-6 w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center">
-                                    <i class="fas fa-snowflake text-accent text-2xl icon-float"></i>
-                                </div>
-                                
-                                <div class="mb-6">
-                                    <span class="badge-primary text-white px-5 py-2 rounded-full text-sm font-semibold inline-flex items-center gap-2">
-                                        <i class="fas fa-crown"></i>
-                                        خدمة مميزة
-                                    </span>
-                                </div>
-                                
-                                <h3 class="text-3xl lg:text-4xl font-bold text-primary mb-6 leading-tight">
-                                    جميع خدمات صيانة المكيفات
-                                </h3>
-                                
-                                <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                                    نقدم لكم أفضل خدمات صيانة وتركيب المكيفات باحترافية عالية وأسعار تنافسية. فريق متخصص ومعتمد لضمان راحتكم على مدار السنة.
-                                </p>
-                                
-                                <div class="grid grid-cols-2 gap-4 mb-8">
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-tools text-primary"></i>
-                                        </div>
-                                        <span>صيانة دورية</span>
-                                    </span>
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-bolt text-primary"></i>
-                                        </div>
-                                        <span>تركيب وتشغيل</span>
-                                    </span>
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-wrench text-primary"></i>
-                                        </div>
-                                        <span>إصلاح الأعطال</span>
-                                    </span>
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-shield-alt text-primary"></i>
-                                        </div>
-                                        <span>ضمان الجودة</span>
-                                    </span>
-                                </div>
-                                
-                                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-                                    <button class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 pulse-glow group/btn">
-                                        <span>اطلب الخدمة الآن</span>
-                                        <i class="fas fa-arrow-left transition-transform group-hover/btn:-translate-x-1"></i>
-                                    </button>
-                                    
-                                    <div class="flex items-center gap-2 text-gray-600">
-                                        <i class="fas fa-clock text-accent"></i>
-                                        <span>خدمة 24/7</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="flex-1 text-center lg:text-right">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 slide-in-up">
+                        <i class="fas fa-star text-accent"></i>
+                        <span class="text-sm font-semibold">المنصة الأولى في الخليج</span>
                     </div>
-                </a>
-            </div>
-
-            <!-- Small Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Small Card 1 -->
-                <a href="/services/ad-space-1" class="block group slide-in-top delay-1">
-                    <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
-                        <div class="relative h-52 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600" 
-                                 alt="مساحة إعلانية" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute top-4 right-4 badge-new text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
-                                <i class="fas fa-bolt"></i>
-                                جديد
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-bullhorn text-primary text-xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">مساحة إعلانية مميزة</h4>
-                            </div>
-                            <p class="text-gray-600 mb-4 leading-relaxed">احجز مساحتك الإعلانية معنا بأفضل الأسعار وأعلى معدلات المشاهدة</p>
-                            <div class="flex items-center justify-between text-sm text-gray-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-eye"></i>
-                                    +10K مشاهدة
-                                </span>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Small Card 2 -->
-                <a href="/services/ad-space-2" class="block group slide-in-bottom delay-2">
-                    <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
-                        <div class="relative h-52 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" 
-                                 alt="خدمات تسويقية" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-chart-line text-primary text-xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">خدمات تسويقية متكاملة</h4>
-                            </div>
-                            <p class="text-gray-600 mb-4 leading-relaxed">حلول تسويقية إبداعية لنجاح أعمالك وزيادة مبيعاتك بشكل مستدام</p>
-                            <div class="flex items-center justify-between text-sm text-gray-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-chart-bar"></i>
-                                    +50% نمو
-                                </span>
-                                <span class="text-accent font-bold">خطط متعددة</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Small Card 3 -->
-                <a href="/services/ad-space-3" class="block group slide-in-top delay-3">
-                    <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
-                        <div class="relative h-52 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600" 
-                                 alt="استشارات" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-users text-primary text-xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">استشارات مهنية</h4>
-                            </div>
-                            <p class="text-gray-600 mb-4 leading-relaxed">استشارات متخصصة في جميع المجالات من قبل خبراء معتمدين ومتخصصين</p>
-                            <div class="flex items-center justify-between text-sm text-gray-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-user-tie"></i>
-                                    خبراء معتمدون
-                                </span>
-                                <span class="text-accent font-bold">جلسة مجانية</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-center text-white slide-in-left">
-                <div class="max-w-3xl mx-auto">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4">هل تحتاج إلى خدمة مخصصة؟</h3>
-                    <p class="text-gray-200 text-lg mb-8">فريقنا جاهز لمساعدتك في تقديم الحلول المناسبة لاحتياجاتك الخاصة</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 justify-center">
+                    
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6  text-shadow leading-tight">
+                        قمر الخليج 
+                        <span class="text-accent block">الذهبي</span>
+                    </h1>
+                    
+                    <!-- Subheading -->
+                    <p class="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-100 font-medium slide-in-up leading-relaxed">
+                        منصتك المتكاملة 
+                        <span class="text-accent font-bold">لجميع الخدمات والإعلانات</span>
+                        <br>بجودة عالية واحترافية غير مسبوقة
+                    </p>
+                    
+                    <!-- Description -->
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto lg:mr-0 slide-in-up leading-relaxed">
+                        نوفر حلولاً شاملة تجمع بين الخدمات المميزة والإعلانات الفعالة، 
+                        مع فريق محترف وخدمة عملاء استثنائية على مدار الساعة
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start slide-in-up">
+                        <a href="#services" class="btn-hover-effect px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 pulse-glow inline-flex items-center gap-3">
+                            <span>اكتشف خدماتنا</span>
+                            <i class="fas fa-arrow-down transition-transform group-hover:-translate-y-1"></i>
+                        </a>
+                        
+                        <a href="#contact" class="btn-hover-effect px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl text-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3">
                             <i class="fas fa-headset"></i>
-                            تواصل معنا الآن
-                        </button>
-                        <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
-                            <i class="fas fa-download ml-2"></i>
-                            حمل الكتيب
-                        </button>
+                            <span>تواصل معنا</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20 slide-in-up">
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl font-bold text-accent">+1500</div>
+                            <div class="text-gray-300 text-sm">عميل راضي</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl font-bold text-accent">+500</div>
+                            <div class="text-gray-300 text-sm">مشروع مكتمل</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl font-bold text-accent">24/7</div>
+                            <div class="text-gray-300 text-sm">دعم فني</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visual Element -->
+                <div class="flex-1 flex justify-center lg:justify-start">
+                    <div class="relative">
+                        <!-- Main Moon -->
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-accent to-yellow-300 rounded-full shadow-2xl moon-float relative overflow-hidden">
+                            <!-- Moon Surface Details -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full opacity-20"></div>
+                            <div class="absolute top-8 left-12 w-16 h-16 bg-yellow-100/30 rounded-full blur-sm"></div>
+                            <div class="absolute bottom-12 right-8 w-12 h-12 bg-yellow-100/40 rounded-full blur-sm"></div>
+                            <div class="absolute top-16 right-16 w-8 h-8 bg-yellow-100/50 rounded-full blur-sm"></div>
+                            
+                            <!-- Shine Effect -->
+                            <div class="absolute top-4 right-4 w-20 h-20 bg-white/30 rounded-full blur-xl"></div>
+                        </div>
+                        
+                        <!-- Floating Elements Around Moon -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary/50 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl"></div>
+                        
+                        <!-- Small Stars -->
+                        <div class="absolute top-4 left-8 w-3 h-3 bg-white rounded-full star-twinkle"></div>
+                        <div class="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full star-twinkle"></div>
+                        <div class="absolute top-1/2 -left-4 w-3 h-3 bg-white rounded-full star-twinkle"></div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 slide-in-up">
+            <div class="flex flex-col items-center gap-2 text-white/70">
+                <span class="text-sm">اكتشف المزيد</span>
+                <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <script>
+        // كود JavaScript للتفاعلية
+        document.addEventListener('DOMContentLoaded', function() {
+            // تأثيرات الظهور عند التمرير
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.fade-in, .slide-in-up').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Smooth scroll for CTA buttons
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+<!-- Main Services Section -->
+<section id="services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+    <div class="container mx-auto px-4">
+        <!-- Header Section -->
+        <div class="text-center mb-16 fade-in">
+            <div class="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full mb-4">
+                <i class="fas fa-star text-accent icon-float"></i>
+                <span class="text-primary font-semibold">خدماتنا المتكاملة</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                خدماتنا <span class="text-accent">المميزة</span>
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                نقدم لكم مجموعة متكاملة من الخدمات المهنية التي تلبي جميع احتياجاتكم بأعلى معايير الجودة والاحترافية
+            </p>
+        </div>
+
+        <!-- Stats Counter -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 stagger-animation">
+            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div class="text-3xl font-bold text-primary stats-counter" data-target="1500">0</div>
+                <div class="text-gray-600 mt-2">عميل راضي</div>
+            </div>
+            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div class="text-3xl font-bold text-primary stats-counter" data-target="500">0</div>
+                <div class="text-gray-600 mt-2">مشروع مكتمل</div>
+            </div>
+            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div class="text-3xl font-bold text-primary stats-counter" data-target="24">0</div>
+                <div class="text-gray-600 mt-2">خدمة متاحة</div>
+            </div>
+            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <div class="text-3xl font-bold text-primary stats-counter" data-target="98">0</div>
+                <div class="text-gray-600 mt-2">نسبة الرضا</div>
+            </div>
+        </div>
+
+        <!-- Grid Container for all cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Left Column - 2/3 width for big image and small cards -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Big Image Card -->
+                <div class="side-in-right">
+                    <a href="/services/ac-maintenance" class="block group">
+                        <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[450px] lg:h-[500px]">
+                            <!-- FULL IMAGE BACKGROUND -->
+                            <img src="./img/B 2.png" 
+                                 alt="خدمات صيانة المكيفات" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                            <!-- Dark Gradient to make text readable -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+
+                            <!-- BADGE TOP RIGHT -->
+                            <div class="absolute top-6 right-6">
+                                <span class="bg-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
+                                    <i class="fas fa-bolt ml-2"></i>
+                                    خدمة سريعة
+                                </span>
+                            </div>
+
+                            <!-- CONTENT OVERLAY -->
+                            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                   
+                                <button class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 pulse-glow">
+                                    <span>اطلب الخدمة الآن</span>
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Two Small Cards in 2 columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Small Card 1 -->
+                    <a href="/services/ad-space-1" class="block group slide-in-top delay-1">
+                        <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600" 
+                                     alt="مساحة إعلانية" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute top-4 right-4 badge-new text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                                    <i class="fas fa-bolt"></i>
+                                    جديد
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-bullhorn text-primary text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-primary">مساحة إعلانية مميزة</h4>
+                                </div>
+                                <p class="text-gray-600 mb-4 leading-relaxed">احجز مساحتك الإعلانية معنا بأفضل الأسعار وأعلى معدلات المشاهدة</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-eye"></i>
+                                        +10K مشاهدة
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Small Card 2 -->
+                    <a href="/services/ad-space-2" class="block group slide-in-bottom delay-2">
+                        <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" 
+                                     alt="خدمات تسويقية" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-chart-line text-primary text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-primary">خدمات تسويقية متكاملة</h4>
+                                </div>
+                                <p class="text-gray-600 mb-4 leading-relaxed">حلول تسويقية إبداعية لنجاح أعمالك وزيادة مبيعاتك بشكل مستدام</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-chart-bar"></i>
+                                        +50% نمو
+                                    </span>
+                                    <span class="text-accent font-bold">خطط متعددة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+           <!-- Emergency Service Card as Small Card Style -->
+<a href="/services/emergency-service" class="block group slide-in-bottom delay-4">
+    <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
+        <!-- Image -->
+        <div class="relative h-[700px] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" 
+                 alt="خدمة الطوارئ" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-6">
+            <!-- Icon + Title -->
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-clock text-primary text-xl"></i>
+                </div>
+                <h4 class="text-xl font-bold text-primary">خدمة الطوارئ</h4>
+            </div>
+
+            <!-- Description -->
+            <p class="text-gray-600 mb-4 leading-relaxed">
+                خدمة طوارئ على مدار الساعة لحل جميع المشاكل الطارئة في أسرع وقت ممكن. فريق متخصص جاهز للاستجابة فوراً.
+            </p>
+
+            <!-- Features / Stats -->
+            <div class="flex items-center justify-between text-sm text-gray-500">
+                <span class="flex items-center gap-1">
+                    <i class="fas fa-bolt"></i>
+                    استجابة سريعة
+                </span>
+                <span class="text-accent font-bold">24/7</span>
+            </div>
+        </div>
+    </div>
+</a>
+
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-center text-white slide-in-left">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">هل تحتاج إلى خدمة مخصصة؟</h3>
+                <p class="text-gray-200 text-lg mb-8">فريقنا جاهز لمساعدتك في تقديم الحلول المناسبة لاحتياجاتك الخاصة</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 justify-center">
+                        <i class="fas fa-headset"></i>
+                        تواصل معنا الآن
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-download ml-2"></i>
+                        حمل الكتيب
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
  
   
@@ -590,158 +853,205 @@
             </div>
 
             <!-- Large Service Card - Cleaning -->
-            <div class="mb-20 slide-in-left">
-                <a href="/services/cleaning" class="block group">
-                    <div class="service-card-large rounded-3xl shadow-2xl overflow-hidden card-hover">
-                        <div class="grid lg:grid-cols-2 gap-0">
-                            <!-- Content Side (First on mobile) -->
-                            <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-primary-light to-white order-2 lg:order-1 relative">
-                                <!-- Floating Icons -->
-                                <div class="absolute top-6 left-6 w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center">
-                                    <i class="fas fa-broom text-accent text-2xl icon-float"></i>
-                                </div>
-                                
-                                <div class="mb-6">
-                                    <span class="badge-primary text-white px-5 py-2 rounded-full text-sm font-semibold inline-flex items-center gap-2">
-                                        <i class="fas fa-shield-alt"></i>
-                                        خدمة احترافية
-                                    </span>
-                                </div>
-                                
-                                <h3 class="text-3xl lg:text-4xl font-bold text-primary mb-6 leading-tight">
-                                    خدمات التنظيف الشامل
-                                </h3>
-                                
-                                <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                                    نوفر لكم خدمات تنظيف متكاملة للمنازل والمكاتب والمنشآت التجارية. فريق مدرب ومعدات حديثة لضمان أعلى معايير النظافة والتعقيم.
-                                </p>
-                                
-                                <div class="grid grid-cols-2 gap-4 mb-8">
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-home text-primary"></i>
-                                        </div>
-                                        <span>تنظيف المنازل</span>
-                                    </span>
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-building text-primary"></i>
-                                        </div>
-                                        <span>تنظيف المكاتب</span>
-                                    </span>
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-virus text-primary"></i>
-                                        </div>
-                                        <span>تعقيم شامل</span>
-                                    </span>
-                                    <span class="flex items-center gap-3 text-gray-700 hover-lift">
-                                        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                                            <i class="fas fa-calendar-check text-primary"></i>
-                                        </div>
-                                        <span>برامج دورية</span>
-                                    </span>
-                                </div>
-                                
-                                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-                                    <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 pulse-glow group/btn">
-                                        <span>احجز الآن</span>
-                                        <i class="fas fa-arrow-left transition-transform group-hover/btn:-translate-x-1"></i>
-                                    </button>
-                                    
-                                    <div class="flex items-center gap-2 text-gray-600">
-                                        <i class="fas fa-clock text-accent"></i>
-                                        <span>خدمة 24/7</span>
-                                    </div>
-                                </div>
+          <!-- Large Service Card with Scalable Image -->
+<div class="mb-20 slide-in-left">
+    <a href="/services/cleaning" class="block group">
+        <div class="service-card-large rounded-3xl shadow-2xl overflow-hidden card-hover">
+            <div class="grid lg:grid-cols-2 gap-0">
+                
+                <!-- Content Side -->
+                <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-primary-light to-white order-2 lg:order-1 relative">
+                    <!-- Floating Icons -->
+                    <div class="absolute top-6 left-6 w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-broom text-accent text-2xl icon-float"></i>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <span class="badge-primary text-white px-5 py-2 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                            <i class="fas fa-shield-alt"></i>
+                            خدمة احترافية
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-3xl lg:text-4xl font-bold text-primary mb-6 leading-tight">
+                        خدمات التنظيف الشامل
+                    </h3>
+                    
+                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                        نوفر لكم خدمات تنظيف متكاملة للمنازل والمكاتب والمنشآت التجارية. فريق مدرب ومعدات حديثة لضمان أعلى معايير النظافة والتعقيم.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <span class="flex items-center gap-3 text-gray-700 hover-lift">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-home text-primary"></i>
                             </div>
-                            
-                            <!-- Image Side -->
-                            <div class="relative h-80 lg:h-auto order-1 lg:order-2">
-                                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" 
-                                     alt="خدمات التنظيف" 
-                                     class="w-full h-full  object-cover transition-transform duration-700  ">
-                                <div class="absolute inset-0 gradient-overlay"></div>
-                                <div class="absolute bottom-6 right-6">
-                                    <span class="badge-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
-                                        <i class="fas fa-star ml-2"></i>
-                                        جودة مضمونة
-                                    </span>
-                                </div>
+                            <span>تنظيف المنازل</span>
+                        </span>
+                        <span class="flex items-center gap-3 text-gray-700 hover-lift">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-building text-primary"></i>
                             </div>
+                            <span>تنظيف المكاتب</span>
+                        </span>
+                        <span class="flex items-center gap-3 text-gray-700 hover-lift">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-virus text-primary"></i>
+                            </div>
+                            <span>تعقيم شامل</span>
+                        </span>
+                        <span class="flex items-center gap-3 text-gray-700 hover-lift">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-calendar-check text-primary"></i>
+                            </div>
+                            <span>برامج دورية</span>
+                        </span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+                        <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 pulse-glow group/btn">
+                            <span>احجز الآن</span>
+                            <i class="fas fa-arrow-left transition-transform group-hover/btn:-translate-x-1"></i>
+                        </button>
+                        
+                        <div class="flex items-center gap-2 text-gray-600">
+                            <i class="fas fa-clock text-accent"></i>
+                            <span>خدمة 24/7</span>
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+                
+                <!-- Image Side -->
+                <div class="relative h-50 lg:h-auto order-1 lg:order-2 overflow-hidden group-hover:scale-105 transition-transform duration-700">
+                    <img src="./img/B 3.png" 
+                         alt="خدمات التنظيف" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <div class="absolute bottom-6 right-6">
+                        <span class="badge-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
+                            <i class="fas fa-star ml-2"></i>
+                            جودة مضمونة
+                        </span>
+                    </div>
+                </div>
 
-            <!-- Small Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                <!-- Small Card 1 - Laundry -->
-                <a href="/services/laundry" class="block group slide-in-right delay-1">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
-                            <div class="relative h-48 md:h-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=400" 
-                                     alt="خدمات الغسيل" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                                    <span class="text-primary font-bold text-sm">30% خصم</span>
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col justify-center">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                        <i class="fas fa-tshirt text-primary text-xl"></i>
-                                    </div>
-                                    <h4 class="text-xl font-bold text-primary">خدمات الغسيل</h4>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">غسيل وكي احترافي لجميع أنواع الملابس والأقمشة بأحدث التقنيات</p>
-                                <div class="flex items-center justify-between text-sm text-gray-500">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-clock text-accent"></i>
-                                        توصيل سريع
-                                    </span>
-                                    <span class="text-accent font-bold">ابدأ من 49 ريال</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Small Card 2 - Deep Cleaning -->
-                <a href="/services/deep-cleaning" class="block group slide-in-left delay-2">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
-                            <div class="relative h-48 md:h-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400" 
-                                     alt="تنظيف عميق" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                                    <span class="text-primary font-bold text-sm">الأكثر طلباً</span>
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col justify-center">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                        <i class="fas fa-spray-can text-primary text-xl"></i>
-                                    </div>
-                                    <h4 class="text-xl font-bold text-primary">تنظيف عميق</h4>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">تنظيف شامل لكل ركن في منزلك أو مكتبك باستخدام أحدث المعدات والمنظفات</p>
-                                <div class="flex items-center justify-between text-sm text-gray-500">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-award text-accent"></i>
-                                        ضمان الجودة
-                                    </span>
-                                    <span class="text-accent font-bold">خطط متعددة</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
             </div>
+        </div>
+    </a>
+</div>
+
+
+          <!-- Container with 4 columns layout -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16">
+    
+    <!-- Left Image Card - 1/4 width -->
+    <div class="lg:col-span-1 slide-in-right">
+        <a href="/services/cleaning-products" class="block group h-full">
+            <div class="rounded-2xl overflow-hidden card-hover h-full relative">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400" 
+                     alt="منتجات التنظيف" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h4 class="text-xl font-bold mb-2">منتجات التنظيف</h4>
+                    <p class="text-white/80 text-sm">أفضل المنتجات والعروض المميزة</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Middle Two Cards - 2/4 width (half) -->
+    <div class="lg:col-span-2 flex flex-col gap-6">
+        
+        <!-- Card 1 - Image Right -->
+        <a href="/services/laundry" class="block group h-full">
+            <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg flex flex-col lg:flex-row-reverse h-full">
+                
+                <!-- Image -->
+                <div class="relative lg:w-1/2 h-48 lg:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=400" 
+                         alt="خدمات الغسيل" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-l from-primary/20 to-transparent"></div>
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
+                        <span class="text-primary font-bold text-sm">30% خصم</span>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="p-6 lg:w-1/2 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-tshirt text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-primary">خدمات الغسيل</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">غسيل وكي احترافي لجميع أنواع الملابس والأقمشة بأحدث التقنيات</p>
+                    <div class="flex items-center justify-between text-sm text-gray-500">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-clock text-accent"></i>
+                            توصيل سريع
+                        </span>
+                        <span class="text-accent font-bold">ابدأ من 49 ريال</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 2 - Image Left -->
+        <a href="/services/deep-cleaning" class="block group h-full">
+            <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg flex flex-col lg:flex-row h-full">
+                
+                <!-- Image -->
+                <div class="relative lg:w-1/2 h-48 lg:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400" 
+                         alt="تنظيف عميق" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
+                        <span class="text-primary font-bold text-sm">الأكثر طلباً</span>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="p-6 lg:w-1/2 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-spray-can text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-primary">تنظيف عميق</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">تنظيف شامل لكل ركن في منزلك أو مكتبك باستخدام أحدث المعدات والمنظفات</p>
+                    <div class="flex items-center justify-between text-sm text-gray-500">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-award text-accent"></i>
+                            ضمان الجودة
+                        </span>
+                        <span class="text-accent font-bold">خطط متعددة</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Right Image Card - 1/4 width -->
+    <div class="lg:col-span-1 slide-in-left">
+        <a href="/services/cleaning-tools" class="block group h-full">
+            <div class="rounded-2xl overflow-hidden card-hover h-full relative">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400" 
+                     alt="أدوات التنظيف" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h4 class="text-xl font-bold mb-2">أدوات التنظيف</h4>
+                    <p class="text-white/80 text-sm">أحدث المعدات والتقنيات المتطورة</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
 
             <!-- Features Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">

@@ -493,13 +493,8 @@ img {
     }
     
     /* تحسين ارتفاع البطاقات في الشاشات الصغيرة */
-    .h-\\[400px\\],
-    .h-\\[500px\\],
-    .h-\\[550px\\],
-    .h-\\[700px\\] {
-        height: auto !important;
-        min-height: 300px;
-    }
+   
+  
     
     /* تحسين النصوص في الشاشات الصغيرة */
     .text-4xl, 
@@ -517,7 +512,7 @@ img {
         font-size: 1.25rem !important;
     }
     
-    /* تحسين الأزرار في الشاشات الصغيرة */
+  
     .px-8 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
@@ -527,9 +522,9 @@ img {
         padding-top: 0.75rem !important;
         padding-bottom: 0.75rem !important;
     }
-}
 
-/* تحسين خاص للبطاقات ذات الارتفاع الثابت */
+
+
 @media (max-width: 768px) {
     .service-card-small,
     .service-card-large {
@@ -545,7 +540,7 @@ img {
     }
 }
 
-/* تحسين الهيدر في الشاشات الصغيرة */
+
 @media (max-width: 768px) {
     .hero-section h1 {
         font-size: 2rem !important;
@@ -593,12 +588,15 @@ html, body {
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center gap-3 text-2xl font-bold">
-                    <div class="flex items-center w-14 h-15 bg-white ">
-                        <img src="./img/mainlogo.png" alt="">
-                    </div>
-                    <span>قمر الخليج الذهبي</span>
-                </div>
+             <div class="flex items-center gap-3 text-2xl font-bold">
+            <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full overflow-hidden">
+                <img src="./img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                    alt="logo"
+                    class="w-full h-full object-cover">
+            </div>
+            <span>قمر الخليج الذهبي</span>
+        </div>
+
 
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex gap-8 text-lg font-semibold">
@@ -610,9 +608,12 @@ html, body {
 
                 <!-- Language Switcher & Mobile Menu Button -->
                 <div class="flex items-center gap-4">
-                    <button class="hidden md:block px-4 py-2 bg-accent hover:bg-accent-hover rounded-lg transition-colors duration-300">
-                        <i class="fas fa-language ml-2"></i>EN
-                    </button>
+                  <a href="tel:01000000000"
+                    class="hidden md:block px-4 py-2 bg-accent hover:bg-accent-hover rounded-lg transition-colors duration-300 flex items-center">
+                        <i class="fas fa-phone ml-2"></i>
+                        اتصل الآن
+                    </a>
+
                     <button id="mobile-menu-btn" class="md:hidden text-2xl">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -707,16 +708,23 @@ html, body {
                 <div class="flex-1 flex justify-center lg:justify-start">
                     <div class="relative">
                         <!-- Main Moon -->
-                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-accent to-yellow-300 rounded-full shadow-2xl moon-float relative overflow-hidden">
-                            <!-- Moon Surface Details -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full opacity-20"></div>
-                            <div class="absolute top-8 left-12 w-16 h-16 bg-yellow-100/30 rounded-full blur-sm"></div>
-                            <div class="absolute bottom-12 right-8 w-12 h-12 bg-yellow-100/40 rounded-full blur-sm"></div>
-                            <div class="absolute top-16 right-16 w-8 h-8 bg-yellow-100/50 rounded-full blur-sm"></div>
-                            
-                            <!-- Shine Effect -->
-                            <div class="absolute top-4 right-4 w-20 h-20 bg-white/30 rounded-full blur-xl"></div>
-                        </div>
+                     <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-accent to-yellow-300 rounded-full shadow-2xl moon-float relative overflow-hidden">
+    
+    <!-- الصورة -->
+    <img src="./img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+         alt="profile"
+         class="absolute inset-0 w-full h-full object-cover rounded-full" />
+
+    <!-- Moon Surface Details -->
+    <div class="absolute inset-0 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full opacity-20"></div>
+    <div class="absolute top-8 left-12 w-16 h-16 bg-yellow-100/30 rounded-full blur-sm"></div>
+    <div class="absolute bottom-12 right-8 w-12 h-12 bg-yellow-100/40 rounded-full blur-sm"></div>
+    <div class="absolute top-16 right-16 w-8 h-8 bg-yellow-100/50 rounded-full blur-sm"></div>
+
+    <!-- Shine Effect -->
+    <div class="absolute top-4 right-4 w-20 h-20 bg-white/30 rounded-full blur-xl"></div>
+</div>
+
                         
                         <!-- Floating Elements Around Moon -->
                         <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary/50 rounded-full blur-2xl"></div>

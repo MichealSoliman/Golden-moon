@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركاؤنا - منصة قمر الخليج الذهبي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#f59f0a',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .partner-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .partner-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+            padding: 15px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+        
+        .partner-img {
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .partner-card:hover .partner-img {
+            transform: scale(1.05);
+        }
+        
+        .pagination-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination-btn:hover:not(.disabled) {
+            background-color: #008080;
+            color: white;
+        }
+        
+        .disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #008080;
+            box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2);
+        }
+        
+        .category-filter-btn.active {
+            background-color: #008080;
+            color: white;
+        }
+        
+        .visit-btn {
+            background: linear-gradient(135deg, #008080 0%, #008080 100%);
+            color: white;
+        }
+        
+        .visit-btn:hover {
+            background: linear-gradient(135deg, #006666 0%, #006666 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.2);
+        }
+        
+        .partner-rating {
+            color: #f59f0a;
+        }
+        
+        .special-badge {
+            background: linear-gradient(45deg, #f59f0a, #ffd166);
+            color: #333;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- الهيدر -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- اللوجو والعنوان -->
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mr-3">
+                       <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="">
+                    </div>
+                    <div class="m-2">
+                        <h1 class="text-2xl font-bold text-gray-800">قمر الخليج <span class="text-secondary">الذهبي</span></h1>
+                        <p class="text-gray-600 text-sm">منصة الخدمات الإلكترونية الشاملة</p>
+                    </div>
+                </div>
+                
+                <!-- شريط البحث -->
+                <div class="w-full md:w-1/3">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="ابحث عن شركة..." 
+                               class="w-full py-3 px-5 pr-12 rounded-full border border-gray-300 focus:border-primary transition-all duration-300 search-input bg-gray-100">
+                        <button class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- روابط -->
+                <nav class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6 space-x-reverse">
+                        <li><a href="./index.html" class="text-gray-700 hover:text-primary font-medium transition-colors">الرئيسية</a></li>
+                        <li><a href="./about.html" class="text-gray-700 hover:text-primary font-medium transition-colors">من نحن</a></li>
+                        <li><a href="./services.html" class="text-gray-700 hover:text-primary font-medium transition-colors">الخدمات</a></li>
+                        <li><a href="#" class="text-primary font-bold border-b-2 border-primary pb-1">شركاؤنا</a></li>
+                        <li><a href="./blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors">المدونة</a></li>
+                        
+                        <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- قسم البطل -->
+    <section class="relative py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">شركاء <span class="text-primary">قمر الخليج</span> الذهبي</h2>
+                <p class="text-gray-600 text-lg mb-8">
+                    نفتخر بشراكاتنا الاستراتيجية مع أبرز الشركات الرائدة في مختلف المجالات. 
+                    هذه الشراكات تمكننا من تقديم خدمات متميزة وشاملة لعملائنا الكرام.
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-8 mb-10">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">10+</div>
+                        <div class="text-gray-600">شركة شريكة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">5+</div>
+                        <div class="text-gray-600">مجالات مختلفة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">3+</div>
+                        <div class="text-gray-600">سنوات تعاون</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">100%</div>
+                        <div class="text-gray-600">رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <!-- فلاتر التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn active" data-category="all">
+                        الكل
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="security">
+                        الأمن والسلامة
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="maintenance">
+                        الصيانة
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="cleaning">
+                        التنظيف
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="medical">
+                        طبية
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="education">
+                        تعليمية
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="logistics">
+                        لوجستية
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 category-filter-btn" data-category="realestate">
+                        عقارية
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- قسم الشركاء -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- عدد الشركاء -->
+            <div class="flex justify-between items-center mb-10">
+                <h3 class="text-2xl font-bold text-gray-800">
+                    <span class="text-primary">شركاؤنا</span> المعتمدون
+                </h3>
+                <div class="text-gray-600">
+                    <span class="font-bold text-primary" id="partner-count">10</span> شركة شريكة
+                </div>
+            </div>
+            
+            <!-- شبكة الشركاء -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="partners-grid">
+                
+                <!-- شركة 1 -->
+                <article class="partner-card bg-white relative" data-category="security">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-primary text-white">أمن وسلامة</span>
+                        <span class="special-badge">شريك مميز</span>
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="أمن الوطن للأنظمة الأمنية" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                       
+                        
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            أمن الوطن للأنظمة الأمنية
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            شركة رائدة في مجال أنظمة الأمن والمراقبة، تقدم حلولاً متكاملة للمنازل والشركات 
+                            مع خدمات تركيب وصيانة على مدار الساعة.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-security.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 2 -->
+                <article class="partner-card bg-white relative" data-category="maintenance">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-secondary text-white">صيانة</span>
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             altتكييف الخليج" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                        
+                        
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            تكييف الخليج المتميز
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            متخصصون في صيانة وتركيب المكيفات المركزية بأنواعها، مع فريق فني مدرب 
+                            وخدمة طوارئ متاحة 24/7 لتلبية جميع احتياجات العملاء.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-ac.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 3 -->
+                <article class="partner-card bg-white relative" data-category="cleaning">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-primary text-white">تنظيف</span>
+                        <span class="special-badge">شريك جديد</span>
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="اللمعة الذهبية للتنظيف" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                      
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            اللمعة الذهبية للتنظيف
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            تقدم خدمات تنظيف متكاملة للمنازل والشركات باستخدام أحدث التقنيات 
+                            والمواد الآمنة، مع ضمان الجودة والالتزام بالمواعيد.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-cleaning.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 4 -->
+                <article class="partner-card bg-white relative" data-category="logistics">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-secondary text-white">لوجستية</span>
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="نقل الأمانة" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                       
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            نقل الأمانة الدولي
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            شركة متخصصة في خدمات النقل الدولي والشحن بجميع أنواعه، 
+                            مع حلول لوجستية متكاملة وخدمة تخليص جمركي سريعة.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-shipping.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 5 -->
+                <article class="partner-card bg-white relative" data-category="medical">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-primary text-white">طبية</span>
+                        <span class="special-badge">شريك استراتيجي</span>
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="الشفاء الطبية" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                      
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            مجموعة الشفاء الطبية
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            تقدم خدمات طبية متكاملة تشمل عيادات متخصصة، رعاية منزلية، 
+                            وفحوصات دورية مع نخبة من الأطباء الاستشاريين.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-medical.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 6 -->
+                <article class="partner-card bg-white relative" data-category="education">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-secondary text-white">تعليمية</span>
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="أكاديمية المستقبل" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                      
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            أكاديمية المستقبل التعليمية
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            منصة تعليمية إلكترونية متكاملة تقدم دورات تدريبية في مختلف المجالات 
+                            مع شهادات معتمدة ومدربين متخصصين.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-education.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 7 -->
+                <article class="partner-card bg-white relative" data-category="realestate">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-primary text-white">عقارية</span>
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="الواحة العقارية" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                    
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            الواحة العقارية
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(3.5)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            شركة متخصصة في خدمات الوساطة العقارية، تمويل العقارات، 
+                            وإدارة الممتلكات مع فريق استشاري متخصص.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-realestate.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 8 -->
+                <article class="partner-card bg-white relative" data-category="maintenance">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-secondary text-white">صيانة</span>
+                        <span class="special-badge">شريك ذهبي</span>
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="الرواد للتشطيبات" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                     
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            الرواد للتشطيبات والديكور
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            متخصصون في أعمال التشطيبات والديكور الداخلي بأحدث التصاميم 
+                            والمواد عالية الجودة، مع التزام بالجودة والمواعيد.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-finishing.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 9 -->
+                <article class="partner-card bg-white relative" data-category="security">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-primary text-white">أمن وسلامة</span>
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" 
+                             alt="الحارس الذكي" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                     
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            الحارس الذكي للأمن الإلكتروني
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            شركة متخصصة في حلول الأمن الإلكتروني وحماية البيانات 
+                            للشركات والأفراد، مع أنظمة متطورة للحماية من الهجمات.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-cybersecurity.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- شركة 10 -->
+                <article class="partner-card bg-white relative" data-category="logistics">
+                    <div class="relative overflow-hidden">
+                        <span class="category-badge bg-secondary text-white">لوجستية</span>
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" 
+                             alt="سريع الشحن" 
+                             class="w-full partner-img">
+                    </div>
+                    <div class="p-6">
+                      
+                        
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                            سريع الشحن والنقل
+                        </h4>
+                        
+                        <div class="flex justify-center mb-3 partner-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                            متخصصون في خدمات النقل السريع والشحن الداخلي مع نظام تتبع 
+                            حديث وخدمة عملاء متاحة على مدار الساعة.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="https://www.example-fastshipping.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+            
+           
+        </div>
+    </section>
+    
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="./img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        منصتك الموثوقة لجميع الخدمات والإعلانات في منطقة الخليج. نفتخر بشراكاتنا 
+                        مع أبرز الشركات الرائدة لتقديم أفضل الخدمات لعملائنا الكرام.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط سريعة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                الرئيسية
+                            </a></li>
+                        <li><a href="services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                خدماتنا
+                            </a></li>
+                        <li><a href="blog.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                المدونة
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركاؤنا
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">شركاؤنا</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                أمن الوطن
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تكييف الخليج
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                اللمعة الذهبية
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                نقل الأمانة
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">خدمة العملاء</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">info@goldengulfmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الشراكة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الاسترجاع</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // فلترة الشركاء حسب التصنيف
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter-btn');
+            const partners = document.querySelectorAll('.partner-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشاط للزر المضغوط
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // عرض/إخفاء الشركاء حسب التصنيف
+                    let visibleCount = 0;
+                    partners.forEach(partner => {
+                        if (category === 'all' || partner.getAttribute('data-category') === category) {
+                            partner.style.display = 'block';
+                            visibleCount++;
+                            // تأثير الظهور
+                            setTimeout(() => {
+                                partner.style.opacity = '1';
+                                partner.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            partner.style.display = 'none';
+                        }
+                    });
+                    
+                    // تحديث عدد الشركاء المعروضين
+                    document.getElementById('partner-count').textContent = visibleCount;
+                });
+            });
+            
+            // تأثير تحميل الصفحة
+            partners.forEach(partner => {
+                partner.style.opacity = '0';
+                partner.style.transform = 'translateY(20px)';
+                partner.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            setTimeout(() => {
+                partners.forEach(partner => {
+                    partner.style.opacity = '1';
+                    partner.style.transform = 'translateY(0)';
+                });
+            }, 100);
+            
+            // وظيفة البحث
+            const searchInput = document.querySelector('.search-input');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                let visibleCount = 0;
+                
+                partners.forEach(partner => {
+                    const title = partner.querySelector('h4').textContent.toLowerCase();
+                    const description = partner.querySelector('p').textContent.toLowerCase();
+                    const category = partner.getAttribute('data-category');
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
+                        partner.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        partner.style.display = 'none';
+                    }
+                });
+                
+                document.getElementById('partner-count').textContent = visibleCount;
+            });
+            
+            // تأثير عند المرور على أزرار زيارة الموقع
+            const visitButtons = document.querySelectorAll('.visit-btn');
+            visitButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

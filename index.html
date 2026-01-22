@@ -7,6 +7,8 @@
     <title>قمر الخليج الذهبي - مدونة الخدمات</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -24,7 +26,6 @@
     </script>
     <!-- style hero section -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
 
         :root {
             --primary: #197e8a;
@@ -33,10 +34,13 @@
             --accent: #f59e0b;
             --accent-hover: #eab308;
         }
-
+        * {
+                    font-family: 'Cairo', sans-serif;
+                }
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Cairo', sans-serif;
         }
+       
 
         .hero-gradient {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #0f4a52 100%);
@@ -212,7 +216,6 @@
         }
     </style>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
 
         * {
             font-family: 'Cairo', sans-serif;
@@ -358,7 +361,6 @@
     </style>
     <!-- style footer -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
 
         :root {
             --primary: #0f172a;
@@ -368,7 +370,7 @@
         }
 
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Cairo', sans-serif;
         }
         html, body {
     max-width: 100%;
@@ -557,12 +559,12 @@
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex gap-8 text-lg font-semibold">
                     <li><a href="#home" class="hover:text-accent transition-colors duration-300">الرئيسية</a></li>
-                    <li><a href="./index1.html" class="hover:text-accent transition-colors duration-300">من نحن</a></li>
-                    <li><a href="#services" class="hover:text-accent transition-colors duration-300">خدماتنا</a></li>
-                    <li><a href="#company" class="hover:text-accent transition-colors duration-300">الشركات المشتركة
+                    <li><a href="./about.html" class="hover:text-accent transition-colors duration-300">من نحن</a></li>
+                    <li><a href="./services.html" class="hover:text-accent transition-colors duration-300">خدماتنا</a></li>
+                    <li><a href="./companes.html" class="hover:text-accent transition-colors duration-300">الشركات المشتركة
                             معنا </a></li>
                     <li><a href="./blog/index.html" class="hover:text-accent transition-colors duration-300"> المدونة </a></li>
-                    <li><a href="#contact" class="hover:text-accent transition-colors duration-300">تواصل معنا</a></li>
+                    <li><a href="tel:01111263618" class="hover:text-accent transition-colors duration-300">تواصل معنا</a></li>
                 </ul>
 
                 <!-- Language Switcher & Mobile Menu Button -->
@@ -583,15 +585,15 @@
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <ul class="flex flex-col gap-3 text-lg font-semibold">
                     <li><a href="#home" class="block hover:text-accent transition-colors duration-300">الرئيسية</a></li>
-                    <li><a href="./index1.html" class="block hover:text-accent transition-colors duration-300">من نحن</a></li>
-                    <li><a href="#services" class="block hover:text-accent transition-colors duration-300">خدماتنا</a>
+                    <li><a href="./about.html" class="block hover:text-accent transition-colors duration-300">من نحن</a></li>
+                    <li><a href="./services.html" class="block hover:text-accent transition-colors duration-300">خدماتنا</a>
                     </li>
-                    <li><a href="#services" class="block hover:text-accent transition-colors duration-300">الشركات
+                    <li><a href="./companes.html" class="block hover:text-accent transition-colors duration-300">شركاؤنا
                             المشتركة معنا </a></li>
                     <li><a href="./blog/index.html" class="block hover:text-accent transition-colors duration-300"> المدونة </a>
                     </li>
 
-                    <li><a href="#contact" class="block hover:text-accent transition-colors duration-300">تواصل معنا</a>
+                    <li><a href="tel:01111263618" class="block hover:text-accent transition-colors duration-300">تواصل معنا</a>
                     </li>
                 </ul>
             </div>

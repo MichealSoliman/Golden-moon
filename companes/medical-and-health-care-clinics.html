@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات العيادات الطبية والرعاية الصحية | رعاية طبية شاملة • عيادات متخصصة • استشارات طبية | قمر الخليج الذهبي</title>
+    <meta name="description" content="خدمات رعاية صحية شاملة: عيادات متخصصة، استشارات طبية، فحوصات دورية، رعاية منزلية، طب وقائي، خدمات تشخيصية، عيادات متنقلة، رعاية كبار السن.">
+    <meta name="keywords" content="عيادات طبية, رعاية صحية, استشارات طبية, فحوصات دورية, رعاية منزلية, طب وقائي, خدمات تشخيصية, عيادات متخصصة, رعاية كبار السن, عيادات أسنان, عيادات نسائية, عيادات أطفال, تحاليل طبية, أشعة طبية, عيادات متنقلة, طوارئ طبية">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#f59f0a',
+                        accent: '#10b981',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .clinic-card {
+            transition: all 0.4s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        
+        .clinic-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 128, 128, 0.15);
+            border-color: #008080;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        
+        .clinic-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .clinic-card:hover .clinic-img {
+            transform: scale(1.08);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #008080 0%, #006666 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #f0f9f9 0%, #e6f7f7 100%);
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 128, 128, 0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .process-step {
+            position: relative;
+            padding: 30px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.15);
+        }
+        
+        .process-step-number {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .specialty-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .specialty-card:hover {
+            border-color: #008080;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #008080, #059669);
+            color: white;
+            padding: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .department-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .department-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.1);
+        }
+        
+        .faq-item {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .story-section {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .story-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .difference-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .difference-card:hover {
+            transform: translateY(-10px);
+            border-color: #008080;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .difference-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #008080, #006666);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .factor-card {
+            position: relative;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .factor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .factor-number {
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            width: 60px;
+            height: 60px;
+            background: #008080;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .factor-card {
+                padding: 2rem 1.5rem 2rem 2rem;
+            }
+            
+            .factor-number {
+                position: relative;
+                right: 0;
+                top: 0;
+                margin-bottom: 1.5rem;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+        
+        .emergency-banner {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        
+        .appointment-form {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #008080;
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #008080;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2);
+        }
+        
+        .timeline-item:last-child:before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - خدمات العيادات الطبية">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">خدمات العيادات الطبية والرعاية الصحية</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        العيادات الطبية
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-hospital ml-3 w-6 text-center"></i>
+                        العيادات الطبية
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    });
+</script>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-24 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    رعاية <span class="text-secondary">طبية شاملة</span> لعافية مستدامة
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-100 leading-relaxed">
+                    نقدم حلول رعاية صحية متكاملة تشمل عيادات متخصصة، استشارات طبية، فحوصات دورية، ورعاية منزلية
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-10 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">50+</div>
+                        <div class="text-gray-200">تخصص طبي</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">200+</div>
+                        <div class="text-gray-200">طبيب استشاري</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">100,000+</div>
+                        <div class="text-gray-200">مريض راضٍ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-gray-200">خدمة طوارئ</div>
+                    </div>
+                </div>
+                
+               
+                
+                <!-- أزرار التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#clinics" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-hospital ml-2"></i>
+                        العيادات المتخصصة
+                    </a>
+                    <a href="#home-care" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-home-heart ml-2"></i>
+                        الرعاية المنزلية
+                    </a>
+                    <a href="#diagnostic" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-stethoscope ml-2"></i>
+                        الخدمات التشخيصية
+                    </a>
+                    <a href="#appointment" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-calendar-check ml-2"></i>
+                        حجز موعد
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left碼 0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f0f9f9"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم فلسفة الرعاية الصحية -->
+    <section id="health-philosophy" class="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        فلسفة الرعاية الصحية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        الطب ليس علاجاً فقط.. 
+                        <span class="text-primary">بل هو رحلة عافية شاملة</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نرى في المريض إنساناً قبل أن نرى مرضاً، ونرى في العافية هدفاً نسعى إليه معاً
+                    </p>
+                </div>
+
+                <!-- مقدمة فلسفية -->
+                <div class="prose prose-lg mx-auto mb-16 text-center">
+                    <p class="text-gray-700 text-xl leading-relaxed mb-8">
+                        منذ فجر الحضارة، والطب يحمل رسالة إنسانية سامية. ليست مجرد أدوية وجراحات، 
+                        بل هي حوار بين الطبيب والمريض، بين العلم والإنسانية، بين الجسد والروح.
+                    </p>
+                </div>
+
+                <!-- أركان الرعاية الصحية -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-12 text-center">
+                        أركان <span class="text-primary">الرعاية الصحية</span> المتكاملة
+                    </h3>
+                    
+                    <div class="space-y-12">
+                        <!-- ركن 1 -->
+                        <div class="factor-card">
+                            <div class="factor-number">١</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">الطب الوقائي: الحكمة قبل العلاج</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        الوقاية خير من العلاج ليست مجرد مقولة، بل هي فلسفة طبية متكاملة. 
+                                        نبدأ بالفحوصات الدورية، التوعية الصحية، والتغذية السليمة قبل أن نصل لمرحلة العلاج.
+                                    </p>
+                                    <p>
+                                        الطب الوقائي هو استثمار في الصحة قبل المرض. هو قراءة لجسم الإنسان وفهم إشاراته، 
+                                        هو حوار مع الجسد قبل أن يصبح الحوار مع المرض.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ركن 2 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٢</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">التشخيص الدقيق: فن الاستماع والقراءة</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        التشخيص ليس مجرد تحاليل وأشعة، بل هو فن الاستماع للمريض، قراءة التاريخ الصحي، 
+                                        وفهم السياق النفسي والاجتماعي. كل مريض قصة، وكل قصة تحتاج قراءة متأنية.
+                                    </p>
+                                    <p>
+                                        التشخيص الدقيق هو بداية العلاج الصحيح. هو الخريطة التي ترشدنا في رحلة العافية، 
+                                        هو الضوء الذي ينير الطريق في ظلمة الأعراض المتشابكة.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ركن 3 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٣</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">العلاج المتكامل: جسد وروح وعقل</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        العلاج ليس دواءً فقط، بل هو منظومة متكاملة: علاج دوائي، دعم نفسي، تغذية مناسبة، 
+                                        وتمارين علاجية. نتعامل مع الإنسان ككل، لا كمجموعة أعراض منفصلة.
+                                    </p>
+                                    <p>
+                                        كل مريض يحتاج خطة علاج مخصصة تناسب حالته الصحية، ظروفه الاجتماعية، وإمكانياته المادية. 
+                                        العلاج عندنا ليس نمطياً، بل هو شخصي ومتطور.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ركن 4 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٤</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">المتابعة المستمرة: شراكة طويلة المدى</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        العلاقة مع المريض لا تنتهي بانتهاء العلاج، بل تستمر في المتابعة والرعاية اللاحقة. 
+                                        نراقب التحسن، نمنع الانتكاس، ونساند في رحلة التعافي الكاملة.
+                                    </p>
+                                    <p>
+                                        المتابعة عندنا ليست زيارة عابرة، بل هي شراكة حقيقية في رحلة العافية. نكون بجانب المريض 
+                                        في كل مرحلة، نسانده، نوجهه، ونحتفل معه بكل تحسن.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ركن 5 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٥</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">الرعاية المنزلية: الطب يصل إليك</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        الرعاية الصحية ليست محصورة في جدران المستشفيات، بل تصل إلى منازل المرضى. 
+                                        نقدم خدمة طبية منزلية متكاملة: تمريض، علاج طبيعي، استشارات، وأدوية.
+                                    </p>
+                                    <p>
+                                        البيئة المنزلية لها تأثير إيجابي على الشفاء. نأتي بالطب إلى حيث راحة المريض، 
+                                        نحيط العائلة بدائرة الرعاية، ونجعل الشفاء رحلة أسرية وليس فردية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تأثير الرعاية الصحية المتكاملة -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-12 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        تأثير <span class="text-primary">الرعاية الصحية</span> المتكاملة
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- تأثير 1 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-heartbeat text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">تحسين جودة الحياة</h4>
+                            <p class="text-gray-700">
+                                الرعاية الشاملة تحسن جودة حياة المرضى بنسبة 60%، وتقلل من أيام الغياب عن العمل أو الدراسة
+                            </p>
+                        </div>
+                        
+                        <!-- تأثير 2 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-piggy-bank text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">توفير التكاليف</h4>
+                            <p class="text-gray-700">
+                                الطب الوقائي والرعاية المبكرة توفر 40-50% من تكاليف العلاج المتأخر والمضاعفات
+                            </p>
+                        </div>
+                        
+                        <!-- تأثير 3 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-smile text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">رضا المرضى</h4>
+                            <p class="text-gray-700">
+                                الرعاية المتكاملة تزيد من رضا المرضى وتقلل من الشكاوى بنسبة 70% مقارنة بالرعاية التقليدية
+                            </p>
+                        </div>
+                        
+                        <!-- تأثير 4 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-chart-line text-green-500 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">نتائج علاجية أفضل</h4>
+                            <p class="text-gray-700">
+                                المتابعة المستمرة والرعاية الشاملة تحسن النتائج العلاجية بنسبة 30-40% وتقلل من معدلات الانتكاس
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- خاتمة -->
+                <div class="text-center">
+                    <div class="max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                            الرعاية الصحية: <span class="text-primary">حق إنساني ومسؤولية أخلاقية</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                            الصحة ليست غياب المرض فقط، بل هي حالة من اكتمال السلامة بدنياً وعقلياً واجتماعياً. 
+                            ونحن نرى في تقديم الرعاية الصحية المتكاملة ليس مجرد خدمة، بل هو واجب إنساني ومسؤولية أخلاقية.
+                            <br><br>
+                            في كل استشارة نقدمها، كل دواء نوصفها، كل علاج نقدمه، نرى إنساناً يستحق العافية، 
+                            وأسرة تنتظر عودة أحبائها بصحة وسلامة.
+                        </p>
+                        
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+                        
+                        <p class="text-gray-600 italic">
+                            "الطبيب الجيد يعالج المرض، والطبيب العظيم يعالج الإنسان الذي يحمل المرض"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العيادات المتخصصة -->
+    <section id="clinics" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        التخصصات الطبية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        عيادات <span class="text-primary">متخصصة</span> بمعايير عالمية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نقدم مجموعة شاملة من العيادات المتخصصة تغطي جميع احتياجاتك الصحية
+                    </p>
+                </div>
+
+                <!-- تخصصات طبية رئيسية -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tooth text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">طب الأسنان</h4>
+                        <p class="text-gray-600 text-sm">علاجات تجميلية، تقويم، زراعة، وجراحة فكية</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-baby text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">طب الأطفال</h4>
+                        <p class="text-gray-600 text-sm">رعاية حديثي الولادة، تطعيمات، ومتابعة النمو</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-female text-accent text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">النساء والتوليد</h4>
+                        <p class="text-gray-600 text-sm">متابعة الحمل، ولادة، وعناية ما بعد الولادة</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-eye text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">طب العيون</h4>
+                        <p class="text-gray-600 text-sm">فحوصات النظر، عمليات الليزك، وجراحات الشبكية</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">طب الأعصاب</h4>
+                        <p class="text-gray-600 text-sm">علاج الصداع، الصرع، والاضطرابات العصبية</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-accent text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">طب القلب</h4>
+                        <p class="text-gray-600 text-sm">قسطرة، موجات صوتية، ومتابعة أمراض القلب</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bone text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">العظام والمفاصل</h4>
+                        <p class="text-gray-600 text-sm">علاج الكسور، استبدال المفاصل، وإصابات الرياضيين</p>
+                    </div>
+                    
+                    <div class="department-box">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-allergies text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">طب الجلدية</h4>
+                        <p class="text-gray-600 text-sm">علاج الأمراض الجلدية، تجميل، وليزر</p>
+                    </div>
+                </div>
+
+                <!-- عيادات متخصصة مميزة -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        عيادات <span class="text-primary">مميزة</span> بمواصفات عالمية
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- عيادة 1 -->
+                        <div class="clinic-card">
+                            <div class="relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="عيادة القلب المتقدمة" 
+                                     class="w-full clinic-img">
+                                <span class="category-badge bg-primary text-white">قلب وأوعية دموية</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">عيادة القلب المتقدمة</h3>
+                                <p class="text-gray-600 mb-4">أحدث تقنيات تشخيص وعلاج أمراض القلب</p>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                        <span>قسطرة تشخيصية وعلاجية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                        <span>موجات صوتية على القلب</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                        <span>مراقبة نظم القلب 24 ساعة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                        <span>برنامج تأهيل قلبي متكامل</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- عيادة 2 -->
+                        <div class="clinic-card">
+                            <div class="relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="مركز التجميل والليزر" 
+                                     class="w-full clinic-img">
+                                <span class="category-badge bg-secondary text-white">تجميل وجلدية</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">مركز التجميل والليزر</h3>
+                                <p class="text-gray-600 mb-4">أحدث تقنيات التجميل غير الجراحي</p>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                        <span>علاج التجاعيد بالبوتوكس</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                        <span>تفتيح البشرة بالليزر</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                        <span>إزالة الشعر الدائم</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                        <span>علاج الندبات وآثار الحبوب</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- عيادة 3 -->
+                        <div class="clinic-card">
+                            <div class="relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="مركز العظام والعلاج الطبيعي" 
+                                     class="w-full clinic-img">
+                                <span class="category-badge bg-accent text-white">عظام وعلاج طبيعي</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">مركز العظام والعلاج الطبيعي</h3>
+                                <p class="text-gray-600 mb-4">علاج متكامل للجهاز العضلي الهيكلي</p>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                        <span>علاج طبيعي متقدم</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                        <span>أشعة متخصصة للعظام</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                        <span>جراحة عظام بالمنظار</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                        <span>تأهيل إصابات الرياضيين</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مزايا العيادات -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مميزات <span class="text-primary">عياداتنا</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-primary/10">
+                                <i class="fas fa-user-md text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">استشاريون متخصصون</h4>
+                                <p class="text-gray-600">أطباء استشاريون من أفضل الجامعات العالمية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-accent/10">
+                                <i class="fas fa-microscope text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">أجهزة متطورة</h4>
+                                <p class="text-gray-600">أحدث الأجهزة التشخيصية والعلاجية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-secondary/10">
+                                <i class="fas fa-clock text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">مواعيد مرنة</h4>
+                                <p class="text-gray-600">خدمة 24/7 وحجز مواعيد أونلاين</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-primary/10">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">معايير أمنية عالية</h4>
+                                <p class="text-gray-600">تعقيم وتطهير وفق أعلى المعايير العالمية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-accent/10">
+                                <i class="fas fa-comments text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">متابعة مستمرة</h4>
+                                <p class="text-gray-600">متابعة بعد الزيارة واستشارات مجانية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-secondary/10">
+                                <i class="fas fa-hand-holding-usd text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">أسعار تنافسية</h4>
+                                <p class="text-gray-600">خطط دفع مرنة وتأمين مع معظم الشركات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الرعاية المنزلية -->
+    <section id="home-care" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
+                        الرعاية المنزلية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        الطب <span class="text-primary">يصل إليك</span> في منزلك
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        رعاية طبية متكاملة تقدم في منزلك لتوفير الراحة والأمان خلال فترة العلاج والتعافي
+                    </p>
+                </div>
+
+                <!-- قصة الرعاية المنزلية -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">فلسفة الرعاية المنزلية</h3>
+                        <div class="space-y-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                الرعاية المنزلية ليست مجرد زيارة طبيب، بل هي نظام متكامل يقدم الخدمات الطبية 
+                                في البيئة الأكثر راحة للمريض: منزله. حيث الجدران تحكي قصص الراحة، والهواء 
+                                يحمل عبق الأمان.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                أثبتت الدراسات أن المرضى الذين يتلقون الرعاية في منازلهم يشفون بشكل أسرع، 
+                                ويعانون من مضاعفات أقل، ويتمتعون برضا أعلى عن الخدمات الطبية.
+                            </p>
+                            
+                            <div class="bg-primary/5 p-6 rounded-xl">
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">من يحتاج الرعاية المنزلية؟</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>كبار السن الذين يعانون من أمراض مزمنة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>مرضى ما بعد الجراحة الذين يحتاجون متابعة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>الأطفال المرضى الذين يحتاجون رعاية متخصصة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>مرضى الأمراض المزمنة (سكري، ضغط، قلب)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>مرضى يحتاجون علاج طبيعي أو تمريض متخصص</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="الرعاية المنزلية" 
+                             class="w-full h-full object-cover rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <!-- خدمات الرعاية المنزلية -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        خدمات <span class="text-primary">الرعاية المنزلية</span> المتكاملة
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="process-step">
+                            <div class="process-step-number" style="background: #008080;">1</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-user-nurse text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">تمريض متخصص</h4>
+                                <p class="text-gray-600 text-sm">ممرضون وممرضات مدربون على أعلى مستوى للرعاية اليومية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number" style="background: #008080;">2</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-stethoscope text-accent text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">زيارات طبية</h4>
+                                <p class="text-gray-600 text-sm">زيارات دورية من أطباء متخصصين للمتابعة والتقييم</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number" style="background: #008080;">3</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-prescription-bottle-alt text-secondary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">إعطاء الأدوية</h4>
+                                <p class="text-gray-600 text-sm">إدارة وتنظيم الأدوية وتنفيذ خطط العلاج بدقة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number" style="background: #008080;">4</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-hand-holding-heart text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">رعاية نفسية</h4>
+                                <p class="text-gray-600 text-sm">دعم نفسي للمريض والعائلة خلال رحلة العلاج</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- برامج الرعاية المنزلية -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        برامج <span class="text-primary">الرعاية المنزلية</span> المتخصصة
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-wheelchair text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">رعاية كبار السن</h4>
+                            <p class="text-gray-600 text-center">
+                                برنامج متكامل للعناية بكبار السن في منازلهم مع احترام خصوصيتهم وكرامتهم
+                            </p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>متابعة الأمراض المزمنة</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>مساعدة في الأنشطة اليومية</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card p-6 border-2 border-primary">
+                            <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-baby text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">رعاية حديثي الولادة</h4>
+                            <p class="text-gray-600 text-center">
+                                رعاية متخصصة للأمهات الجدد وحديثي الولادة في الأسابيع الأولى بعد الولادة
+                            </p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>استشارات الرضاعة الطبيعية</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>متابعة نمو الطفل</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-procedures text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">ما بعد الجراحة</h4>
+                            <p class="text-gray-600 text-center">
+                                رعاية شاملة للمرضى بعد العمليات الجراحية لتسريع الشفاء ومنع المضاعفات
+                            </p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تغيير الضمادات والغيارات</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>علاج طبيعي منزلي</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات التشخيصية -->
+    <section id="diagnostic" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+                        التشخيص الدقيق
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">تشخيصية</span> متطورة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        أحدث التقنيات التشخيصية للوصول إلى تشخيص دقيق وخطة علاج مناسبة
+                    </p>
+                </div>
+
+                <!-- معامل التحاليل -->
+                <div class="mb-16">
+                    <div class="flex items-center mb-10">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ml-4">
+                            <i class="fas fa-flask text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">معامل <span class="text-primary">التحاليل الطبية</span></h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-vial text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">تحاليل الدم الشاملة</h4>
+                                    <p class="text-gray-600">
+                                        تشمل صورة دم كاملة، كيمياء الدم، إنزيمات الكبد، وظائف الكلى، 
+                                        دهون الدم، وسكر الدم التراكمي بدقة عالية وسرعة في النتائج
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-dna text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">تحاليل الجينات والوراثة</h4>
+                                    <p class="text-gray-600">
+                                        تحاليل متخصصة للكشف عن الأمراض الوراثية، تحليل الكروموسومات، 
+                                        وفحوصات ما قبل الزواج للحفاظ على صحة الأجيال القادمة
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-microscope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">تحاليل الميكروبيولوجي</h4>
+                                    <p class="text-gray-600">
+                                        زراعة البكتيريا والفطريات، فحص الحساسية للمضادات الحيوية، 
+                                        وتحاليل الطفيليات المعوية بدقة وتقنيات متطورة
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-hormone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">تحاليل الهرمونات</h4>
+                                    <p class="text-gray-600">
+                                        فحوصات الهرمونات للذكور والإناث، هرمونات الغدة الدرقية، 
+                                        هرمونات النمو، وهرمونات الخصوبة بدقة متناهية
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الأشعة والتشخيص -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        أقسام <span class="text-primary">الأشعة والتشخيص</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="department-box">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-x-ray text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الأشعة العادية</h4>
+                            <p class="text-gray-600 text-sm">أشعة سينية للعظام، الصدر، البطن، والأسنان</p>
+                        </div>
+                        
+                        <div class="department-box">
+                            <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-wave-square text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الموجات فوق الصوتية</h4>
+                            <p class="text-gray-600 text-sm">سونار للبطن، الحوض، الحمل، والغدة الدرقية</p>
+                        </div>
+                        
+                        <div class="department-box">
+                            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-magnet text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الرنين المغناطيسي</h4>
+                            <p class="text-gray-600 text-sm">تصوير دقيق للمخ، العمود الفقري، والمفاصل</p>
+                        </div>
+                        
+                        <div class="department-box">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-tachometer-alt text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الأشعة المقطعية</h4>
+                            <p class="text-gray-600 text-sm">CT سكانر للدماغ، الصدر، البطن، والحوض</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الفحوصات الدورية -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        برامج <span class="text-primary">الفحوصات الدورية</span>
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>نوع البرنامج</th>
+                                    <th>يشمل</th>
+                                    <th>الفئة المستهدفة</th>
+                                    <th>التكرار الموصى به</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">فحص شامل للكبار</td>
+                                    <td class="text-gray-600">تحاليل دم، بول، أشعة صدر، تخطيط قلب</td>
+                                    <td class="text-center">+18 سنة</td>
+                                    <td class="text-center">سنوياً</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">فحص ما قبل الزواج</td>
+                                    <td class="text-gray-600">تحاليل دم، فصيلة، أمراض وراثية، أمراض معدية</td>
+                                    <td class="text-center">المقبلين على الزواج</td>
+                                    <td class="text-center">مرة واحدة</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">فحص الحمل</td>
+                                    <td class="text-gray-600">سونار، تحاليل دم، بول، فحص سكري الحمل</td>
+                                    <td class="text-center">الحوامل</td>
+                                    <td class="text-center">كل 3 أشهر</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">فحص الرياضيين</td>
+                                    <td class="text-gray-600">تخطيط قلب مجهود، أشعة، تحاليل شاملة</td>
+                                    <td class="text-center">الرياضيين المحترفين</td>
+                                    <td class="text-center">كل 6 أشهر</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">فحص كبار السن</td>
+                                    <td class="text-gray-600">فحص كثافة العظام، ذاكرة، سمع، بصر، تحاليل</td>
+                                    <td class="text-center">+60 سنة</td>
+                                    <td class="text-center">كل 6 أشهر</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">فحص الأطفال</td>
+                                    <td class="text-gray-600">متابعة نمو، سمع، بصر، تحاليل، تطعيمات</td>
+                                    <td class="text-center">0-18 سنة</td>
+                                    <td class="text-center">حسب العمر</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- قسم أهمية وجود العيادات والخدمات الصحية -->
+<section id="health-importance" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-semibold mb-4">
+                    أهمية وجود العيادات الصحية
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    لماذا تُمثل <span class="text-primary">العيادات الصحية</span> ضرورة حيوية للمجتمع؟
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    العيادات ليست مجرد مباني، بل هي قلوب تنبض بالحياة، ومراكز تخلق الأمان الصحي للمجتمع
+                </p>
+            </div>
+
+            <!-- مقدمة عن أهمية العيادات -->
+            <div class="mb-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10">
+                <h3 class="text-2xl font-bold text-primary mb-6">العيادات الصحية: عصب المجتمع النابض</h3>
+                <div class="space-y-6">
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        في قلب كل مجتمع ناجح، توجد عيادات صحية قوية. هذه العيادات ليست مجرد أماكن للعلاج، 
+                        بل هي مراكز إشعاع صحي، ومصانع لإنتاج الأفراد الأصحاء، وحصون تحمي المجتمع من الأمراض.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        تخيل مدينة بلا عيادات طبية: الأمراض تنتشر، الأوجاع تتفاقم، الأطفال يمرضون دون علاج، 
+                        وكبار السن يعانون في صمت. العيادات الصحية هي التي تحول هذا الكابوس إلى واقع صحي آمن.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        كل عيادة تفتح أبوابها، تفتح باباً للأمل، وتغلق باباً للمعاناة. إنها ليست خدمة رفاهية، 
+                        بل هي حاجة أساسية كالماء والهواء في مجتمع يريد أن يعيش بكرامة وصحة.
+                    </p>
+                </div>
+            </div>
+
+            <!-- الأعمدة السبعة لأهمية العيادات -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-gray-800 mb-12 text-center">
+                    الأعمدة <span class="text-primary">السبعة</span> لأهمية وجود العيادات الصحية
+                </h3>
+                
+                <div class="space-y-12">
+                    <!-- عمود 1 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">١</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود الأول: خط الدفاع الأول</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    العيادات الصحية هي خط الدفاع الأول ضد انتشار الأمراض في المجتمع. 
+                                    عندما يظهر مرض ما، تكون العيادة هي نقطة الاكتشاف المبكر، التشخيص السريع، 
+                                    والاحتواء الفوري قبل أن يتحول المرض إلى وباء.
+                                </p>
+                                <p>
+                                    في جائحة كورونا، أثبتت العيادات الصحية أنها الدرع الواقي للمجتمع. 
+                                    كل فحص، كل تطعيم، كل استشارة قدمتها العيادات، كانت لبنة في جدار الحماية المجتمعية.
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-r-4 border-blue-500">
+                                    <p class="text-blue-700 font-medium">
+                                        <i class="fas fa-shield-alt text-blue-500 ml-2"></i>
+                                        إحصائياً: كل ريال يُستثمر في العيادات الوقائية يوفر 10 ريالات في علاج الأمراض المتقدمة
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عمود 2 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">٢</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود الثاني: قوة المجتمع الاقتصادية</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    المجتمع الصحي هو المجتمع المنتج. العيادات الصحية لا تعالج الأفراد فقط، 
+                                    بل تعالج الاقتصاد أيضاً. عندما يكون الموظفون أصحاء، تزداد إنتاجيتهم، 
+                                    وعندما يكون الطلاب أصحاء، تتحسن تحصيلاتهم.
+                                </p>
+                                <p>
+                                    دراسة منظمة الصحة العالمية تثبت أن كل يوم غياب عن العمل بسبب المرض 
+                                    يكلف الاقتصاد الوطني آلاف الريالات. العيادات الصحية تقلل هذه الخسائر 
+                                    بنسبة تصل إلى 70% من خلال الرعاية الوقائية والمبكرة.
+                                </p>
+                                <div class="bg-green-50 p-4 rounded-lg border-r-4 border-green-500">
+                                    <p class="text-green-700 font-medium">
+                                        <i class="fas fa-chart-line text-green-500 ml-2"></i>
+                                        الحقيقة: الدول التي تستثمر في العيادات الصحية تسجل نمواً اقتصادياً أعلى بنسبة 30%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عمود 3 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">٣</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود الثالث: العدالة الصحية والاجتماعية</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    العيادات الصحية هي تجسيد للعدالة الاجتماعية. فيها يلتقي الغني والفقير، 
+                                    الكبير والصغير، الجميع أمام خدمة صحية واحدة. الصحة حق إنساني أساسي، 
+                                    والعيادات هي التي تجعل هذا الحق واقعاً ملموساً.
+                                </p>
+                                <p>
+                                    في الأحياء الشعبية والمناطق النائية، تكون العيادات الصحية بمثابة شريان حياة. 
+                                    توفر الخدمات الأساسية، تنقذ الأرواح، وتوفر الرعاية التي قد لا يجدها السكان في مكان آخر.
+                                </p>
+                                <div class="bg-purple-50 p-4 rounded-lg border-r-4 border-purple-500">
+                                    <p class="text-purple-700 font-medium">
+                                        <i class="fas fa-balance-scale text-purple-500 ml-2"></i>
+                                        الحقيقة: وجود عيادة في كل حي يقلل من الفوارق الصحية بين الطبقات الاجتماعية بنسبة 60%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عمود 4 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">٤</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود الرابع: التربية الصحية والتوعية</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    العيادات ليست أماكن علاج فقط، بل هي مدارس للصحة. فيها يتعلم المجتمع 
+                                    كيفية الوقاية، كيف يعيش بطريقة صحية، وكيف يتعامل مع الأمراض المزمنة.
+                                </p>
+                                <p>
+                                    جلسات التوعية في العيادات تنقذ أرواحاً أكثر من الأدوية أحياناً. 
+                                    عندما تعلم الأم كيفية تغذية طفلها، أو يعلم مريض السكري كيفية مراقبة 
+                                    مستويات السكر، يكون الأثر أكبر من أي دواء.
+                                </p>
+                                <div class="bg-yellow-50 p-4 rounded-lg border-r-4 border-yellow-500">
+                                    <p class="text-yellow-700 font-medium">
+                                        <i class="fas fa-graduation-cap text-yellow-500 ml-2"></i>
+                                        إحصائياً: كل جلسة توعية في العيادات تمنع 10 حالات مرضية مستقبلية
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عمود 5 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">٥</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود الخامس: الرعاية المتكاملة والمستمرة</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    العيادات الصحية توفر رعاية متكاملة تبدأ من الولادة وتستمر طوال العمر. 
+                                    تطعيمات الأطفال، متابعة النمو، رعاية المراهقين، رعاية البالغين، 
+                                    ورعاية كبار السن - كلها حلقات في سلسلة واحدة تقدمها العيادات.
+                                </p>
+                                <p>
+                                    هذه الاستمرارية في الرعاية تخلق علاقة ثقة بين الطبيب والمريض، 
+                                    وتسمح بمتابعة الحالة الصحية عبر السنوات، مما يضمن اكتشاف المشاكل 
+                                    مبكراً وعلاجها قبل أن تتفاقم.
+                                </p>
+                                <div class="bg-indigo-50 p-4 rounded-lg border-r-4 border-indigo-500">
+                                    <p class="text-indigo-700 font-medium">
+                                        <i class="fas fa-history text-indigo-500 ml-2"></i>
+                                        الحقيقة: المرضى الذين لديهم طبيب عائلة في عيادة قريبة يعيشون أطول بـ 5 سنوات في المتوسط
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عمود 6 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">٦</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود السادس: تخفيف العبء عن المستشفيات</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    العيادات الصحية هي صمام الأمان للمستشفيات. عندما تعمل العيادات بكفاءة، 
+                                    تتعامل مع 80% من الحالات الصحية، تاركة للمستشفيات التركيز على الحالات 
+                                    الحرجة والعمليات الجراحية المعقدة.
+                                </p>
+                                <p>
+                                    بدون عيادات فعالة، تتحول المستشفيات إلى أماكن مزدحمة، تنتظر فيها 
+                                    الحالات البسيطة لساعات، وتفقد المستشفيات قدرتها على التركيز على 
+                                    الحالات التي تحتاج حقاً إلى رعاية متقدمة.
+                                </p>
+                                <div class="bg-red-50 p-4 rounded-lg border-r-4 border-red-500">
+                                    <p class="text-red-700 font-medium">
+                                        <i class="fas fa-hospital text-red-500 ml-2"></i>
+                                        إحصائياً: كل عيادة نشطة تخفض العبء على المستشفيات القريبة بنسبة 40%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عمود 7 -->
+                    <div class="factor-card">
+                        <div class="factor-number" style="background: #008080;">٧</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">العمود السابع: الأمان النفسي والطمأنينة</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    وجود عيادة قريبة يعطي شعوراً بالأمان لا يقدر بثمن. معرفة أن هناك 
+                                    مكاناً يمكن اللجوء إليه في منتصف الليل إذا اشتد الألم، أن هناك 
+                                    من سيستمع ويهتم - هذا الشعور يخفف من القلق والضغط النفسي.
+                                </p>
+                                <p>
+                                    العيادات الصحية لا تعالج الأجساد فقط، بل تعالج القلوب أيضاً. 
+                                    الطمأنينة التي تقدمها العيادة للمريض ولعائلته لها تأثير علاجي 
+                                    لا يقل أهمية عن تأثير الدواء نفسه.
+                                </p>
+                                <div class="bg-pink-50 p-4 rounded-lg border-r-4 border-pink-500">
+                                    <p class="text-pink-700 font-medium">
+                                        <i class="fas fa-heart text-pink-500 ml-2"></i>
+                                        الحقيقة: 70% من المرضى يقولون أن وجود عيادة قريبة يخفف من قلقهم الصحي
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تأثير العيادات على المجتمع -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                    تأثير <span class="text-primary">العيادات الصحية</span> على جودة الحياة المجتمعية
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-child text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">صحة الأطفال</h4>
+                        <p class="text-gray-600 text-center">
+                            تقليل وفيات الأطفال بنسبة 60%، وتحسين معدلات النمو والتطور
+                        </p>
+                        <div class="mt-4 text-center">
+                            <span class="text-sm text-gray-500">تأثير مباشر:</span>
+                            <span class="block text-primary font-bold text-lg">+40% نجاح دراسي</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-briefcase text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">الإنتاجية</h4>
+                        <p class="text-gray-600 text-center">
+                            زيادة أيام العمل الفعلية، وتقليل الغياب بسبب المرض
+                        </p>
+                        <div class="mt-4 text-center">
+                            <span class="text-sm text-gray-500">تأثير مباشر:</span>
+                            <span class="block text-secondary font-bold text-lg">+35% إنتاجية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-money-bill-wave text-accent text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التوفير الاقتصادي</h4>
+                        <p class="text-gray-600 text-center">
+                            توفير ملايين الريالات في علاج الأمراض المتقدمة
+                        </p>
+                        <div class="mt-4 text-center">
+                            <span class="text-sm text-gray-500">تأثير مباشر:</span>
+                            <span class="block text-accent font-bold text-lg">-50% تكاليف علاج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-smile text-green-500 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">السعادة المجتمعية</h4>
+                        <p class="text-gray-600 text-center">
+                            تحسين جودة الحياة وزيادة معدلات السعادة والرضا
+                        </p>
+                        <div class="mt-4 text-center">
+                            <span class="text-sm text-gray-500">تأثير مباشر:</span>
+                            <span class="block text-green-500 font-bold text-lg">+45% رضا مجتمعي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- رسالة ختامية -->
+            <div class="bg-gradient-to-r from-primary to-accent rounded-2xl p-12 text-white text-center">
+                <h3 class="text-2xl font-bold mb-6">العيادات الصحية: ليست رفاهية، بل ضرورة</h3>
+                <p class="text-white/90 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+                    عندما نستثمر في عيادة صحية، لا نستثمر في مبنى أو معدات فقط، 
+                    بل نستثمر في صحة الأجيال، في مستقبل المجتمع، في قوة الوطن. 
+                    كل عيادة نفتتحها هي خطوة نحو مجتمع أقوى، وأكثر صحة، وأكثر إنتاجية.
+                </p>
+                <p class="text-white/90 text-lg mb-10 max-w-3xl mx-auto leading-relaxed">
+                    العيادات الصحية ليست خياراً بين خيارات، بل هي أساس لا يمكن للمجتمع 
+                    أن يستغني عنه. هي الضمانة لصحة أبنائه، وسلامة مستقبله، وقوة اقتصاده.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div class="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30">
+                        <div class="text-3xl font-bold text-secondary">1 عيادة</div>
+                        <div class="text-white/80">تخدم 5,000 فرد</div>
+                    </div>
+                    <div class="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30">
+                        <div class="text-3xl font-bold text-secondary">1 ريال وقاية</div>
+                        <div class="text-white/80">يوفر 10 ريالات علاج</div>
+                    </div>
+                    <div class="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30">
+                        <div class="text-3xl font-bold text-secondary">1 طبيب</div>
+                        <div class="text-white/80">يحمي آلاف العائلات</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- دعوة للاهتمام بالصحة -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">صحة المجتمع تبدأ من عيادته</h3>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+                    لنعمل معاً لضمان وجود عيادة صحية في كل حي، وخدمة طبية لكل مواطن، 
+                    ورعاية صحية متكاملة لكل أسرة. لأن المجتمع الصحي هو المجتمع القوي.
+                </p>
+                <div class="w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.factor-card {
+    position: relative;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.factor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 128, 128, 0.1);
+}
+
+.factor-number {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 60px;
+    height: 60px;
+    background: #008080;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-card {
+    transition: all 0.3s ease;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 128, 128, 0.12);
+}
+
+@media (max-width: 768px) {
+    .factor-card {
+        padding: 2rem 1.5rem 2rem 2rem;
+    }
+    
+    .factor-number {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-bottom: 1.5rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+</style>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    الأسئلة <span class="text-primary">الشائعة</span> عن الخدمات الطبية
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- سؤال 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(1)">
+                            <h4 class="text-lg font-bold text-gray-800">ما هي مدة الانتظار في العيادة بعد حجز موعد؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-1"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p class="text-gray-700">
+                                نحن نحرص على تقليل أوقات الانتظار إلى الحد الأدنى:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>مع حجز مسبق:</strong> انتظار متوسط 15-30 دقيقة حسب حالة الطبيب</li>
+                                    <li><strong>بدون حجز:</strong> قد تصل مدة الانتظار إلى 60-90 دقيقة</li>
+                                    <li><strong>حالات الطوارئ:</strong> أولوية فورية بدون انتظار</li>
+                                    <li><strong>نظام الجدولة الذكي:</strong> يحدد الوقت المناسب لتقليل الازدحام</li>
+                                    <li><strong>تطبيق التتبع:</strong> يمكنك معرفة وقتك التقريبي عبر التطبيق</li>
+                                </ul>
+                                ننصح دائماً بالحجز المسبق لتجنب فترات الانتظار الطويلة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(2)">
+                            <h4 class="text-lg font-bold text-gray-800">هل تغطي شركات التأمين خدمات العيادات؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-2"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p class="text-gray-700">
+                                نتعامل مع معظم شركات التأمين الصحي المعتمدة في المملكة:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>التأمين الحكومي:</strong> نتعامل مع التأمينات الحكومية الرئيسية</li>
+                                    <li><strong>التأمين الخاص:</strong> معظم شركات التأمين الخاصة المعتمدة</li>
+                                    <li><strong>الشركات:</strong> خطط تأمين مجموعة كبيرة من الشركات</li>
+                                    <li><strong>الدفع الشخصي:</strong> خصومات للدفع المباشر</li>
+                                </ul>
+                                يمكنك الاستفسار عن تغطية تأمينك قبل الحضور، كما نوفر خدمة التأكيد من التغطية التأمينية قبل الزيارة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(3)">
+                            <h4 class="text-lg font-bold text-gray-800">ما الفرق بين الرعاية المنزلية والمستشفى؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-3"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p class="text-gray-700">
+                                <strong>الرعاية المنزلية:</strong> تقدم في منزل المريض، تناسب الحالات المستقرة، تركيز على الراحة النفسية، تكاليف أقل، ومشاركة العائلة.
+                                <br><br>
+                                <strong>الرعاية في المستشفى:</strong> تقدم في المستشفى، تناسب الحالات الحرجة، إمكانيات تشخيصية وعلاجية متقدمة، مراقبة 24/7، وتكاليف أعلى.
+                                <br><br>
+                                نحدد نوع الرعاية المناسبة بناءً على:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>حالة المريض الصحية</li>
+                                    <li>احتياجات الرعاية الطبية</li>
+                                    <li>رأي الطبيب المعالج</li>
+                                    <li>رغبة المريض والعائلة</li>
+                                    <li>الإمكانيات المتاحة</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(4)">
+                            <h4 class="text-lg font-bold text-gray-800">كيف يتم اختيار الأطباء في العيادات؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-4"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p class="text-gray-700">
+                                نتبع معايير صارمة في اختيار الأطباء:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>المؤهلات العلمية:</strong> شهادات من جامعات معتمدة عالمياً</li>
+                                    <li><strong>الخبرة العملية:</strong> سنوات خبرة في التخصص</li>
+                                    <li><strong>الترخيص:</strong> ترخيص مزاولة مهنة من الهيئة السعودية للتخصصات الصحية</li>
+                                    <li><strong>التدريب المستمر:</strong> مشاركة في دورات وورش عمل دورية</li>
+                                    <li><strong>التقييم الدوري:</strong> تقييم أداء دوري من قبل المرضى واللجان الطبية</li>
+                                    <li><strong>الأخلاقيات المهنية:</strong> التزام بأعلى معايير الأخلاقيات الطبية</li>
+                                    <li><strong>التطوير المهني:</strong> نشر أبحاث ومشاركة في مؤتمرات طبية</li>
+                                </ul>
+                                كل طبيب في فريقنا يخضع لفحص دقيق قبل التعيين ومتابعة مستمرة للأداء.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(5)">
+                            <h4 class="text-lg font-bold text-gray-800">هل تقدمون استشارات طبية أونلاين؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-5"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p class="text-gray-700">
+                                نعم، نقدم خدمة الاستشارات الطبية أونلاين عبر:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>مكالمات الفيديو:</strong> استشارة مباشرة مع الطبيب عبر الفيديو</li>
+                                    <li><strong>المحادثة الكتابية:</strong> استشارة عبر الدردشة مع الطبيب</li>
+                                    <li><strong>المكالمات الصوتية:</strong> استشارة هاتفية مع الطبيب</li>
+                                    <li><strong>رفع التقارير:</strong> إمكانية رفع التقارير والصور الطبية</li>
+                                    <li><strong>الوصفات الإلكترونية:</strong> وصفات طبية إلكترونية صالحة للصيدليات</li>
+                                    <li><strong>المتابعة:</strong> متابعة عبر النظام الإلكتروني</li>
+                                </ul>
+                                الاستشارات الأونلاين مناسبة للحالات البسيطة والمتوسطة، والمتابعة بعد الزيارة، 
+                                واستشارات الرأي الثاني. للحالات الحرجة ننصح بالزيارة المباشرة للعيادة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - خدمات العيادات الطبية">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        شريكك الموثوق في رحلة العافية والصحة. نقدم خدمات رعاية طبية شاملة تشمل عيادات متخصصة، 
+                        رعاية منزلية، خدمات تشخيصية، واستشارات طبية بفريق طبي متميز وتقنيات متطورة.
+                    </p>
+                </div>
+
+                <!-- خدمات العيادات -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدماتنا</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#clinics"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                العيادات المتخصصة
+                            </a></li>
+                        <li><a href="#home-care"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                الرعاية المنزلية
+                            </a></li>
+                        <li><a href="#diagnostic"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                الخدمات التشخيصية
+                            </a></li>
+                        <li><a href="#appointment"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                حجز موعد طبي
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- روابط مهمة -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركاؤنا الطبيون
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                المدونة الطبية
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                من نحن
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- تواصل معنا -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">استشارات تركيب مجانية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">installation@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - خدمات العيادات الطبية والرعاية الصحية. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الخدمة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الضمان</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // وظيفة الأسئلة الشائعة
+        function toggleFAQ(number) {
+            const answer = document.getElementById('faq-answer-' + number);
+            const icon = document.getElementById('faq-icon-' + number);
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // وظيفة التمرير إلى نموذج الحجز
+        function scrollToAppointmentForm() {
+            const appointmentSection = document.getElementById('appointment');
+            if (appointmentSection) {
+                window.scrollTo({
+                    top: appointmentSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // إغلاق القائمة المتنقلة عند النقر على رابط تنقل
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+        
+        // تأثير التمرير السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

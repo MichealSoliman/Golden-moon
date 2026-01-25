@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلول متكاملة للتشطيبات والديكورات | تصميم داخلي • تشطيب • ديكور | قمر الخليج الذهبي</title>
+    <meta name="description" content="حلول متكاملة للتشطيبات والديكورات للمنازل، الشركات، الفلل، والشقق. تصميم داخلي، تشطيب فاخر، ديكور مبتكر، وإشراف متكامل. فريق محترف ومواد عالية الجودة.">
+    <meta name="keywords" content="تشطيبات, ديكور, تصميم داخلي, تشطيب فلل, تشطيب شقق, تشطيب مكاتب, ديكور داخلي, تصميم ديكور, تشطيب بعد البناء, تجديد مساحات, إشراف تشطيبات, مواد تشطيب, تشطيب فاخر">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080', // لون خشبي دافئ
+                        secondary: '#D4AF37', // ذهبي
+                        accent: '#2E8B57', // أخضر
+                        dark: '#2C1810', // بني غامق
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.4s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(139, 69, 19, 0.15);
+            border-color: #8B4513;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        
+        .service-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.08);
+        }
+        
+        .hero-section {
+            background: #008080;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #f9f5f0 0%, #f0f4f8 100%);
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(139, 69, 19, 0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(139, 69, 19, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .process-step {
+            position: relative;
+            padding: 30px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.15);
+        }
+        
+        .process-step-number {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .package-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            border-color: #8B4513;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .package-card.popular {
+            border-color: #D4AF37;
+            position: relative;
+            transform: scale(1.05);
+        }
+        
+        .package-card.popular:before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D4AF37;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 10;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #8B4513, #2C1810);
+            color: white;
+            padding: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .area-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .area-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.1);
+        }
+        
+        .faq-item {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .method-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(139, 69, 19, 0.15);
+        }
+        
+        /* تأثيرات جديدة للديكور */
+        .design-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .design-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(139, 69, 19, 0.2);
+        }
+        
+        .material-card {
+            background: linear-gradient(145deg, #ffffff, #f5f5f5);
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .material-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #8B4513, #D4AF37);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .material-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .style-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+            margin-bottom: 8px;
+        }
+        
+        /* تأثيرات النص */
+        .text-glow {
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* خلفيات متدرجة */
+        .gradient-bg {
+            background: linear-gradient(135deg, #f9f5f0 0%, #fff9f0 50%, #f0f4f8 100%);
+        }
+        
+        .dark-gradient {
+            background: linear-gradient(135deg, #2C1810 0%, #8B4513 100%);
+        }
+        
+        /* تأثيرات الصور */
+        .image-frame {
+            border: 8px solid white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .image-frame:hover {
+            transform: rotate(-1deg) scale(1.05);
+            box-shadow: 0 30px 60px rgba(139, 69, 19, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - حلول متكاملة للتشطيبات والديكورات">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">حلول متكاملة للتشطيبات والديكورات</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة للأجهزة الصغيرة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل للأجهزة الكبيرة -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        التشطيبات والديكورات
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة للأجهزة الصغيرة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-paint-roller ml-3 w-6 text-center"></i>
+                        التشطيبات والديكورات
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+                <li class="pt-4 border-t border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600">متابعتنا على:</span>
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon" class="text-gray-500 hover:text-sky-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA==" class="text-gray-500 hover:text-pink-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // تغيير الأيقونة عند فتح/إغلاق القائمة
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<style>
+    @media (max-width: 640px) {
+        header .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #mobile-menu {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            max-height: calc(100vh - 64px);
+            overflow-y: auto;
+        }
+    }
+</style>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-24 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    حلول <span class="text-secondary">متكاملة</span> للتشطيبات والديكورات
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-100 leading-relaxed">
+                    نصنع مساحات تعكس شخصيتك، تجمع بين الجمال والوظيفية. تصميم داخلي، تشطيب فاخر، وديكور مبتكر.
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-10 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">500+</div>
+                        <div class="text-gray-200">مشروع منفذ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">15+</div>
+                        <div class="text-gray-200">سنة خبرة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">50+</div>
+                        <div class="text-gray-200">فريق متخصص</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">98%</div>
+                        <div class="text-gray-200">رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <!-- أزرار التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#design" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-palette ml-2"></i>
+                        التصميم الداخلي
+                    </a>
+                    <a href="#finishing" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-paint-roller ml-2"></i>
+                        أعمال التشطيب
+                    </a>
+                    <a href="#villas" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-warehouse ml-2"></i>
+                        تشطيب الفلل
+                    </a>
+                    <a href="#supervision" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-eye ml-2"></i>
+                        الإشراف المتكامل
+                    </a>
+                </div>
+                
+                <!-- دعوة للعمل -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="tel:01111263618" class="px-10 py-4 bg-secondary text-white rounded-xl font-bold text-lg hover:bg-secondary/90 transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-phone-alt ml-2"></i>
+                        استشارة مجانية
+                    </a>
+                    <a href="#consultation" class="px-10 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calculator ml-2"></i>
+                        حساب التكلفة
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f9f5f0"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم فلسفة التشطيب والديكور -->
+    <section id="design-philosophy" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        فلسفتنا في التشطيب
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        التشطيب ليس مجرد أعمال إنشائية، بل هو 
+                        <span class="text-primary">فن صناعة المساحات</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        كل مساحة تحكي قصة، وكل تفصيل يعكس هوية. نحن هنا لنحول أحلامك إلى واقع ملموس
+                    </p>
+                </div>
+
+                <!-- فلسفة التشطيب -->
+                <div class="mb-20">
+                    <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-8 md:p-12">
+                        <div class="text-center mb-10">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                                لماذا يعد التشطيب الفاخر استثماراً في حياتك؟
+                            </h3>
+                            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                                في عالم يزداد تعقيداً، تصبح المساحات التي نعيش ونعمل فيها ملاذنا الآمن. 
+                                التشطيب الجيد ليس مجرد رفاهية، بل هو ضرورة للصحة النفسية والجسدية.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-home text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">هوية المكان</h4>
+                                <p class="text-gray-600">
+                                    التشطيب يعطي للمساحة هويتها وشخصيتها المميزة، مما ينعكس على ساكنيها
+                                </p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-heart text-accent text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">الراحة النفسية</h4>
+                                <p class="text-gray-600">
+                                    المساحات المصممة بعناية تخلق بيئة مريحة تعزز الاسترخاء والإبداع
+                                </p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-chart-line text-secondary text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">زيادة القيمة</h4>
+                                <p class="text-gray-600">
+                                    التشطيب الفاخر يزيد من قيمة العقار بنسبة 20-30% على المدى الطويل
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مبادئنا في التشطيب -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        مبادئنا في <span class="text-primary">التشطيب والديكور</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="material-card">
+                            <div class="flex items-start mb-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-lightbulb text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">الإبداع في التفاصيل</h4>
+                                    <p class="text-gray-600">
+                                        نؤمن أن الجمال يكمن في التفاصيل. كل زاوية، كل إضاءة، كل لون يحمل رسالة
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="material-card">
+                            <div class="flex items-start mb-4">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-handshake text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">الشراكة مع العميل</h4>
+                                    <p class="text-gray-600">
+                                        نعمل معك، لا لك. نستمع لأفكارك ونحولها إلى واقع مع الحفاظ على رؤيتك
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="material-card">
+                            <div class="flex items-start mb-4">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">الجودة فوق كل شيء</h4>
+                                    <p class="text-gray-600">
+                                        نستخدم أفضل المواد وأحدث التقنيات لضمان ديمومة المشروع ورضاك التام
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="material-card">
+                            <div class="flex items-start mb-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">الالتزام بالوقت</h4>
+                                    <p class="text-gray-600">
+                                        نحترم وقتك ونلتزم بالمواعيد المتفق عليها دون أي تأخير غير مبرر
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدمات التصميم الداخلي -->
+    <section id="design" class="py-20 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        التصميم الداخلي
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">التصميم الداخلي</span> المتكاملة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نحول أفكارك إلى تصاميم ثلاثية الأبعاد تعكس شخصيتك وتواكب أحدث الاتجاهات العالمية
+                    </p>
+                </div>
+
+                <!-- أنواع التصميم -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- تصميم سكني -->
+                    <div class="design-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="التصميم السكني" 
+                                 class="w-full h-64 object-cover">
+                            <span class="category-badge bg-primary text-white">سكني</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">التصميم السكني</h3>
+                            <p class="text-gray-600 mb-4">تصميم المساحات السكنية بجميع أنواعها وأحجامها</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="style-tag bg-primary/10 text-primary">عصري</span>
+                                <span class="style-tag bg-accent/10 text-accent">كلاسيكي</span>
+                                <span class="style-tag bg-secondary/10 text-secondary">مينيماليست</span>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex justify-between">
+                                    <span>المدة:</span>
+                                    <span class="font-medium">2-4 أسابيع</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>التكلفة:</span>
+                                    <span class="font-medium text-primary">5,000 - 20,000 ريال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- تصميم تجاري -->
+                    <div class="design-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="التصميم التجاري" 
+                                 class="w-full h-64 object-cover">
+                            <span class="category-badge bg-accent text-white">تجاري</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">التصميم التجاري</h3>
+                            <p class="text-gray-600 mb-4">تصميم المكاتب، المحلات، والمباني التجارية</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="style-tag bg-primary/10 text-primary">مهني</span>
+                                <span class="style-tag bg-accent/10 text-accent">إبداعي</span>
+                                <span class="style-tag bg-secondary/10 text-secondary">فاخر</span>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex justify-between">
+                                    <span>المدة:</span>
+                                    <span class="font-medium">3-6 أسابيع</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>التكلفة:</span>
+                                    <span class="font-medium text-primary">10,000 - 50,000 ريال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- تصميم الفلل -->
+                    <div class="design-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تصميم الفلل" 
+                                 class="w-full h-64 object-cover">
+                            <span class="category-badge bg-secondary text-white">فلل</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">تصميم الفلل والقصور</h3>
+                            <p class="text-gray-600 mb-4">تصميم متخصص للمساحات الفاخرة والفلل الكبيرة</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="style-tag bg-primary/10 text-primary">فخامة</span>
+                                <span class="style-tag bg-accent/10 text-accent">عراقة</span>
+                                <span class="style-tag bg-secondary/10 text-secondary">حداثة</span>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex justify-between">
+                                    <span>المدة:</span>
+                                    <span class="font-medium">4-8 أسابيع</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>التكلفة:</span>
+                                    <span class="font-medium text-primary">15,000 - 100,000 ريال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مراحل التصميم -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مراحل <span class="text-primary">عملية التصميم</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="process-step-number bg-primary mb-4 mx-auto">1</div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الاستشارة الأولية</h4>
+                            <p class="text-gray-600 text-sm">
+                                لقاء مع العميل لفهم احتياجاته، أذواقه، وميزانيته
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="process-step-number bg-accent mb-4 mx-auto">2</div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">المسح والقياسات</h4>
+                            <p class="text-gray-600 text-sm">
+                                زيارة الموقع لأخذ القياسات الدقيقة ودراسة المساحات
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="process-step-number bg-secondary mb-4 mx-auto">3</div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">التصاميم الأولية</h4>
+                            <p class="text-gray-600 text-sm">
+                                إعداد مخططات وتصاميم ثلاثية الأبعاد لعرضها على العميل
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="process-step-number bg-primary mb-4 mx-auto">4</div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">التنفيذ والإشراف</h4>
+                            <p class="text-gray-600 text-sm">
+                                متابعة التنفيذ والتأكد من مطابقته للتصميم المعتمد
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- قسم ثورة المواد والتقنيات الحديثة -->
+<section id="finishing-revolution" class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-semibold mb-4">
+                    مستقبل التشطيب
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    الثورة القادمة: 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                        مواد وتقنيات التشطيب الذكية
+                    </span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    نحن لا نستخدم فقط أحدث التقنيات العالمية، بل نبتكر حلولاً تناسب بيئتنا وثقافتنا
+                </p>
+            </div>
+
+            <!-- مقدمة تحفيزية -->
+            <div class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            ماذا يعني أن تكون "حديث" في عالم التشطيب اليوم؟
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                            لم يعد الحديث عن "أحدث مواد التشطيب" مجرد سيراميك فاخر أو دهانات أوروبية. 
+                            العالم يتغير، والثورة الحقيقية هي في مواد تفكر، تتكيف، وتتفاعل معك.
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-center mb-8">
+                        <div class="relative">
+                            <div class="w-24 h-24 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
+                                <i class="fas fa-lightbulb text-primary text-4xl"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center animate-pulse">
+                                <i class="fas fa-bolt text-secondary"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center max-w-2xl mx-auto">
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            تخيل أرضية تنظف نفسها بنفسها، جدران تغير لونها حسب مزاجك، 
+                            نوافذ تنتج الكهرباء من ضوء الشمس... هذا ليس خيالاً علمياً، 
+                            بل هو واقع بدأنا نطبقه في مشاريعنا.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- التقنيات الثورية -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-gray-800 mb-12 text-center">
+                    <span class="text-primary">خمس تقنيات</span> ستغير مفهومك عن التشطيب
+                </h3>
+                
+                <div class="space-y-12">
+                    <!-- التقنية 1 -->
+                    <div class="tech-card">
+                        <div class="tech-badge bg-gradient-to-r from-primary to-blue-500">التقنية 1</div>
+                        <div class="md:flex items-center gap-8">
+                            <div class="md:w-1/3 mb-6 md:mb-0">
+                                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-blue-500 flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-solar-panel text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">أسطح الطاقة الشمسية</h4>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    <strong class="text-primary">الأسطح التي تولد الكهرباء:</strong> 
+                                    لم تعد الألواح الشمسية تلك الألواح الكبيرة القبيحة على الأسطح. 
+                                    اليوم لدينا سيراميك وطلاءات تحتوي على خلايا شمسية مجهرية. 
+                                    يمكن لأرضية منزلك أو حتى جدرانه أن تولد الكهرباء التي تحتاجها.
+                                </p>
+                                <div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                                    <p class="text-gray-600 text-sm">
+                                        <i class="fas fa-lightbulb text-blue-500 ml-2"></i>
+                                        <strong>التطبيق:</strong> في مشروع فيلا بالرياض، وفرنا 40% من فاتورة الكهرباء 
+                                        باستخدام سيراميك شمسي في الأفنية الخارجية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- التقنية 2 -->
+                    <div class="tech-card">
+                        <div class="tech-badge bg-gradient-to-r from-accent to-green-500">التقنية 2</div>
+                        <div class="md:flex items-center gap-8">
+                            <div class="md:w-1/3 mb-6 md:mb-0 order-2">
+                                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 border border-green-100">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-accent to-green-500 flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-wind text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">الدهانات الذكية</h4>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3 order-1">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    <strong class="text-accent">الطلاء الذي يتنفس:</strong> 
+                                    ليست مجرد دهانات مضادة للبكتيريا أو العفن. اليوم لدينا دهانات:
+                                </p>
+                                <ul class="space-y-2 text-gray-600 mb-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-temperature-high text-accent text-sm mt-1 ml-2"></i>
+                                        <span><strong>تنظف الهواء:</strong> تحول الملوثات إلى مواد غير ضارة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-palette text-accent text-sm mt-1 ml-2"></i>
+                                        <span><strong>تغير اللون:</strong> بتطبيق إلكتروني أو حسب درجة الحرارة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-sun text-accent text-sm mt-1 ml-2"></i>
+                                        <span><strong>تنظم الحرارة:</strong> تعكس الحرارة صيفاً وتحتفظ بها شتاءً</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- التقنية 3 -->
+                    <div class="tech-card">
+                        <div class="tech-badge bg-gradient-to-r from-secondary to-purple-500">التقنية 3</div>
+                        <div class="md:flex items-center gap-8">
+                            <div class="md:w-1/3 mb-6 md:mb-0">
+                                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-100">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-secondary to-purple-500 flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-hand-sparkles text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">الأسطح ذاتية التنظيف</h4>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    <strong class="text-secondary">وداعاً للتنظيف المستمر:</strong> 
+                                    تقنية النانو قد غيرت كل شيء. اليوم لدينا:
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-purple-50 rounded-lg p-4">
+                                        <h5 class="font-bold text-gray-800 mb-2">سيراميك مضاد للبقع</h5>
+                                        <p class="text-gray-600 text-sm">يطرد السوائل والأوساخ تلقائياً</p>
+                                    </div>
+                                    <div class="bg-purple-50 rounded-lg p-4">
+                                        <h5 class="font-bold text-gray-800 mb-2">زجاج يطرد الغبار</h5>
+                                        <p class="text-gray-600 text-sm">طبقة نانوية تمنع التصاق الأتربة</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm">
+                                    <i class="fas fa-check-circle text-purple-500 ml-2"></i>
+                                    هذه التقنيات ليست للمستقبل البعيد، بل نستخدمها اليوم في مشاريع الفلل الفاخرة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- التقنية 4 -->
+                    <div class="tech-card">
+                        <div class="tech-badge bg-gradient-to-r from-primary to-cyan-500">التقنية 4</div>
+                        <div class="md:flex items-center gap-8">
+                            <div class="md:w-1/3 mb-6 md:mb-0 order-2">
+                                <div class="bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-6 border border-cyan-100">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-cyan-500 flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-recycle text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">المواد الحيوية</h4>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3 order-1">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    <strong class="text-primary">التشطيب المستدام:</strong> 
+                                    المستقبل ينتمي للمواد التي تعيش وتتنفس معنا:
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center ml-4 flex-shrink-0">
+                                            <i class="fas fa-leaf text-cyan-600"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold text-gray-800 mb-1">خشب ينمو من الفطر!</h5>
+                                            <p class="text-gray-600 text-sm">بديل للخشب الطبيعي، أقوى وأكثر استدامة</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center ml-4 flex-shrink-0">
+                                            <i class="fas fa-seedling text-cyan-600"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold text-gray-800 mb-1">بلاستيك من الطحالب</h5>
+                                            <p class="text-gray-600 text-sm">للديكورات والقطع الفنية، يتحلل طبيعياً</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center ml-4 flex-shrink-0">
+                                            <i class="fas fa-tint text-cyan-600"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold text-gray-800 mb-1">طلاء من ثاني أكسيد الكربون</h5>
+                                            <p class="text-gray-600 text-sm">يحول التلوث إلى مواد بناء جميلة</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- التقنية 5 -->
+                    <div class="tech-card">
+                        <div class="tech-badge bg-gradient-to-r from-accent to-pink-500">التقنية 5</div>
+                        <div class="md:flex items-center gap-8">
+                            <div class="md:w-1/3 mb-6 md:mb-0">
+                                <div class="bg-gradient-to-br from-pink-50 to-white rounded-2xl p-6 border border-pink-100">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-accent to-pink-500 flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-robot text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">الذكاء الاصطناعي في التشطيب</h4>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    <strong class="text-accent">عندما تتعلم المواد منك:</strong> 
+                                    الذكاء الاصطناعي لم يعد برنامجاً على الكمبيوتر فقط:
+                                </p>
+                                
+                                <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl p-6 mb-4">
+                                    <h5 class="font-bold text-gray-800 mb-3">كيف يعمل؟</h5>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div class="flex items-start">
+                                            <i class="fas fa-brain text-pink-500 text-sm mt-1 ml-2"></i>
+                                            <div class="mr-3">
+                                                <span class="block font-medium text-gray-700">إضاءة ذكية</span>
+                                                <span class="text-gray-600 text-xs">تتعلم مواعيد نومك واستيقاظك</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <i class="fas fa-thermometer-half text-pink-500 text-sm mt-1 ml-2"></i>
+                                            <div class="mr-3">
+                                                <span class="block font-medium text-gray-700">جدران ذكية</span>
+                                                <span class="text-gray-600 text-xs">تضبط العزل حسب الطقس الخارجي</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <i class="fas fa-eye text-pink-500 text-sm mt-1 ml-2"></i>
+                                            <div class="mr-3">
+                                                <span class="block font-medium text-gray-700">أرضيات ذكية</span>
+                                                <span class="text-gray-600 text-xs">تراقب حركة الأطفال والكبار في السن</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <i class="fas fa-water text-pink-500 text-sm mt-1 ml-2"></i>
+                                            <div class="mr-3">
+                                                <span class="block font-medium text-gray-700">حمامات ذكية</span>
+                                                <span class="text-gray-600 text-xs">تحلل المياه وتنبه لأي مشاكل صحية</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لماذا نختلف في استخدام التقنيات؟ -->
+            <div class="mb-20">
+                <div class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            لماذا لا نستخدم كل التقنيات الحديثة في كل مشروع؟
+                        </h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            الحكمة في التشطيب الحديث ليست في استخدام كل ما هو جديد، بل في استخدام المناسب
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center ml-4">
+                                    <i class="fas fa-times text-red-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800">ما نرفضه</h4>
+                            </div>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-ban text-red-400 text-xs mt-1 ml-2"></i>
+                                    <span>التقنيات غير المجربة في مناخنا الحار</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-ban text-red-400 text-xs mt-1 ml-2"></i>
+                                    <span>المواد التي تحتاج صيانة معقدة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-ban text-red-400 text-xs mt-1 ml-2"></i>
+                                    <span>الحلول التي تتناقض مع ثقافتنا وعاداتنا</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-ban text-red-400 text-xs mt-1 ml-2"></i>
+                                    <span>التكنولوجيا من أجل التكنولوجيا فقط</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center ml-4">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800">ما نتبناه</h4>
+                            </div>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xs mt-1 ml-2"></i>
+                                    <span>التقنيات التي تناسب مناخنا وثقافتنا</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xs mt-1 ml-2"></i>
+                                    <span>الحلول الذكية التي توفر الطاقة والماء</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xs mt-1 ml-2"></i>
+                                    <span>المواد المستدامة والصحية للأسر</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xs mt-1 ml-2"></i>
+                                    <span>التكنولوجيا التي تحسن جودة الحياة الحقيقية</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الخاتمة والرؤية -->
+            <div class="text-center">
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative">
+                        <!-- تأثير دائري خلفي -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-primary/5 blur-3xl"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-secondary/5 blur-3xl"></div>
+                        
+                        <div class="relative bg-white rounded-3xl p-12 shadow-2xl border border-gray-100">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                                <span class="text-primary">رؤيتنا:</span> التشطيب في عصر الثورة الصناعية الرابعة
+                            </h3>
+                            
+                            <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                                نحن لا نتابع فقط أحدث التقنيات العالمية، بل نشارك في تطويرها. 
+                                مختبراتنا البحثية تعمل على تكييف هذه التقنيات مع بيئتنا الصحراوية، 
+                                ثقافتنا العربية، واحتياجات أسرنا.
+                            </p>
+                            
+                            <div class="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                            
+                            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                                <a href="tel:01111263618" 
+                                   class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-1">
+                                    <i class="fas fa-flask ml-2"></i>
+                                    استشر خبراء التقنيات الحديثة
+                                </a>
+                                
+                                <a href="../blog/index.html" 
+                                   class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-xl font-bold text-lg hover:bg-primary/5 transition-all">
+                                    <i class="fas fa-newspaper ml-2"></i>
+                                    اقرأ عن مشاريعنا الذكية
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.tech-card {
+    position: relative;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.tech-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.875rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-card:nth-child(2) .tech-badge {
+    background: linear-gradient(135deg, var(--accent), #10b981);
+}
+
+.tech-card:nth-child(3) .tech-badge {
+    background: linear-gradient(135deg, var(--secondary), #8b5cf6);
+}
+
+.tech-card:nth-child(4) .tech-badge {
+    background: linear-gradient(135deg, var(--primary), #06b6d4);
+}
+
+.tech-card:nth-child(5) .tech-badge {
+    background: linear-gradient(135deg, var(--accent), #ec4899);
+}
+
+@media (max-width: 768px) {
+    .tech-card {
+        padding: 1.5rem;
+    }
+    
+    .tech-badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+}
+</style>
+
+    <!-- قسم تشطيب الفلل -->
+    <section id="villas" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
+                        تشطيب الفلل
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        تشطيب <span class="text-primary">الفلل والقصور</span> الفاخرة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        خبرة متخصصة في تشطيب الفلل الكبيرة والقصور بمواد فاخرة وتقنيات حديثة
+                    </p>
+                </div>
+
+                <!-- ميزات تشطيب الفلل -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">ماذا يميز تشطيب الفلل معنا؟</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-users text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">فريق متخصص للفلل</h4>
+                                    <p class="text-gray-600">فريق مدرب على التعامل مع المساحات الكبيرة والمشاريع الفاخرة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-gem text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">مواد تشطيب فاخرة</h4>
+                                    <p class="text-gray-600">استخدام أفضل المواد العالمية والمواد الطبيعية مثل الرخام والخشب</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-home text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تصميم متكامل</h4>
+                                    <p class="text-gray-600">تصميم جميع عناصر الفلة من الديكورات إلى التفاصيل الصغيرة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="تشطيب الفلل" 
+                             class="w-full h-full object-cover rounded-2xl shadow-lg image-frame">
+                    </div>
+                </div>
+
+                <!-- خدمات تشطيب الفلل الخاصة -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        خدمات <span class="text-primary">تشطيب الفلل</span> الخاصة
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="text-center p-6 border border-gray-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-swimming-pool text-primary text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">تشطيب المسابح</h4>
+                            <p class="text-gray-600 text-sm">تصميم وتشطيب المسابح الداخلية والخارجية بأنظمة حديثة</p>
+                        </div>
+                        
+                        <div class="text-center p-6 border border-gray-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-tree text-accent text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">تنسيق الحدائق</h4>
+                            <p class="text-gray-600 text-sm">تصميم وتنفيذ الحدائق المنزلية مع أنظمة الري الذكية</p>
+                        </div>
+                        
+                        <div class="text-center p-6 border border-gray-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-theater-masks text-secondary text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">صالات السينما المنزلية</h4>
+                            <p class="text-gray-600 text-sm">تصميم وتشطيب صالات السينما المنزلية بأنظمة صوت متطورة</p>
+                        </div>
+                        
+                        <div class="text-center p-6 border border-gray-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-dumbbell text-primary text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">غرف الرياضة</h4>
+                            <p class="text-gray-600 text-sm">تشطيب غرف الرياضة بأنواع الأرضيات المناسبة والمرايا</p>
+                        </div>
+                        
+                        <div class="text-center p-6 border border-gray-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-wine-bottle text-accent text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">البارات والملاحق</h4>
+                            <p class="text-gray-600 text-sm">تصميم وتشطيب البارات المنزلية وملاحق الضيوف الفاخرة</p>
+                        </div>
+                        
+                        <div class="text-center p-6 border border-gray-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-secondary text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">أنظمة الأمن والذكاء</h4>
+                            <p class="text-gray-600 text-sm">تركيب أنظمة الأمن المتكاملة والمنازل الذكية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الإشراف المتكامل -->
+    <section id="supervision" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        الإشراف المتكامل
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">الإشراف المتكامل</span> على المشاريع
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        إدارة وتنفيذ المشاريع من الفكرة إلى التسليم النهائي بجودة عالية وفي الوقت المحدد
+                    </p>
+                </div>
+
+                <!-- خدمات الإشراف -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="method-card">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">إشراف متكامل على المشروع</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                        <i class="fas fa-clipboard-check text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-800 mb-1">التخطيط والجدولة</h4>
+                                        <p class="text-gray-600 text-sm">وضع خطة زمنية دقيقة وجدولة جميع مراحل المشروع</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                        <i class="fas fa-search-dollar text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-800 mb-1">إدارة الميزانية</h4>
+                                        <p class="text-gray-600 text-sm">مراقبة التكاليف والتحكم في المصروفات دون تجاوز الميزانية</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                        <i class="fas fa-eye text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-800 mb-1">متابعة الجودة</h4>
+                                        <p class="text-gray-600 text-sm">التأكد من مطابقة التنفيذ للمواصفات والتصميم المعتمد</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                        <i class="fas fa-handshake text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-800 mb-1">التنسيق مع المقاولين</h4>
+                                        <p class="text-gray-600 text-sm">التواصل مع جميع الأطراف وضمان سير العمل بسلاسة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">فوائد الإشراف المتكامل</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-primary/5 p-4 rounded-lg">
+                                    <h4 class="font-bold text-gray-800 mb-1">توفير الوقت والجهد</h4>
+                                    <p class="text-gray-600 text-sm">نتولى جميع المهام الإدارية والفنية نيابة عنك</p>
+                                </div>
+                                
+                                <div class="bg-accent/5 p-4 rounded-lg">
+                                    <h4 class="font-bold text-gray-800 mb-1">تجنب الأخطاء الفنية</h4>
+                                    <p class="text-gray-600 text-sm">خبرتنا تحميك من الأخطاء الشائعة في التشطيب</p>
+                                </div>
+                                
+                                <div class="bg-secondary/5 p-4 rounded-lg">
+                                    <h4 class="font-bold text-gray-800 mb-1">الالتزام بالمواعيد</h4>
+                                    <p class="text-gray-600 text-sm">ضمان تسليم المشروع في الوقت المتفق عليه</p>
+                                </div>
+                                
+                                <div class="bg-primary/5 p-4 rounded-lg">
+                                    <h4 class="font-bold text-gray-800 mb-1">جودة التنفيذ</h4>
+                                    <p class="text-gray-600 text-sm">متابعة دقيقة لجميع مراحل التنفيذ لضمان الجودة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مراحل الإشراف -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مراحل <span class="text-primary">الإشراف المتكامل</span>
+                    </h3>
+                    
+                    <div class="relative">
+                        <!-- خط التقدم -->
+                        <div class="hidden md:block absolute top-1/2 right-0 left-0 h-1 bg-gray-200 transform -translate-y-1/2"></div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                            <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">التخطيط المبدئي</h4>
+                                <p class="text-gray-600 text-sm">دراسة المشروع وتحديد المتطلبات والميزانية</p>
+                            </div>
+                            
+                            <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                                <div class="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-drafting-compass"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">التصميم والمواصفات</h4>
+                                <p class="text-gray-600 text-sm">إعداد التصاميم النهائية وكتابة دفتر الشروط</p>
+                            </div>
+                            
+                            <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                                <div class="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">التنفيذ والمتابعة</h4>
+                                <p class="text-gray-600 text-sm">متابعة سير العمل ومراقبة الجودة اليومية</p>
+                            </div>
+                            
+                            <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">التسليم والضمان</h4>
+                                <p class="text-gray-600 text-sm">التسليم النهائي وتقديم ضمان على الأعمال</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مواد التشطيب -->
+    <section id="materials" class="py-20 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+                        مواد التشطيب
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        مواد <span class="text-primary">تشطيب عالية الجودة</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نعمل مع أفضل الموردين العالميين والمحليين لتوفير مواد تشطيب تتميز بالجودة والديمومة
+                    </p>
+                </div>
+
+                <!-- أنواع مواد التشطيب -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="material-card">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-square text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">السيراميك والرخام</h4>
+                        <p class="text-gray-600 text-center text-sm">
+                            نخبة من أفضل أنواع السيراميك والرخام المحلي والعالمي
+                        </p>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tree text-accent text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">الخشب والباركيه</h4>
+                        <p class="text-gray-600 text-center text-sm">
+                            خشب طبيعي وباركيه بأفضل الجودات والتصاميم العصرية
+                        </p>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-paint-roller text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">الدهانات والألوان</h4>
+                        <p class="text-gray-600 text-center text-sm">
+                            دهانات صديقة للبيئة بجميع الألوان والأنواع المائية والزيتية
+                        </p>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">التجهيزات الصحية</h4>
+                        <p class="text-gray-600 text-center text-sm">
+                            تجهيزات صحية من ماركات عالمية مع ضمان طويل المدى
+                        </p>
+                    </div>
+                </div>
+
+                <!-- جدول مقارنة المواد -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مقارنة بين <span class="text-primary">أنواع المواد</span>
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>نوع المادة</th>
+                                    <th>الماركات</th>
+                                    <th>متوسط العمر</th>
+                                    <th>مستوى الجودة</th>
+                                    <th>الضمان</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">رخام طبيعي</td>
+                                    <td class="text-center">إيطالي، إسباني، تركي</td>
+                                    <td class="text-center">20+ سنة</td>
+                                    <td class="text-center text-green-600">ممتاز</td>
+                                    <td class="text-center">5 سنوات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">سيراميك</td>
+                                    <td class="text-center">إسباني، إيطالي، محلي</td>
+                                    <td class="text-center">15+ سنة</td>
+                                    <td class="text-center text-green-600">جيد جداً</td>
+                                    <td class="text-center">3 سنوات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">باركيه خشبي</td>
+                                    <td class="text-center">ألماني، سويدي، أوروبي</td>
+                                    <td class="text-center">25+ سنة</td>
+                                    <td class="text-center text-green-600">ممتاز</td>
+                                    <td class="text-center">10 سنوات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">دهانات</td>
+                                    <td class="text-center">جوتن، سايبس، محلي</td>
+                                    <td class="text-center">7+ سنوات</td>
+                                    <td class="text-center text-yellow-600">جيد</td>
+                                    <td class="text-center">2 سنوات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">تجهيزات صحية</td>
+                                    <td class="text-center">أمريكي، أوروبي، آسيوي</td>
+                                    <td class="text-center">10+ سنوات</td>
+                                    <td class="text-center text-green-600">جيد جداً</td>
+                                    <td class="text-center">5 سنوات</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    الأسئلة <span class="text-primary">الشائعة</span> عن التشطيبات والديكورات
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- سؤال 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(1)">
+                            <h4 class="text-lg font-bold text-gray-800">كم تستغرق عملية تشطيب منزل متوسط؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-1"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p class="text-gray-700">
+                                تختلف المدة حسب حجم المشروع ونوع التشطيب:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>شقة 100م²:</strong> 2-3 أشهر للتشطيب المتوسط، 3-4 أشهر للتشطيب الفاخر</li>
+                                    <li><strong>منزل 200م²:</strong> 3-4 أشهر للتشطيب المتوسط، 4-6 أشهر للتشطيب الفاخر</li>
+                                    <li><strong>فلة 400م²:</strong> 6-8 أشهر للتشطيب المتوسط، 8-12 شهر للتشطيب الفاخر</li>
+                                    <li><strong>مشروع تجاري:</strong> حسب المساحة وتعقيد التصميم</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(2)">
+                            <h4 class="text-lg font-bold text-gray-800">ما هو الفرق بين التشطيب العادي والتشطيب الفاخر؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-2"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p class="text-gray-700">
+                                <strong>التشطيب العادي:</strong> يركز على الوظائف الأساسية باستخدام مواد متوسطة الجودة.
+                                <br><br>
+                                <strong>التشطيب الفاخر:</strong> يشمل:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>استخدام مواد عالمية عالية الجودة</li>
+                                    <li>تصميم داخلي متكامل</li>
+                                    <li>تفاصيل ديكورية مميزة</li>
+                                    <li>أنظمة إضاءة متطورة</li>
+                                    <li>تجهيزات فاخرة للحمامات والمطابخ</li>
+                                    <li>ضمان أطول على المواد والأعمال</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(3)">
+                            <h4 class="text-lg font-bold text-gray-800">هل تقدمون ضمان على أعمال التشطيب؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-3"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p class="text-gray-700">
+                                نعم، نقدم نظام ضمان متكامل:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>ضمان على الأعمال:</strong> 3 سنوات على جميع الأعمال الإنشائية والتنفيذية</li>
+                                    <li><strong>ضمان على المواد:</strong> حسب سياسة الضمان الخاصة بكل مورد</li>
+                                    <li><strong>ضمان على التصميم:</strong> متابعة مجانية لمدة سنة بعد التسليم</li>
+                                    <li><strong>صيانة دورية:</strong> خطة صيانة وقائية سنوية للمشاريع الكبيرة</li>
+                                </ul>
+                                جميع عقودنا تتضمن بنود ضمان واضحة وملزمة للطرفين.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(4)">
+                            <h4 class="text-lg font-bold text-gray-800">كيف يتم تحديد تكلفة مشروع التشطيب؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-4"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p class="text-gray-700">
+                                تعتمد تكلفة التشطيب على عدة عوامل:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>مساحة المشروع:</strong> التكلفة تتناسب طردياً مع المساحة</li>
+                                    <li><strong>نوعية المواد:</strong> المواد الفاخرة تزيد التكلفة بنسبة 30-50%</li>
+                                    <li><strong>تعقيد التصميم:</strong> التصاميم المعقدة تحتاج وقتاً وتكلفة أكبر</li>
+                                    <li><strong>الموقع الجغرافي:</strong> تكاليف النقل والمواد تختلف حسب المنطقة</li>
+                                    <li><strong>الخدمات الإضافية:</strong> التصميم الداخلي، الإشراف، الديكورات</li>
+                                    <li><strong>الجدول الزمني:</strong> المشاريع العاجلة قد تحتاج تكلفة إضافية</li>
+                                </ul>
+                                نقدم دراسة جدوى مفصلة لكل مشروع قبل البدء فيه.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(5)">
+                            <h4 class="text-lg font-bold text-gray-800">هل يمكن تحديث ديكور المنزل الحالي دون تشطيب كامل؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-5"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p class="text-gray-700">
+                                نعم، نقدم خدمات تجديد وتحديث الديكور دون الحاجة لتشطيب كامل:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>تجديد الدهانات:</strong> تغيير ألوان الجدران والأسقف</li>
+                                    <li><strong>تحديث الأرضيات:</strong> تركيب أرضيات جديدة فوق القديمة</li>
+                                    <li><strong>تجديد المطابخ والحمامات:</strong> تغيير الأدراج والأسطح فقط</li>
+                                    <li><strong>تحديث الإضاءة:</strong> تغيير الوحدات الإضاءة والديكورات</li>
+                                    <li><strong>تجديد المفروشات:</strong> تغيير الأثاث والستائر والسجاد</li>
+                                    <li><strong>إضافة ديكورات:</strong> لوحات، تحف، نباتات زينة</li>
+                                </ul>
+                                ندرس حالة المنزل الحالية ونقدم الحلول المناسبة والمقتصدة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- قسم فلسفة التشطيب واختيار الشركة -->
+<section id="finishing-philosophy" class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- العنوان الرئيسي -->
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                    فن التشطيب
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    التشطيب ليس مجرد عملية إنشائية...
+                    <span class="text-primary">بل هو قصة ترويها مساحتك</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    في كل تفصيل، في كل لون، في كل سطح... هناك حكاية تنتظر أن تُروى
+                </p>
+            </div>
+
+            <!-- الفقرة الافتتاحية -->
+            <div class="prose prose-lg mx-auto mb-16 text-center">
+                <p class="text-gray-700 text-xl leading-relaxed mb-8">
+                    تخيل أنك تخطو لأول مرة إلى منزلك بعد التشطيب. الأرضية الناعمة تحت قدميك، 
+                    الضوء الدافئ يرقص على الجدران، الروائح العذبة للخشب الجديد والدهان الطازج. 
+                    كل شيء في مكانه، كل شيء يتناغم، كل شيء يهمس: "هذا بيتك".
+                </p>
+                <p class="text-gray-700 text-xl leading-relaxed">
+                    هذا الشعور، هذه التجربة، هذه اللحظة... هي ما نسعى لصنعه في كل مشروع.
+                </p>
+            </div>
+
+            <!-- التشطيب كاستثمار -->
+            <div class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        التشطيب: <span class="text-primary">استثمار في جودة الحياة</span>
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ml-6 flex-shrink-0">
+                                <i class="fas fa-home text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">ليس مجرد جدران وأرضيات</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    الكثيرون يرون التشطيب مجرد طبقة من الطلاء أو بلاط على الأرض. 
+                                    لكن الحقيقة أن التشطيب الجيد هو الطبقة التي تفصل بين "مكان للسكن" 
+                                    و"بيت للعيش". هو الفارق بين الاستيقاظ على جدران باردة 
+                                    والاستيقاظ على ضوء شمس يلعب مع الألوان التي اخترتها بعناية.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center ml-6 flex-shrink-0">
+                                <i class="fas fa-heart text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">تأثير نفسي عميق</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    الدراسات النفسية تؤكد أن المساحات التي نعيش فيها تؤثر مباشرة 
+                                    على حالتنا المزاجية، إنتاجيتنا، وحتى علاقاتنا الأسرية. 
+                                    منزل مُشطَب بعناية لا يريح العين فقط، بل يريح القلب، 
+                                    يهدئ الأعصاب، ويخلق بيئة مثالية للنمو والازدهار.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center ml-6 flex-shrink-0">
+                                <i class="fas fa-chart-line text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">استثمار مالي ذكي</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    نعم، التشطيب الجيد يكلف مالاً. لكنه ليس نفقة، بل استثمار. 
+                                    استثمار يزيد من قيمة عقارك بنسبة تصل إلى 30%. 
+                                    استثمار يوفر عليك تكاليف الصيانة لسنوات طويلة. 
+                                    استثمار في راحتك اليومية التي لا تقدر بثمن.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لماذا يختلف التشطيب الجيد؟ -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                        الفارق بين <span class="text-primary">تشطيب جيد وآخر عادي</span>
+                    </h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        التشطيب الجيد لا تراه فقط، بل تشعر به
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-times text-red-500 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 text-center">التشطيب العادي</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-red-400 text-xs mt-2 ml-2"></i>
+                                <span>ينتهي عند "النظر الجيد"</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-red-400 text-xs mt-2 ml-2"></i>
+                                <span>يهتم بالمظهر أكثر من الجوهر</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-red-400 text-xs mt-2 ml-2"></i>
+                                <span>يظهر عيوبه مع مرور الوقت</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-red-400 text-xs mt-2 ml-2"></i>
+                                <span>يكلفك أكثر على المدى الطويل</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 border-primary/20">
+                        <div class="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-check text-green-500 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 text-center">التشطيب الجيد</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-green-500 text-xs mt-2 ml-2"></i>
+                                <span>يدوم لسنوات طويلة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-green-500 text-xs mt-2 ml-2"></i>
+                                <span>يجمع بين الجمال والمتانة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-green-500 text-xs mt-2 ml-2"></i>
+                                <span>يزداد جمالاً مع الزمن</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-green-500 text-xs mt-2 ml-2"></i>
+                                <span>استثمار في سعادتك اليومية</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كيف تختار شركة التشطيب المناسبة؟ -->
+            <div class="mb-20">
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            السؤال الأهم: 
+                            <span class="text-primary">كيف تختار شركة التشطيب المناسبة؟</span>
+                        </h3>
+                        <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                            اختيار الشركة المناسبة هو أول خطوة في رحلة تشطيب ناجحة
+                        </p>
+                    </div>
+
+                    <!-- الخطوة 1: لا تتعجل -->
+                    <div class="mb-10">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                <span class="text-2xl font-bold text-primary">١</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">لا تتعجل في الاختيار</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    رحلة التشطيب قد تستمر أشهراً، وعلاقتك مع الشركة ستستمر طوال هذه المدة. 
+                                    خذ وقتك. قابل أكثر من شركة. استمع إلى عروضهم. 
+                                    الشركة المناسبة ليست فقط التي تقدم أقل سعر، بل التي تفهم رؤيتك، 
+                                    تحترم ميزانيتك، وتتحدث بلغة الجودة والاحترافية.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 2: اطلب المشاريع السابقة -->
+                    <div class="mb-10">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                <span class="text-2xl font-bold text-primary">٢</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">اطلب رؤية مشاريع سابقة</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    الصور الجميلة على المواقع الإلكترونية شيء، والمشاريع الحية شيء آخر. 
+                                    اطلب زيارة مشروع منفذ بالفعل. انظر إلى التفاصيل: 
+                                    كيف التقاء الأرضيات مع الجدران؟ كيف تنتهي الزوايا؟ 
+                                    كيف تبدو الأماكن التي لا يراها الناس عادة؟ 
+                                    الجودة الحقيقية تختبئ في التفاصيل الصغيرة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 3: استمع لآراء العملاء -->
+                    <div class="mb-10">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                <span class="text-2xl font-bold text-primary">٣</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">استمع إلى قصص العملاء</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    اطلب التواصل مع عملاء سابقين. اسألهم ليس فقط عن النتيجة النهائية، 
+                                    بل عن الرحلة كلها: كيف كانت التواصل أثناء العمل؟ 
+                                    هل التزموا بالجدول الزمني؟ كيف تعاملوا مع المشاكل الطارئة؟ 
+                                    الشركة المحترفة لا تخاف من عرض عملائها السابقين، بل تفتخر بهم.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 4: انظر إلى التفاصيل -->
+                    <div class="mb-10">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                <span class="text-2xl font-bold text-primary">٤</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">انظر إلى التفاصيل في العرض</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    العرض المتميز ليس فقط ورقة بأرقام. انظر إلى التفاصيل: 
+                                    هل هناك خطة عمل واضحة؟ جدول زمني واقعي؟ 
+                                    قائمة مفصلة بالمواد مع ماركاتها وجودتها؟ 
+                                    شروط ضمان واضحة؟ الشركة المحترفة تقدم كل شيء كتابة، 
+                                    لأنها تريد أن تبدأ العلاقة بوضوح وتستمر بها بثقة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 5: ثق بحدسك -->
+                    <div class="mb-10">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                <span class="text-2xl font-bold text-primary">٥</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3">ثق بحدسك</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    في النهاية، بعد كل الأرقام والمقارنات، استمع إلى صوتك الداخلي. 
+                                    هل تشعر بالراحة مع هذه الشركة؟ هل تثق أنهم سيعاملون منزلك 
+                                    كما يعاملون منزلهم؟ هل تشعر أنهم يهتمون حقاً بتحقيق رؤيتك؟ 
+                                    هذه العلاقة ستستمر أشهراً، فاختر من تشعر أنهم شركاء حقيقيون في رحلتك.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- علامات الشركة الجيدة -->
+            <div class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        <span class="text-primary">عشرة علامات</span> تخبرك أنك أمام شركة تشطيب جيدة
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تستمع أكثر مما تتكلم</h5>
+                                <p class="text-gray-600 text-sm">تفهم احتياجاتك قبل أن تقدم حلولها</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تقدم نصائح صادقة</h5>
+                                <p class="text-gray-600 text-sm">حتى لو كانت تخالف رغبتك المبدئية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تتحدث عن المشاكل المحتملة</h5>
+                                <p class="text-gray-600 text-sm">بدلاً من إعطاء وعود غير واقعية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">لها فريق ثابت ومتخصص</h5>
+                                <p class="text-gray-600 text-sm">وليس مجرد عمال يومية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تستخدم مواد معروفة وموثوقة</h5>
+                                <p class="text-gray-600 text-sm">وتوفر لك شهادات ضمانها</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تقدم عرضاً مفصلاً وواضحاً</h5>
+                                <p class="text-gray-600 text-sm">بدون بنود غامضة أو "مفاجآت" لاحقة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تلتزم بجدول زمني واقعي</h5>
+                                <p class="text-gray-600 text-sm">وتبلغك بأي تأخير مسبقاً</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تواصل مستمر ومباشر</h5>
+                                <p class="text-gray-600 text-sm">مع مسؤول يمكنك الوصول إليه</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تنظف موقع العمل يومياً</h5>
+                                <p class="text-gray-600 text-sm">دليل على النظام والاحترافية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-800 mb-2">تقدم ضماناً حقيقياً</h5>
+                                <p class="text-gray-600 text-sm">ليس مجرد وعود شفهية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الخاتمة التحفيزية -->
+            <div class="text-center">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                            رحلة التشطيب: <span class="text-primary">من الحلم إلى الواقع</span>
+                        </h3>
+                        
+                        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                            تذكر دائماً: التشطيب الجيد ليس رفاهية، بل هو استحقاق. 
+                            استحقاق تعيشه كل يوم عند استيقاظك في غرفة مزينة بألوان تحبها، 
+                            عند مشيك على أرضية مريحة، عند جلوسك في مساحة تشعرك بالانتماء.
+                        </p>
+                        
+                        <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                            لا تستعجل، لا تتهاون، اختر بعناية. لأن المساحة التي تعيش فيها 
+                            ليست مجرد جدران وأرضيات، بل هي الإطار الذي تعيش فيه حياتك، 
+                            تشاهد فيه أحبابك يكبرون، تخلق فيه ذكريات تبقى معك للأبد.
+                        </p>
+                        
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                        
+                        <p class="text-gray-600 italic">
+                            "بيتك مرآة قلبك، فاجعل انعكاسه جميلاً"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - حلول متكاملة للتشطيبات والديكورات">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        خبرة 15 عاماً في مجال التشطيبات والديكورات. نقدم حلولاً متكاملة تبدأ من التصميم وتنتهي بالتسليم النهائي بجودة عالية وفي الوقت المحدد.
+                    </p>
+                </div>
+
+                <!-- خدمات التشطيب -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدماتنا</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#design"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                التصميم الداخلي
+                            </a></li>
+                        <li><a href="#finishing"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                أعمال التشطيب
+                            </a></li>
+                        <li><a href="#villas"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تشطيب الفلل
+                            </a></li>
+                        <li><a href="#supervision"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                الإشراف المتكامل
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- روابط مهمة -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركاؤنا المعتمدون
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                مدونة التشطيب والديكور
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                من نحن
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">استشارات مجانية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">design@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - حلول متكاملة للتشطيبات والديكورات. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الخدمة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الضمان</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // وظيفة الأسئلة الشائعة
+        function toggleFAQ(number) {
+            const answer = document.getElementById('faq-answer-' + number);
+            const icon = document.getElementById('faq-icon-' + number);
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // حاسبة التكلفة
+        function calculateCost() {
+            const propertyType = document.querySelector('select').value;
+            const area = parseInt(document.querySelector('input[type="number"]').value) || 0;
+            const finishingType = document.querySelectorAll('select')[1].value;
+            const services = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            
+            if (!area || area < 50) {
+                alert('الرجاء إدخال مساحة صحيحة (50م² على الأقل)');
+                return;
+            }
+            
+            // أسعار أساسية حسب نوع العقار
+            let basePricePerMeter = 0;
+            
+            switch(propertyType) {
+                case 'apartment':
+                    basePricePerMeter = 800;
+                    break;
+                case 'house':
+                    basePricePerMeter = 1000;
+                    break;
+                case 'villa':
+                    basePricePerMeter = 1200;
+                    break;
+                case 'office':
+                    basePricePerMeter = 900;
+                    break;
+                case 'commercial':
+                    basePricePerMeter = 700;
+                    break;
+            }
+            
+            // تعديل حسب نوع التشطيب
+            switch(finishingType) {
+                case 'economy':
+                    basePricePerMeter *= 0.7;
+                    break;
+                case 'standard':
+                    basePricePerMeter *= 1;
+                    break;
+                case 'premium':
+                    basePricePerMeter *= 1.5;
+                    break;
+                case 'luxury':
+                    basePricePerMeter *= 2;
+                    break;
+            }
+            
+            // حساب التكلفة الأساسية
+            let estimatedCost = Math.round(basePricePerMeter * area);
+            
+            // إضافة تكلفة الخدمات الإضافية
+            if (services > 0) {
+                estimatedCost += Math.round(estimatedCost * (services * 0.1));
+            }
+            
+            // عرض النتيجة
+            document.getElementById('estimated-cost').textContent = estimatedCost.toLocaleString();
+            document.getElementById('cost-result').classList.remove('hidden');
+            
+            // التمرير السلس إلى النتيجة
+            document.getElementById('cost-result').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        // تأثيرات التمرير السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // تأثيرات الظهور عند التمرير
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // مراقبة العناصر لإضافة تأثيرات الظهور
+        document.querySelectorAll('.service-card, .design-card, .material-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // إضافة تأثيرات CSS للظهور
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .animate-fade-in {
+                animation: fadeIn 0.6s ease forwards;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

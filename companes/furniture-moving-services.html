@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات نقل العفش الشامل | فك، نقل، تركيب، تخزين، صيانة | قمر الخليج الذهبي</title>
+    <meta name="description" content="خدمات نقل عفش شاملة: فك، نقل، تركيب، تخزين، صيانة وتغليف. شركات نقل موثوقة، فريق محترف، تأمين شامل، مواد تغليف عالية الجودة.">
+    <meta name="keywords" content="نقل عفش, فك وتركيب العفش, تخزين العفش, صيانة العفش, شركات نقل العفش, نقل اثاث, خدمات نقل, تخزين اثاث, تغليف العفش, نقل منازل">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#D2691E',
+                        accent: '#A0522D',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .furniture-card {
+            transition: all 0.4s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        
+        .furniture-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(139, 69, 19, 0.15);
+            border-color: #8B4513;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        
+        .furniture-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .furniture-card:hover .furniture-img {
+            transform: scale(1.08);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #008080 0%, #008080 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #f8f4f0 0%, #f5f1eb 100%);
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(139, 69, 19, 0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(139, 69, 19, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .process-step {
+            position: relative;
+            padding: 30px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.15);
+        }
+        
+        .process-step-number {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            background: #8B4513;
+        }
+        
+        .company-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .company-card:hover {
+            border-color: #8B4513;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            padding: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .area-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .area-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.1);
+        }
+        
+        .faq-item {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .story-section {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .story-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .difference-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .difference-card:hover {
+            transform: translateY(-10px);
+            border-color: #8B4513;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .difference-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .factor-card {
+            position: relative;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .factor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .factor-number {
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            width: 60px;
+            height: 60px;
+            background: #8B4513;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .factor-card {
+                padding: 2rem 1.5rem 2rem 2rem;
+            }
+            
+            .factor-number {
+                position: relative;
+                right: 0;
+                top: 0;
+                margin-bottom: 1.5rem;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - خدمات نقل العفش">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">خدمات نقل العفش الشاملة</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        نقل العفش
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-truck-moving ml-3 w-6 text-center"></i>
+                        نقل العفش
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    });
+</script>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-24 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    رحلة <span class="text-secondary">العفش</span> الآمنة من الباب إلى الباب
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-100 leading-relaxed">
+                    نقل، فك، تركيب، تخزين، وصيانة - كل ما يحتاجه عفشك في رحلة الانتقال بأمان واحترافية
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-10 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">10,000+</div>
+                        <div class="text-gray-200">قطعة عفش تم نقلها</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">2,500+</div>
+                        <div class="text-gray-200">منزل تم نقل عفشه</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">99.7%</div>
+                        <div class="text-gray-200">سلامة العفش المنقول</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">15+</div>
+                        <div class="text-gray-200">سنة خبرة في النقل</div>
+                    </div>
+                </div>
+                
+                <!-- أزرار التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#moving" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-truck ml-2"></i>
+                        نقل العفش
+                    </a>
+                    <a href="#storage" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-warehouse ml-2"></i>
+                        تخزين العفش
+                    </a>
+                    <a href="#assembly" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-tools ml-2"></i>
+                        فك وتركيب
+                    </a>
+                    <a href="#companies" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-building ml-2"></i>
+                        شركات النقل
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f8f4f0"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم فلسفة العفش ودور الشركات -->
+    <section id="furniture-philosophy" class="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        فلسفة العفش
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        العفش ليس أثاثاً فقط.. 
+                        <span class="text-primary">بل هو ذاكرة وحياة</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        في كل قطعة عفش قصة، وفي كل نقل رحلة، ونحن حراس هذه الذكريات في رحلتها
+                    </p>
+                </div>
+
+                <!-- مقدمة فلسفية -->
+                <div class="prose prose-lg mx-auto mb-16 text-center">
+                    <p class="text-gray-700 text-xl leading-relaxed mb-8">
+                        العفش في بيوتنا ليس مجرد خشب ونسيج، بل هو شاهد على اللحظات، حارس الذكريات، 
+                        ومستودع الأحلام. كل كرسي حمل ضحكات، كل طاولة جمعت عائلة، كل سرير احتضن أحلاماً.
+                    </p>
+                </div>
+
+                <!-- العوامل الأساسية لخدمات العفش -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-12 text-center">
+                        أركان خدمة العفش الشاملة: <span class="text-primary">الدورة الكاملة</span>
+                    </h3>
+                    
+                    <div class="space-y-12">
+                        <!-- عامل 1 -->
+                        <div class="factor-card">
+                            <div class="factor-number">١</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">الفك الاحترافي: فن التفكيك الآمن</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        فك العفش ليس مجرد إزالة مسامير، بل هو علم وفن. كل قطعة لها طريقة فك خاصة، 
+                                        كل مسمار له مكانه، كل وصلة تحتاج عناية. الفك السليم هو أساس النقل الآمن.
+                                    </p>
+                                    <p>
+                                        نتعامل مع العفش كجسم حي، نعرف مفاصله، ندرك نقاط ضعفه، نحترم تاريخه. 
+                                        الفك عندنا عملية جراحية دقيقة، نخرج منها بالعفش سليماً وجاهزاً للرحلة.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- عامل 2 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٢</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">التغليف المتقن: درع الحماية الذكي</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        التغليف هو اللحظة التي نصنع فيها درعاً واقياً للذكريات. نلف القطع بطبقات 
+                                        من الحماية: الفقاعات للصدمات، البلاستيك للرطوبة، الكرتون للخدوش، الشريط للأمان.
+                                    </p>
+                                    <p>
+                                        كل مادة تغليف نختارها بحكمة، كل طبقة نضعها بحرفية، كل عقدة نربطها بأمانة. 
+                                        التغليف عندنا ليس تغطية، بل هو تحضير للرحلة بكل ما تحمله من تحديات.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- عامل 3 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٣</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">النقل الآمن: رحلة العناية المتواصلة</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        الشاحنة ليست مجرد وسيلة نقل، بل هي حاضنة متنقلة للعفش. نختار المركبات 
+                                        بحكمة، نجهزها بعناية، نضع القطع بذكاء، نثبتها بأمان، نسير بها بحذر.
+                                    </p>
+                                    <p>
+                                        السائق عندنا ليس مجرد قائد، بل هو حارس للذكريات. يعرف كل منعطف، يحسب 
+                                        كل اهتزاز، يختار كل طريق، يصل بسلامة القطع وبراحة أصحابها.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- عامل 4 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٤</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">التركيب الدقيق: إعادة الحياة للقطع</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        التركيب هو لحظة الولادة الجديدة للعفش في بيته الجديد. نعيد تجميع القطع 
+                                        بدقة الجراح، نثبتها بقوة البنائين، نضبطها بأناقة المصممين.
+                                    </p>
+                                    <p>
+                                        كل مسمار نعيده لمكانه، كل وصلة نصلحها بحرفية، كل سطح نلمعه بعناية. 
+                                        التركيب عندنا ليس تجميعاً فقط، بل هو إحياء للعفش في مسكنه الجديد.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- عامل 5 -->
+                        <div class="factor-card">
+                            <div class="factor-number">٥</div>
+                            <div class="mr-16">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">التخزين الذكي: بيت العفش المؤقت</h4>
+                                <div class="text-gray-700 leading-relaxed space-y-4">
+                                    <p>
+                                        المخزن ليس مجرد مساحة فارغة، بل هو بيت مؤقت للعفش. نختاره بعناية: 
+                                        جاف، آمن، منظم، مراقب. نرتب القطع بحكمة، نحميها بذكاء، نزورها بانتظام.
+                                    </p>
+                                    <p>
+                                        التخزين عندنا ليس إخفاءً، بل هو حفظ. نحفظ القطع كما تحفظ الكنوز في 
+                                        الخزائن، نراقبها كما تراقب الأم أطفالها، نعيدها سليمة كما استلمناها.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دور شركات النقل -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-12 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        دور <span class="text-primary">شركات النقل</span> في حماية تراثك المنزلي
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- دور 1 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الحماية المتكاملة</h4>
+                            <p class="text-gray-700">
+                                الشركات توفر أنظمة حماية شاملة: تأمين، تتبع، مراقبة، وصيانة وقائية تحمي عفشك من اللحظة الأولى إلى الأخيرة
+                            </p>
+                        </div>
+                        
+                        <!-- دور 2 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-users-cog text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الخبرة المتخصصة</h4>
+                            <p class="text-gray-700">
+                                فريق مدرب على التعامل مع جميع أنواع العفش: الخشبي، الزجاجي، الرخامي، الأثري، والفاخر ببروتوكولات خاصة لكل نوع
+                            </p>
+                        </div>
+                        
+                        <!-- دور 3 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-warehouse text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">البنية التحتية</h4>
+                            <p class="text-gray-700">
+                                مستودعات مجهزة، شاحنات مخصصة، معدات متطورة، ونظام تتبع ذكي يضمن سلامة عفشك في كل مرحلة
+                            </p>
+                        </div>
+                        
+                        <!-- دور 4 -->
+                        <div class="info-card p-6">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                                <i class="fas fa-handshake text-green-500 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الشراكات الاستراتيجية</h4>
+                            <p class="text-gray-700">
+                                شبكة من الشركاء المتخصصين: نجارين، دهانين، مرممين، ومخازن متخصصة لتقديم خدمة شاملة لا تقتصر على النقل فقط
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- خاتمة -->
+                <div class="text-center">
+                    <div class="max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                            العفش: <span class="text-primary">تراث متنقل وحياة متجددة</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                            عندما تختار شركة نقل عفش محترفة، فأنت لا تختار مجرد ناقلين، بل تختار حراساً لذكرياتك، 
+                            أمناء على تراثك، وشركاء في رحلة تجديد حياتك.
+                            <br><br>
+                            العفش يحمل روح البيت، ونقل العفش هو نقل للروح. اختر من يحمل روحك بأمانة، 
+                            ويعيدها إليك في بيتك الجديد أكثر تألقاً وحيوية.
+                        </p>
+                        
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+                        
+                        <p class="text-gray-600 italic">
+                            "البيت ليس جدراناً، بل هو العفش الذي يحمل حكايات من عاشوا بينها"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدمات نقل العفش الشاملة -->
+    <section id="moving" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        خدمات النقل الشامل
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        رحلة <span class="text-primary">العفش الكاملة</span> من البداية للنهاية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نقدم حلاً متكاملاً يشمل كل ما يحتاجه عفشك في رحلة الانتقال
+                    </p>
+                </div>
+
+                <!-- قصة النقل -->
+                <div class="mb-20">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                        <div class="text-center mb-10">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                                رحلة العفش معنا: من الفك إلى التركيب
+                            </h3>
+                            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                                كل نقل عفش هو قصة، وكل قصة تبدأ بالاستعداد وتنتهي بالاستقرار. 
+                                نحن نروي هذه القصة بفصول من الاحترافية والعناية
+                            </p>
+                        </div>
+
+                        <!-- مراحل النقل -->
+                        <div class="space-y-8">
+                            <div class="story-section">
+                                <div class="flex items-start mb-6">
+                                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                        <i class="fas fa-clipboard-list text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-3">الفصل الأول: التخطيط الذكي</h4>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            نبدأ بزيارة استشارية ندرس فيها كل قطعة، نقيسها، نصورها، نحدد طريقة نقلها. 
+                                            نصنع خريطة ذكية للعفش: ما يحتاج فكاً، ما يحتاج تغليفاً خاصاً، ما يحتاج عناية فائقة.
+                                            التخطيط عندنا ليس مجرد قائمة، بل هو استراتيجية نقل محكمة.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="story-section">
+                                <div class="flex items-start mb-6">
+                                    <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                        <i class="fas fa-box-open text-accent text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-3">الفصل الثاني: التغليف المتقن</h4>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            بأيدٍ تعرف سر كل مادة، نغلف الخشب بحنان، الزجاج بحذر، الرخام باحترام. 
+                                            نستخدم مواد تغليف متخصصة: الفلين للزجاج، الفقاعات للخشب، الأغطية الواقية للأسطح.
+                                            كل قطعة تحصل على درعها الخاص، كل درع يصمم حسب طبيعة القطعة وأهميتها.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="story-section">
+                                <div class="flex items-start mb-6">
+                                    <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                        <i class="fas fa-truck-loading text-secondary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-3">الفصل الثالث: التحميل الذكي</h4>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            الشاحنة عندنا ليست صندوقاً فارغاً، بل هي لوحة شطرنج نرتب عليها القطع بذكاء. 
+                                            الثقيل في الأسفل، الخفيف في الأعلى، الهش في المنتصف، الثمين في القلب.
+                                            نستخدم معدات رفع متطورة، أحزمة تثبيت ذكية، وفوط حماية لكل سطح.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="story-section">
+                                <div class="flex items-start mb-6">
+                                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                        <i class="fas fa-home text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-3">الفصل الأخير: الاستقرار الجديد</h4>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            في البيت الجديد، لا نرمي القطع فحسب، بل نضعها في أماكنها المخطط لها، 
+                                            نركبها بدقة، نضبطها بأناقة، نلمعها بعناية. نترك لك بيتاً مرتباً، عفشاً سليماً، 
+                                            وراحة بال كاملة. رحلة العفش تنتهي عندما يستقر في بيته الجديد وكأنه لم يغادره.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- اقتباس -->
+                        <div class="mt-12 pt-8 border-t border-gray-200">
+                            <div class="text-center">
+                                <i class="fas fa-quote-right text-3xl text-gray-300 mb-4"></i>
+                                <p class="text-xl italic text-gray-700 max-w-2xl mx-auto">
+                                    "نقل عفش ناجح ليس نقلاً للأثاث فقط، بل هو نقل للحياة من مكان إلى مكان"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أنواع خدمات النقل -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        أنواع <span class="text-primary">خدمات النقل</span> المتخصصة
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="difference-card">
+                            <div class="difference-icon">
+                                <i class="fas fa-home text-white"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">نقل المنازل الشامل</h4>
+                            <p class="text-gray-600">
+                                خدمة كاملة تشمل فك جميع القطع، تغليفها، نقلها، وتركيبها في الموقع الجديد مع تنظيف المسكن القديم والجديد
+                            </p>
+                        </div>
+                        
+                        <div class="difference-card">
+                            <div class="difference-icon">
+                                <i class="fas fa-building text-white"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">نقل المكاتب والشركات</h4>
+                            <p class="text-gray-600">
+                                نقل متخصص للمكاتب يشمل الأثاث المكتبي، الأجهزة الإلكترونية، الملفات، وإعادة تركيب جميع الأنظمة
+                            </p>
+                        </div>
+                        
+                        <div class="difference-card">
+                            <div class="difference-icon">
+                                <i class="fas fa-university text-white"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">نقل المؤسسات الحكومية</h4>
+                            <p class="text-gray-600">
+                                خدمات نقل للمؤسسات الكبيرة مع بروتوكولات أمنية خاصة، توقيتات محددة، وتوثيق كامل للعملية
+                            </p>
+                        </div>
+                        
+                        <div class="difference-card">
+                            <div class="difference-icon">
+                                <i class="fas fa-palette text-white"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">نقل القطع الفنية والتحف</h4>
+                            <p class="text-gray-600">
+                                نقل متخصص للقطع الفنية، التحف الأثرية، والمقتنيات الثمينة مع تأمين شامل ومرافقة خبراء
+                            </p>
+                        </div>
+                        
+                        <div class="difference-card">
+                            <div class="difference-icon">
+                                <i class="fas fa-piano text-white"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">نقل الآلات الموسيقية</h4>
+                            <p class="text-gray-600">
+                                نقل آمن للبيانو، الأورج، وآلات موسيقية أخرى مع معدات خاصة وخبراء في ضبط النغمات
+                            </p>
+                        </div>
+                        
+                        <div class="difference-card">
+                            <div class="difference-icon">
+                                <i class="fas fa-warehouse text-white"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">نقل المخازن والمستودعات</h4>
+                            <p class="text-gray-600">
+                                نقل كميات كبيرة من البضائع والمخزون مع أنظمة تتبع وجرد وتسليم في الوقت المحدد
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تخزين العفش -->
+    <section id="storage" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+                        التخزين الآمن
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        تخزين <span class="text-primary">العفش</span> بمواصفات الذهب
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        مخازننا ليست أماكن فارغة، بل هي بيوت مؤقتة تعتني بعفشك كما تعتني به في منزلك
+                    </p>
+                </div>
+
+                <!-- فلسفة التخزين -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">فلسفة التخزين الذكي</h3>
+                        <div class="space-y-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                التخزين ليس مجرد وضع الأشياء في مكان مغلق، بل هو علم وفن. علم في اختيار المكان المناسب، 
+                                وفن في ترتيب القطع وحمايتها. كل قطعة عفش لها متطلبات تخزين خاصة.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                الخشب يحتاج رطوبة معتدلة، النسيج يحتاج تهوية مناسبة، الزجاج يحتاج عزل عن الاهتزازات، 
+                                المعدن يحتاج حماية من الصدأ. نحن نعرف كل هذه المتطلبات ونطبقها في مخازننا.
+                            </p>
+                            
+                            <div class="bg-primary/5 p-6 rounded-xl">
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">لماذا تخزين العفش مهم؟</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>حماية العفش خلال فترات السفر الطويلة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>التخزين المؤقت خلال أعمال الترميم والتشطيب</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>حفظ القطع الموسمية (مثل أجهزة التدفئة والتبريد)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تخزين المقتنيات الثمينة في مكان آمن</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>التخزين خلال عملية الانتقال بين المنازل</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="مخازن تخزين العفش" 
+                             class="w-full h-full object-cover rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <!-- مميزات المخازن -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        مميزات <span class="text-primary">مخازننا</span> الذكية
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="process-step">
+                            <div class="process-step-number">1</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-thermometer-half text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">تحكم مناخي ذكي</h4>
+                                <p class="text-gray-600 text-sm">أنظمة تحكم في درجة الحرارة والرطوبة تناسب كل نوع من أنواع العفش</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number">2</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-shield-alt text-accent text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">أنظمة أمن متطورة</h4>
+                                <p class="text-gray-600 text-sm">كاميرات مراقبة 24/7، أنظمة إنذار، حراسة، وتأمين شامل على المحتويات</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number">3</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-mouse-pointer text-secondary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">تتبع رقمي ذكي</h4>
+                                <p class="text-gray-600 text-sm">نظام تتبع رقمي يمكنك من معرفة مكان قطعك والوصول إليها بسهولة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number">4</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-spray-can text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">صيانة دورية</h4>
+                                <p class="text-gray-600 text-sm">فريق صيانة يقوم بتنظيف وفحص القطع المخزنة بشكل دوري</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أنواع التخزين -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        أنواع <span class="text-primary">خدمات التخزين</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-clock text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">تخزين قصير المدى</h4>
+                            <p class="text-gray-600 text-center">
+                                لحفظ العفش خلال الانتقال بين المنازل أو خلال أعمال الصيانة البسيطة
+                            </p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>من أسبوع إلى 3 أشهر</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تسليم واستلام سريع</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card p-6 border-2 border-primary">
+                            <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-calendar-alt text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">تخزين متوسط المدى</h4>
+                            <p class="text-gray-600 text-center">
+                                لتخزين العفش خلال السفر أو المشاريع الطويلة مثل التشطيب الكامل
+                            </p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>من 3 أشهر إلى سنة</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>صيانة دورية مجانية</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-building text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">تخزين طويل المدى</h4>
+                            <p class="text-gray-600 text-center">
+                                لتخزين المقتنيات الثمينة والمهمة التي تحتاج حفظاً آمناً لفترات طويلة
+                            </p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>سنة فأكثر</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تأمين شامل ومتابعة مستمرة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم فك وتركيب العفش -->
+    <section id="assembly" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
+                        فك وتركيب
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        فن <span class="text-primary">فك وتركيب</span> العفش
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        فك العفش علم، وتركيبه فن، ونحن نجمع بين العلم والفن لخدمة عفشك
+                    </p>
+                </div>
+
+                <!-- أهمية الفك والتركيب المحترف -->
+                <div class="mb-16">
+                    <div class="flex items-center mb-10">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ml-4">
+                            <i class="fas fa-tools text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">لماذا <span class="text-primary">الفك والتركيب المحترف</span> مهم؟</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">الحفاظ على عمر العفش</h4>
+                                    <p class="text-gray-600">
+                                        الفك الخاطئ يمكن أن يتسبب في كسور وشقوق لا يمكن إصلاحها. الفك المحترف يحافظ على سلامة المفاصل والوصلات
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">توفير الوقت والجهد</h4>
+                                    <p class="text-gray-600">
+                                        فريق محترف يمكنه فك وتركيب عفش منزل كامل في ساعات قليلة، بينما قد يستغرق الأمر أياماً إذا قام به المالك بنفسه
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">السلامة الشخصية</h4>
+                                    <p class="text-gray-600">
+                                        فك وتركيب العفش الكبير قد يكون خطراً على الأشخاص غير المدربين. المحترفون يعرفون كيفية التعامل مع القطع الثقيلة بأمان
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <i class="fas fa-puzzle-piece text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">ضمان إعادة التركيب الصحيح</h4>
+                                    <p class="text-gray-600">
+                                        المحترفون يعرفون كيفية إعادة تركيب كل قطعة في مكانها الصحيح، مع ضمان ثباتها وسلامتها
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أنواع العفش التي تحتاج فك وتركيب -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        أنواع <span class="text-primary">العفش</span> التي تحتاج فكاً وتركيباً احترافياً
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="area-box">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bed text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الأسرة والمراتب</h4>
+                            <p class="text-gray-600 text-sm">أسرة الزنبرك، الأسرة القابلة للفك، المراتب الكبيرة</p>
+                        </div>
+                        
+                        <div class="area-box">
+                            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chair text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">المكاتب والخزانات</h4>
+                            <p class="text-gray-600 text-sm">المكاتب المكتبية، خزانات الملفات، أرفف الكتب الكبيرة</p>
+                        </div>
+                        
+                        <div class="area-box">
+                            <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-couch text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الكنب والمجالس</h4>
+                            <p class="text-gray-600 text-sm">الكنب القابل للفك، المجالس العربية، الكراسي المتحركة</p>
+                        </div>
+                        
+                        <div class="area-box">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-utensils text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">مطابخ وأجهزة</h4>
+                            <p class="text-gray-600 text-sm">مطابخ خشبية، ثلاجات كبيرة، غسالات، أفران</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- خطوات الفك والتركيب المحترف -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        خطوات <span class="text-primary">الفك والتركيب</span> المحترف
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="process-step">
+                            <div class="process-step-number">1</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-search text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التقييم الأولي</h4>
+                                <p class="text-gray-600 text-sm">فحص القطعة، تحديد طريقة الفك، تجهيز الأدوات المناسبة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number">2</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-screwdriver text-accent text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">الفك المنظم</h4>
+                                <p class="text-gray-600 text-sm">فك القطعة بترتيب، ترقيم الأجزاء، حفظ المسامير في أكياس معلمة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number">3</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-box text-secondary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التغليف والتعبئة</h4>
+                                <p class="text-gray-600 text-sm">تغليف كل جزء على حدة، حماية الزوايا، منع الخدوش</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number">4</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-hammer text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التركيب الدقيق</h4>
+                                <p class="text-gray-600 text-sm">إعادة التركيب حسب التسلسل، ضبط المفاصل، اختبار الثبات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم شركات نقل العفش -->
+    <section id="companies" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-semibold mb-4">
+                        شركاء النقل
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        شركات <span class="text-primary">نقل العفش</span> الموثوقة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نتعاون مع أفضل شركات نقل العفش لتقديم خدمة شاملة ومتكاملة لعملائنا
+                    </p>
+                </div>
+
+                <!-- مقدمة عن الشركات -->
+                <div class="mb-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10">
+                    <h3 class="text-2xl font-bold text-primary mb-6">لماذا تتعاون مع شركات نقل متخصصة؟</h3>
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            نقل العفش ليس مجرد نقل أشياء من مكان لآخر، بل هو عملية معقدة تحتاج إلى خبرة، 
+                            معدات، وتخطيط. شركات النقل المتخصصة تجمع كل هذه العناصر تحت سقف واحد.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            تتعاون "قمر الخليج الذهبي" مع مجموعة مختارة من أفضل شركات نقل العفش في المنطقة، 
+                            كل منها متخصص في مجال معين، مما يمكننا من تقديم خدمة شاملة تلبي جميع احتياجات العملاء.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- أنواع شركات النقل -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        أنواع <span class="text-primary">شركات النقل</span> التي نتعاون معها
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- شركة 1 -->
+                        <div class="company-card">
+                            <div class="p-6 text-center border-b border-gray-200">
+                                <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-truck-moving text-primary text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">شركات النقل المحلي</h3>
+                                <p class="text-gray-600 text-sm">متخصصة في نقل العفش داخل المدينة</p>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>معرفة دقيقة بشوارع المدينة</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>فريق سريع الاستجابة</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>تكاليف مناسبة للمسافات القصيرة</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>خبرة في التعامل مع العقارات المحلية</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- شركة 2 -->
+                        <div class="company-card border-2 border-primary">
+                            <div class="p-6 text-center border-b border-gray-200">
+                                <div class="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-truck text-primary text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">شركات النقل بين المدن</h3>
+                                <p class="text-gray-600 text-sm">متخصصة في نقل العفش بين المدن المختلفة</p>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>أسطول كبير من الشاحنات المخصصة</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>خبرة في الطرق السريعة والمسافات الطويلة</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>نظام تتبع GPS للمركبات</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>تأمين شامل للمسافات الطويلة</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- شركة 3 -->
+                        <div class="company-card">
+                            <div class="p-6 text-center border-b border-gray-200">
+                                <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-plane text-primary text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">شركات النقل الدولي</h3>
+                                <p class="text-gray-600 text-sm">متخصصة في نقل العفش عبر الحدود</p>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>خبرة في الإجراءات الجمركية</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>مستودعات تخزين مؤقت في المطارات</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>تغليف خاص للنقل الجوي والبحري</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                        <span>شبكة شركاء في مختلف الدول</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- شركات متخصصة -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        شركات <span class="text-primary">متخصصة</span> نتعاون معها
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="info-card p-6">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center ml-4">
+                                    <i class="fas fa-piano text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">شركات نقل البيانو</h4>
+                                    <p class="text-gray-600">متخصصة في نقل الآلات الموسيقية الكبيرة</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">
+                                نقل البيانو يحتاج مهارة خاصة نظراً لوزنه الثقيل وحساسيته للتقلبات. 
+                                نتعاون مع شركات متخصصة تمتلك معدات رفع خاصة وفنيين مدربين على ضبط النغمات.
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center ml-4">
+                                    <i class="fas fa-palette text-accent text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">شركات نقل التحف</h4>
+                                    <p class="text-gray-600">متخصصة في نقل القطع الفنية والآثار</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">
+                                نقل التحف والقطع الأثرية يحتاج إلى عناية فائقة وتغليف خاص. 
+                                نتعاون مع شركات تمتلك خبرة في التعامل مع المتاحف والمعارض الفنية.
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center ml-4">
+                                    <i class="fas fa-server text-secondary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">شركات نقل المعدات</h4>
+                                    <p class="text-gray-600">متخصصة في نقل الأجهزة الطبية والعلمية</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">
+                                نقل المعدات الطبية والعلمية يحتاج إلى معرفة تقنية وخبرة في التعامل مع الأجهزة الحساسة. 
+                                نتعاون مع شركات متخصصة في هذا المجال.
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center ml-4">
+                                    <i class="fas fa-warehouse text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">شركات التخزين</h4>
+                                    <p class="text-gray-600">متخصصة في تخزين العفش لفترات طويلة</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">
+                                نتعاون مع شركات تمتلك مستودعات مجهزة بأحدث أنظمة التحكم المناخي 
+                                والأمني للحفاظ على العفش المخزن في أفضل حالة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- معايير اختيار الشركاء -->
+                <div class="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-6 text-center">معايير اختيارنا للشركاء</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">الخبرة والسمعة</h4>
+                            <p class="text-white/90 text-sm">
+                                نختار الشركات التي تمتلك سجلاً حافلاً من العمل الناجح وسمعة طيبة في السوق
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">التأمين والتراخيص</h4>
+                            <p class="text-white/90 text-sm">
+                                نتعاون فقط مع الشركات المرخصة والتي توفر تأميناً شاملاً على المنقولات
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">المعدات والتقنيات</h4>
+                            <p class="text-white/90 text-sm">
+                                نفضل الشركات التي تستخدم معدات متطورة وتقنيات حديثة في النقل والتخزين
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">الفريق المدرب</h4>
+                            <p class="text-white/90 text-sm">
+                                نحرص على أن تكون فرق العمل مدربة تدريباً جيداً وتمتلك المهارات اللازمة
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">خدمة العملاء</h4>
+                            <p class="text-white/90 text-sm">
+                                نختار الشركات التي تقدم خدمة عملاء ممتازة وتستجيب بسرعة للاستفسارات والشكاوى
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">الشفافية</h4>
+                            <p class="text-white/90 text-sm">
+                                نتعاون مع الشركات الشفافة في تقديم العروض وتوضيح كافة التفاصيل للعملاء
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم صيانة وحماية العفش -->
+    <section id="maintenance" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-semibold mb-4">
+                        الصيانة والحماية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        صيانة <span class="text-primary">العفش</span> أثناء النقل والتخزين
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        لا ننقل العفش فقط، بل نحافظ عليه ونصونه خلال رحلته وحتى وصوله الآمن
+                    </p>
+                </div>
+
+                <!-- أهمية الصيانة الوقائية -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">الصيانة الوقائية: درع الحماية الذكي</h3>
+                        <div class="space-y-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                العفش الجيد يستمر لعقود إذا تم الاعتناء به، والعناية به لا تقتصر على المنزل فقط، 
+                                بل تمتد إلى فترات النقل والتخزين. الصيانة الوقائية هي الاستثمار الحقيقي في عمر عفشك.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                أثناء النقل، يتعرض العفش لعدة مخاطر: الاهتزازات، التغيرات المناخية، الخدوش، والكسور. 
+                                الصيانة الوقائية تبدأ قبل النقل وتستمر خلاله وبعده.
+                            </p>
+                            
+                            <div class="bg-primary/5 p-6 rounded-xl">
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">مخاطر يمكن تجنبها بالصيانة</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-triangle text-red-500 text-xs mt-1 ml-2"></i>
+                                        <span>تشقق الخشب بسبب التغيرات المفاجئة في الرطوبة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-triangle text-red-500 text-xs mt-1 ml-2"></i>
+                                        <span>تلف النسيج بسبب التعرض المباشر لأشعة الشمس</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-triangle text-red-500 text-xs mt-1 ml-2"></i>
+                                        <span>صدأ المعادن بسبب الرطوبة في المخازن</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-triangle text-red-500 text-xs mt-1 ml-2"></i>
+                                        <span>تكسر الزجاج بسبب الاهتزازات أثناء النقل</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="صيانة العفش" 
+                             class="w-full h-full object-cover rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <!-- خدمات الصيانة -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        خدمات <span class="text-primary">الصيانة والحماية</span> التي نقدمها
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-oil-can text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">تزييت المفاصل</h4>
+                            <p class="text-gray-600 text-center">
+                                تزييت مفاصل الأثاث الخشبي قبل النقل لمنع الاحتكاك والتلف أثناء الحركة
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-spray-can text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">معالجة الخشب</h4>
+                            <p class="text-gray-600 text-center">
+                                معالجة الأسطح الخشبية بمواد واقية تحميها من الرطوبة والتقلبات المناخية
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">حماية الزوايا</h4>
+                            <p class="text-gray-600 text-center">
+                                تركيب واقيات زوايا من الفلين أو المطاط لمنع الكسور والخدوش أثناء النقل
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-tint text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">عزل الرطوبة</h4>
+                            <p class="text-gray-600 text-center">
+                                استخدام مواد عازلة للرطوبة في تغليف القطع الحساسة للمناخ
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bug text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">مقاومة الحشرات</h4>
+                            <p class="text-gray-600 text-center">
+                                معالجة العفش المخزن بمواد آمنة تمنع تسلل الحشرات والنمل الأبيض
+                            </p>
+                        </div>
+                        
+                        <div class="info-card p-6">
+                            <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-compress-arrows-alt text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">ضبط الفك والتركيب</h4>
+                            <p class="text-gray-600 text-center">
+                                ضبط مفاصل الأثاث بعد التركيب للتأكد من ثباته وسلامته التامة
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صيانة أنواع العفش المختلفة -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        صيانة <span class="text-primary">أنواع العفش</span> المختلفة
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>نوع العفش</th>
+                                    <th>مخاطر النقل</th>
+                                    <th>إجراءات الحماية</th>
+                                    <th>فترة الصيانة الموصى بها</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الخشب الصلب</td>
+                                    <td class="text-gray-600">التشقق، الخدوش، الرطوبة</td>
+                                    <td class="text-green-600">تزييت، عزل رطوبة، واقيات زوايا</td>
+                                    <td class="text-center">قبل النقل مباشرة</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الخشب الرقائقي</td>
+                                    <td class="text-gray-600">الانتفاخ، الانحناء، البلل</td>
+                                    <td class="text-green-600">عزل مائي كامل، منع البلل</td>
+                                    <td class="text-center">قبل وأثناء التخزين</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الأثاث المنجد</td>
+                                    <td class="text-gray-600">البقع، العفن، الروائح</td>
+                                    <td class="text-green-600">تنظيف جاف، مواد مضادة للعفن</td>
+                                    <td class="text-center">قبل وبعد التخزين</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الزجاج والمرايا</td>
+                                    <td class="text-gray-600">الكسر، الخدش، الانكسار</td>
+                                    <td class="text-green-600">تغليف خاص، واقيات زوايا</td>
+                                    <td class="text-center">قبل النقل فقط</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">المعدن (الحديد، الألومنيوم)</td>
+                                    <td class="text-gray-600">الصدأ، الخدوش، الانحناء</td>
+                                    <td class="text-green-600">طلاء واقي، مواد مضادة للصدأ</td>
+                                    <td class="text-center">كل 3-6 أشهر في التخزين</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الرخام والحجر</td>
+                                    <td class="text-gray-600">الكسر، الخدوش، البقع</td>
+                                    <td class="text-green-600">تغليف مزدوج، منع الصدمات</td>
+                                    <td class="text-center">قبل النقل فقط</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    الأسئلة <span class="text-primary">الشائعة</span> عن نقل العفش
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- سؤال 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(1)">
+                            <h4 class="text-lg font-bold text-gray-800">كم تستغرق عملية نقل عفش منزل كامل؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-1"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p class="text-gray-700">
+                                تختلف المدة حسب عدة عوامل:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>حجم المنزل:</strong> شقة صغيرة (2-4 ساعات)، منزل متوسط (4-8 ساعات)، فيلا كبيرة (8-12 ساعة)</li>
+                                    <li><strong>كمية العفش:</strong> عدد القطع ونوعيتها تؤثر بشكل كبير على المدة</li>
+                                    <li><strong>المسافة:</strong> النقل داخل المدينة أسرع من النقل بين المدن</li>
+                                    <li><strong>فريق العمل:</strong> الفريق الكبير ينجز العمل بشكل أسرع</li>
+                                    <li><strong>تعقيد القطع:</strong> القطع التي تحتاج فكاً وتركيباً معقداً تأخذ وقتاً أطول</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(2)">
+                            <h4 class="text-lg font-bold text-gray-800">هل تقومون بتأمين العفش المنقول؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-2"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p class="text-gray-700">
+                                نعم، نقدم تأميناً شاملاً على جميع المنقولات من خلال شركات التأمين المعتمدة. يشمل التأمين:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>تأمين ضد الكسر:</strong> للقطع الزجاجية والهشة</li>
+                                    <li><strong>تأمين ضد الضياع:</strong> في حال فقدان أي قطعة أثناء النقل</li>
+                                    <li><strong>تأمين ضد التلف:</strong> للقطع التي قد تتضرر بسبب الحوادث</li>
+                                    <li><strong>تأمين ضد السرقة:</strong> خلال فترة النقل والتخزين</li>
+                                </ul>
+                                يتم تحديد قيمة التأمين حسب قيمة العفش المنقول ونوع الخدمة المطلوبة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(3)">
+                            <h4 class="text-lg font-bold text-gray-800">كيف يتم التعامل مع القطع الثمينة والتحف؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-3"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p class="text-gray-700">
+                                نتبع بروتوكولاً خاصاً للتعامل مع المقتنيات الثمينة:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>تقييم مسبق:</strong> تقييم القطعة وتحديد طريقة النقل المناسبة</li>
+                                    <li><strong>تغليف خاص:</strong> استخدام مواد تغليف مخصصة للقطع الثمينة</li>
+                                    <li><strong>نقل منفصل:</strong> في كثير من الأحيان تنقل القطع الثمينة بشكل منفصل</li>
+                                    <li><strong>مرافقة خبراء:</strong> في بعض الحالات يرافق القطع خبير متخصص</li>
+                                    <li><strong>تأمين إضافي:</strong> تأمين بقيمة القطعة الحقيقية</li>
+                                    <li><strong>توثيق كامل:</strong> تصوير القطعة قبل وبعد النقل</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(4)">
+                            <h4 class="text-lg font-bold text-gray-800">ماذا عن المواد المحظورة نقلها؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-4"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p class="text-gray-700">
+                                هناك مواد لا يمكن نقلها لأسباب أمنية وقانونية:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>المواد القابلة للاشتعال:</strong> البنزين، الكحول، المواد الكيميائية الخطرة</li>
+                                    <li><strong>المواد المتفجرة:</strong> الألعاب النارية، الذخيرة</li>
+                                    <li><strong>المواد السامة:</strong> المبيدات الحشرية، المواد الكيميائية السامة</li>
+                                    <li><strong>الكائنات الحية:</strong> النباتات، الحيوانات الأليفة (تحتاج ترتيبات خاصة)</li>
+                                    <li><strong>المواد غير القانونية:</strong> المخدرات، المواد المقرصنة</li>
+                                    <li><strong>الأموال والمجوهرات:</strong> يفضل نقلها بشكل شخصي</li>
+                                </ul>
+                                ننصح العملاء بالتخلص من هذه المواد أو نقلها بأنفسهم قبل عملية النقل.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(5)">
+                            <h4 class="text-lg font-bold text-gray-800">هل يمكنني تخزين جزء من العفش ونقل الجزء الآخر؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-5"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p class="text-gray-700">
+                                نعم، نقدم خدمة مرنة تتيح للعميل الاختيار بين النقل المباشر أو التخزين المؤقت:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>تخزين جزئي:</strong> يمكن تخزين بعض القpieces ونقل البعض الآخر مباشرة</li>
+                                    <li><strong>تخزين مؤقت:</strong> تخزين العفش لفترة محددة ثم نقله لاحقاً</li>
+                                    <li><strong>تخزين طويل المدى:</strong> للقطع التي لا تحتاجها حالياً</li>
+                                    <li><strong>استرجاع مجاني:</strong> في كثير من الحالات نقدم خدمة استرجاع مجانية من المخزن</li>
+                                    <li><strong>دفعات مرنة:</strong> يمكن دفع تكاليف التخزين شهرياً أو سنوياً</li>
+                                </ul>
+                                ننصح العملاء بتخزين القطع التي لا يحتاجونها فوراً لتقليل تكاليف النقل والتركيب.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - خدمات نقل العفش">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        شريكك الموثوق في رحلة نقل العفش الشاملة. نقدم خدمات فك، نقل، تركيب، تخزين، وصيانة العفش بفريق محترف ومعدات متطورة.
+                    </p>
+                </div>
+
+                <!-- خدمات نقل العفش -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدماتنا</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#moving"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                نقل العفش الشامل
+                            </a></li>
+                        <li><a href="#storage"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تخزين العفش الآمن
+                            </a></li>
+                        <li><a href="#assembly"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                فك وتركيب العفش
+                            </a></li>
+                        <li><a href="#maintenance"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                صيانة وحماية العفش
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- روابط مهمة -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركات النقل المعتمدة
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                مدونة نقل العفش
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                من نحن
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- تواصل معنا -->
+               <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">استشارات تركيب مجانية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">installation@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - خدمات نقل العفش الشاملة. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الخدمة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الضمان</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // وظيفة الأسئلة الشائعة
+        function toggleFAQ(number) {
+            const answer = document.getElementById('faq-answer-' + number);
+            const icon = document.getElementById('faq-icon-' + number);
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // إغلاق القائمة المتنقلة عند النقر على رابط تنقل
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+        
+        // تأثير التمرير السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

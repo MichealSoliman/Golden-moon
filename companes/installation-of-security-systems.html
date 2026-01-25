@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلول متكاملة لتركيب الأنظمة الأمنية | خدمات تركيب احترافية | قمر الخليج الذهبي</title>
+    <meta name="description" content="خدمات تركيب أنظمة الأمن المتكاملة للمنازل والشركات. فريق فني معتمد، صيانة دورية، ضمان شامل. حلول تركيب كاميرات مراقبة، أنظمة إنذار، أمن إلكتروني، ومكافحة حريق.">
+    <meta name="keywords" content="تركيب أنظمة أمنية, تركيب كاميرات مراقبة, تركيب أنظمة إنذار, تركيب أمن إلكتروني, خدمات تركيب أمنية, فني تركيب أنظمة أمنية, تركيب أنظمة مكافحة حريق, تركيب أنظمة مراقبة, تركيب أمن متكامل, صيانة أنظمة أمنية, شركات تركيب أنظمة أمنية">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#f59f0a',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .service-img {
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #008080;
+            box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2);
+        }
+        
+        .category-filter-btn.active {
+            background-color: #008080;
+            color: white;
+        }
+        
+        .cta-btn {
+            background: linear-gradient(135deg, #008080 0%, #008080 100%);
+            color: white;
+        }
+        
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #006666 0%, #006666 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.2);
+        }
+        
+        .special-badge {
+            background: linear-gradient(45deg, #f59f0a, #ffd166);
+            color: #333;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0, 128, 128, 0.9) 0%, rgba(0, 100, 100, 0.9) 100%), url('https://images.unsplash.com/photo-1560252816-69e5c8e34c0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background-color: #f8fafc;
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #008080;
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            right: 9px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #008080;
+        }
+        
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - حلول تركيب الأنظمة الأمنية">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">حلول تركيب الأنظمة الأمنية المتكاملة</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة للأجهزة الصغيرة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل للأجهزة الكبيرة -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        تركيب الأنظمة الأمنية
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة للأجهزة الصغيرة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-tools ml-3 w-6 text-center"></i>
+                        تركيب الأنظمة الأمنية
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+                <li class="pt-4 border-t border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600">متابعتنا على:</span>
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon" class="text-gray-500 hover:text-sky-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA==" class="text-gray-500 hover:text-pink-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // تغيير الأيقونة عند فتح/إغلاق القائمة
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<style>
+    /* تحسينات إضافية للاستجابة */
+    @media (max-width: 640px) {
+        header .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #mobile-menu {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            max-height: calc(100vh - 64px);
+            overflow-y: auto;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        header .container {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        
+        .flex-shrink-0 .mr-2 {
+            margin-right: 0.5rem;
+        }
+    }
+    
+    /* تأثيرات سلسة للروابط */
+    nav a {
+        position: relative;
+        padding-bottom: 2px;
+    }
+    
+    /* تحسين قابلية القراءة على الأجهزة الصغيرة */
+    @media (max-width: 480px) {
+        #mobile-menu ul {
+            font-size: 0.95rem;
+        }
+        
+        #mobile-menu .fa {
+            font-size: 1rem;
+        }
+    }
+</style>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-20 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">حلول <span class="text-secondary">متكاملة</span> لتركيب الأنظمة الأمنية</h1>
+                <p class="text-xl mb-8 text-gray-100 leading-relaxed">
+                    خدمات تركيب احترافية لأنظمة الأمن والسلامة المتكاملة. فريق فني معتمد، ضمان شامل، ودعم فني متواصل. نقدم حلول تركيب كاميرات مراقبة، أنظمة إنذار، أمن إلكتروني، ومكافحة حريق للمنازل والشركات.
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-8 mb-10">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">500+</div>
+                        <div class="text-gray-200">مشروع تركيب ناجح</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">50+</div>
+                        <div class="text-gray-200">فني تركيب معتمد</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-gray-200">دعم فني وطوارئ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">100%</div>
+                        <div class="text-gray-200">رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <!-- فلاتر التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn active" data-category="all">
+                        جميع خدمات التركيب
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="installation">
+                        تركيب الكاميرات
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="alarm">
+                        تركيب أنظمة الإنذار
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="fire">
+                        تركيب أنظمة الحريق
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="access">
+                        تركيب أنظمة الدخول
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="maintenance">
+                        صيانة الأنظمة
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- قسم أهمية التركيب الاحترافي -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    لماذا يعتبر <span class="text-primary">التركيب الاحترافي</span> أساسياً لأنظمة الأمن؟
+                </h2>
+                
+                <!-- مقدمة -->
+                <div class="mb-12 bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-2xl border border-primary/10">
+                    <h3 class="text-2xl font-bold text-primary mb-4">التركيب الصحيح: الفرق بين النظام الفعال والعاجز</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        كثير من الناس يركزون على جودة الأجهزة الأمنية ويتجاهلون أهمية التركيب الاحترافي. الحقيقة أن <strong class="text-primary">70%</strong> من فشل الأنظمة الأمنية يعود إلى أخطاء في التركيب وليس إلى عيوب في الأجهزة نفسها.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        من خلال منصة <strong class="text-primary">قمر الخليج الذهبي</strong>، نوفر لك قائمة بأفضل شركات تركيب الأنظمة الأمنية المعتمدة في الخليج العربي، والتي تضمن تركيباً احترافياً وضماناً شاملاً لجميع الأعمال.
+                    </p>
+                </div>
+                
+                <!-- مخاطر التركيب غير الاحترافي -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">مخاطر التركيب غير الاحترافي للأنظمة الأمنية</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="info-card p-6 border-l-4 border-red-500">
+                            <div class="service-icon bg-red-50">
+                                <i class="fas fa-exclamation-triangle text-2xl text-red-500"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">نقاط عمى أمنية</h4>
+                            <p class="text-gray-600">تركيب كاميرات في أماكن غير مناسبة يخلق مناطق لا يمكن مراقبتها.</p>
+                        </div>
+                        <div class="info-card p-6 border-l-4 border-orange-500">
+                            <div class="service-icon bg-orange-50">
+                                <i class="fas fa-bolt text-2xl text-orange-500"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">مشاكل كهربائية</h4>
+                            <p class="text-gray-600">أسلاك غير معزولة أو توصيلات خاطئة تسبب أعطالاً متكررة.</p>
+                        </div>
+                        <div class="info-card p-6 border-l-4 border-yellow-500">
+                            <div class="service-icon bg-yellow-50">
+                                <i class="fas fa-shield-alt text-2xl text-yellow-500"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">سهولة التعطيل</h4>
+                            <p class="text-gray-600">أنظمة يمكن تعطيلها بسهولة بسبب تركيب غير آمن أو ظاهر.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مزايا التركيب الاحترافي -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">مزايا التركيب الاحترافي للأنظمة الأمنية</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-primary/10">
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">ضمان كفاءة النظام</h4>
+                                    <p class="text-gray-600">جميع المكونات تعمل بكفاءة قصوى وتحقق الغرض المطلوب منها.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-primary/10">
+                                    <i class="fas fa-clock text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">توفير الوقت والجهد</h4>
+                                    <p class="text-gray-600">تركيب سريع ودقيق يمنع الحاجة لإعادة العمل أو التعديلات.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-primary/10">
+                                    <i class="fas fa-shield text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">حماية الممتلكات</h4>
+                                    <p class="text-gray-600">منع التلفيات للممتلكات أثناء التركيب والحفاظ على المظهر الجمالي.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-secondary/10">
+                                    <i class="fas fa-file-contract text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">ضمان معتمد</h4>
+                                    <p class="text-gray-600">ضمان شامل على الأعمال والمواد يصل إلى 5 سنوات في بعض الأنظمة.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-secondary/10">
+                                    <i class="fas fa-user-check text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">دعم فني متواصل</h4>
+                                    <p class="text-gray-600">فريق دعم فني جاهز للتدخل السريع في حال حدوث أي أعطال.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-secondary/10">
+                                    <i class="fas fa-chart-line text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تحسين كفاءة الطاقة</h4>
+                                    <p class="text-gray-600">تركيب يحقق أفضل استهلاك للطاقة ويطيل عمر الأجهزة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الكلمات المفتاحية وأهميتها -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">الكلمات المفتاحية في مجال تركيب الأنظمة الأمنية</h3>
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <p class="text-gray-700 mb-4">
+                            عند البحث عن خدمات تركيب احترافية، هذه أهم الكلمات المفتاحية التي تساعدك في الوصول للشركات المتخصصة:
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">تركيب أنظمة أمنية احترافية</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">فني تركيب كاميرات مراقبة</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">تركيب أنظمة إنذار ضد السرقة</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">خدمات تركيب أمن إلكتروني</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">تركيب أنظمة مكافحة حريق</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">شركات تركيب أنظمة مراقبة</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">صيانة أنظمة أمنية دورية</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">تركيب أنظمة أمن متكاملة</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">فني أمن وسلامة معتمد</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">تركيب كاميرات مراقبة ذكية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم مراحل التركيب -->
+    <section class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <!-- العنوان الرئيسي -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        العملية الاحترافية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        مراحل <span class="text-primary">تركيب الأنظمة الأمنية</span> الاحترافية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نتبع عملية منهجية متكاملة تضمن تركيباً دقيقاً وفعالاً لأنظمة الأمن والسلامة
+                    </p>
+                </div>
+
+                <!-- الخط الزمني للمراحل -->
+                <div class="relative mb-16">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- المرحلة 1 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary">1</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">الدراسة والتخطيط</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>معاينة الموقع وتحديد المتطلبات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تحديد نقاط التركيب المناسبة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تخطيط المسارات والكابلات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>إعداد التصاميم والرسومات</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- المرحلة 2 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-secondary">2</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">الإعداد والتحضير</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تجهيز الأدوات والمعدات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>فحص الأجهزة والمكونات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تجهيز نقاط التوصيل الكهربائية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>حماية الممتلكات أثناء العمل</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- المرحلة 3 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary">3</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التركيب والتشغيل</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تركيب الأجهزة والمكونات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>توصيل الأسلاك والكابلات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>برمجة الأنظمة والضبط</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>اختبار جميع المكونات</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- المرحلة 4 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-secondary">4</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التسليم والتدريب</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>التنظيف والتسليم النهائي</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تدريب المستخدمين على النظام</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تسليم كتيبات التشغيل</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>توقيع عقود الضمان</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أنواع خدمات التركيب -->
+                <div class="mb-16">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                            أنواع <span class="text-primary">خدمات التركيب</span> التي نقدمها
+                        </h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            نغطي جميع جوانب تركيب الأنظمة الأمنية المتكاملة
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="service-card bg-white">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-primary text-white">تركيب كاميرات</span>
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="تركيب كاميرات مراقبة احترافية" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    تركيب كاميرات المراقبة
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تركيب كاميرات داخلية وخارجية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>نظام تسجيل رقمي متطور</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>ربط مع الهواتف الذكية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تخزين سحابي للتسجيلات</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-secondary text-white">أنظمة إنذار</span>
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="تركيب أنظمة إنذار متكاملة" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    تركيب أنظمة الإنذار
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>أنظمة إنذار ضد السرقة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>حساسات حركة وأبواب</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>ربط مع مراكز المراقبة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>أنظمة إنذار لاسلكية</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-primary text-white">مكافحة حريق</span>
+                                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="تركيب أنظمة مكافحة الحريق" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    تركيب أنظمة مكافحة الحريق
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>أنظمة إنذار حريق مبكر</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تركيب طفايات الحريق</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>أنظمة إطفاء أوتوماتيكية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>مخارج طوارئ وإرشادات</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جدول مقارنة -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مقارنة بين <span class="text-primary">التركيب الاحترافي</span> والتركيب العشوائي
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="border border-gray-200 p-4 text-right font-bold text-gray-700">المعيار</th>
+                                    <th class="border border-gray-200 p-4 text-center font-bold text-primary">التركيب الاحترافي</th>
+                                    <th class="border border-gray-200 p-4 text-center font-bold text-red-500">التركيب العشوائي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">الجودة</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        عالية الجودة
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-red-500">
+                                        <i class="fas fa-times-circle ml-2"></i>
+                                        غير مضمونة
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">الضمان</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        ضمان شامل
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-red-500">
+                                        <i class="fas fa-times-circle ml-2"></i>
+                                        بدون ضمان
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">الأمان</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        آمن 100%
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-red-500">
+                                        <i class="fas fa-times-circle ml-2"></i>
+                                        خطر محتمل
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">الكفاءة</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        عالية الكفاءة
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-red-500">
+                                        <i class="fas fa-times-circle ml-2"></i>
+                                        كفاءة منخفضة
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">التكلفة طويلة المدى</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        اقتصادية
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-red-500">
+                                        <i class="fas fa-times-circle ml-2"></i>
+                                        تكاليف إضافية
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- دعوة للعمل -->
+                <div class="text-center">
+                    <div class="inline-block p-1 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+                        <div class="bg-white rounded-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                                مستعد لتركيب نظام أمني متكامل؟
+                            </h3>
+                            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                                اختر من بين أفضل شركات تركيب الأنظمة الأمنية في الخليج. جميع الشركات معتمدة وتوفر ضمانات وخدمة ما بعد البيع.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="../companes.html" class="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                                    <i class="fas fa-building mr-2"></i>
+                                    استعرض الشركات المتخصصة
+                                </a>
+                                <a href="tel:01111263618" class="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    احصل على استشارة مجانية
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم خدمات الصيانة والدعم -->
+    <section class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <!-- عنوان القسم -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    خدمات <span class="text-primary">الصيانة والدعم</span> بعد التركيب
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    نقدم مجموعة شاملة من خدمات الصيانة والدعم الفني لضمان استمرارية عمل الأنظمة الأمنية
+                </p>
+            </div>
+            
+            <!-- خدمات الصيانة -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">الصيانة الدورية</h4>
+                    <p class="text-gray-600 text-sm">فحص دوري شامل لأنظمة الأمن والسلامة كل 6 أشهر</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-secondary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">دعم فني 24/7</h4>
+                    <p class="text-gray-600 text-sm">دعم فني متواصل على مدار الساعة طوال أيام الأسبوع</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">خدمة طوارئ سريعة</h4>
+                    <p class="text-gray-600 text-sm">استجابة فورية خلال 60 دقيقة لأي أعطال طارئة</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">التحديثات المستمرة</h4>
+                    <p class="text-gray-600 text-sm">تحديث البرمجيات والأجهزة للحفاظ على الأمن</p>
+                </div>
+            </div>
+            
+            <!-- معلومات إضافية -->
+            <div class="mt-16 p-8 bg-primary rounded-2xl text-white">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-4">ابحث عن خدمة تركيب احترافية؟</h3>
+                        <p class="text-white/90">
+                            منصة قمر الخليج الذهبي توفر لك قائمة بأفضل شركات تركيب الأنظمة الأمنية المتكاملة في الخليج. جميع الشركات معتمدة ولديها خبرة واسعة في توفير حلول تركيب متكاملة تناسب احتياجاتك وميزانيتك.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 text-center">
+                        <a href="tel:01111263618" class="inline-block px-8 py-4 bg-white text-primary rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            احصل على عرض سعر
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                الأسئلة <span class="text-primary">الشائعة</span> حول تركيب الأنظمة الأمنية
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">كم تستغرق عملية تركيب نظام أمني متكامل للمنزل؟</h4>
+                        <p class="text-gray-700">
+                            تختلف المدة حسب حجم النظام وتعقيده. بشكل عام، يستغرق تركيب النظام الأساسي (4-6 كاميرات ونظام إنذار) من 1-2 أيام، بينما قد تستغرق الأنظمة المتكاملة الكبيرة للمباني التجارية من 5-10 أيام عمل.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">هل يحتاج تركيب الأنظمة الأمنية إلى تصاريح خاصة؟</h4>
+                        <p class="text-gray-700">
+                            نعم، في معظم الدول الخليجية يحتاج تركيب أنظمة الأمن والمراقبة إلى تصاريح من الجهات المختصة. الشركات المتخصصة تقوم بإجراءات التصاريح نيابة عن العميل كجزء من الخدمة الشاملة.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">ما هي مدة ضمان التركيب؟</h4>
+                        <p class="text-gray-700">
+                            تختلف مدة الضمان حسب نوع النظام والشركة. بشكل عام، تتراوح فترة ضمان التركيب من 1-3 سنوات، بينما قد يصل ضمان بعض الأنظمة المتخصصة إلى 5 سنوات مع توفر عقود صيانة سنوية.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">هل يمكن إضافة أنظمة جديدة على النظام الحالي لاحقاً؟</h4>
+                        <p class="text-gray-700">
+                            نعم، معظم الأنظمة الأمنية الحديثة مصممة لتكون قابلة للتوسع. يمكن إضافة كاميرات إضافية، حساسات جديدة، أو أنظمة متكاملة مع النظام الأساسي دون الحاجة لإعادة تركيب كامل النظام.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">ما هو الفرق بين التركيب السطحي والتركيب المخفي؟</h4>
+                        <p class="text-gray-700">
+                            التركيب السطحي يكون ظاهراً والأسلاك مرئية، بينما التركيب المخفي يتم إخفاء جميع الأسلاك داخل الجدران والأسقيع مما يعطي مظهراً أنيقاً. يفضل التركيب المخفي في المنازل والمكاتب الفاخرة رغم كونه أكثر تكلفة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - حلول تركيب الأنظمة الأمنية">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        منصتك الموثوقة لاكتشاف أفضل شركات تركيب الأنظمة الأمنية المتكاملة في الخليج العربي. نوفر لك قائمة بالشركات المعتمدة والمتخصصة في خدمات تركيب وصيانة أنظمة الأمن والسلامة.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدمات التركيب</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تركيب كاميرات المراقبة
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تركيب أنظمة الإنذار
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تركيب أنظمة مكافحة الحريق
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                صيانة الأنظمة الأمنية
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركات التركيب المعتمدة
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                مدونة التركيب والصيانة
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                عن منصتنا
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                 <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">استشارات تركيب مجانية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">installation@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - حلول تركيب الأنظمة الأمنية. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط التركيب</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الضمان</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // فلترة الخدمات حسب التصنيف
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter-btn');
+            const services = document.querySelectorAll('.service-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشاط للزر المضغوط
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // عرض/إخفاء الخدمات حسب التصنيف
+                    services.forEach(service => {
+                        const serviceCategories = service.getAttribute('data-category');
+                        if (category === 'all' || serviceCategories === category) {
+                            service.style.display = 'block';
+                            // تأثير الظهور
+                            setTimeout(() => {
+                                service.style.opacity = '1';
+                                service.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            service.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // تأثير تحميل الصفحة
+            services.forEach(service => {
+                service.style.opacity = '0';
+                service.style.transform = 'translateY(20px)';
+                service.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            setTimeout(() => {
+                services.forEach(service => {
+                    service.style.opacity = '1';
+                    service.style.transform = 'translateY(0)';
+                });
+            }, 100);
+            
+            // تأثير عند المرور على أزرار CTA
+            const ctaButtons = document.querySelectorAll('.cta-btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

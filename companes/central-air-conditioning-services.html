@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات المكيفات المركزية | تركيب • صيانة • إصلاح • تنظيف | قمر الخليج الذهبي</title>
+    <meta name="description" content="خدمات شاملة للمكيفات المركزية: تركيب، صيانة دورية، إصلاح أعطال، تنظيف وتعقيم، تحسين كفاءة، توفير استهلاك الطاقة. فريق فني معتمد 24/7.">
+    <meta name="keywords" content="مكيفات مركزية, تكييف مركزي, صيانة مكيفات مركزية, تركيب تكييف مركزي, إصلاح مكيفات مركزية, تنظيف مكيفات مركزية, تكييف سبليت مركزي, تبريد مركزي, تكييف مركزي للمباني, فني مكيفات مركزية, أعطال التكييف المركزي, تشغيل التكييف المركزي, فلتر مكيف مركزي, ضغط غاز التكييف">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#f59f0a',
+                        accent: '#0ea5e9',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.4s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 128, 128, 0.15);
+            border-color: #008080;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .service-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.08);
+        }
+        
+        .hero-section {
+            background: #008080;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 128, 128, 0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .timeline-vertical {
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .timeline-vertical:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, #008080, #0ea5e9);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            right: -36px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #008080;
+            border: 3px solid white;
+            box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.2);
+        }
+        
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #008080, #006666);
+            color: white;
+            padding: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .price-card {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .price-card:hover {
+            border-color: #008080;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .price-card.popular {
+            border-color: #f59f0a;
+            position: relative;
+            transform: scale(1.05);
+        }
+        
+        .price-card.popular:before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f59f0a;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 10;
+        }
+        
+        .stat-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.1);
+        }
+        
+        .faq-item {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .system-type-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .system-type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 128, 128, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - خدمات المكيفات المركزية">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">خدمات المكيفات المركزية المتكاملة</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة للأجهزة الصغيرة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل للأجهزة الكبيرة -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        مكيفات مركزية
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة للأجهزة الصغيرة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-wind ml-3 w-6 text-center"></i>
+                        مكيفات مركزية
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+                <li class="pt-4 border-t border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600">متابعتنا على:</span>
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon" class="text-gray-500 hover:text-sky-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA==" class="text-gray-500 hover:text-pink-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // تغيير الأيقونة عند فتح/إغلاق القائمة
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<style>
+    @media (max-width: 640px) {
+        header .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #mobile-menu {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            max-height: calc(100vh - 64px);
+            overflow-y: auto;
+        }
+    }
+</style>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-24 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    خدمات <span class="text-secondary">المكيفات المركزية</span> المتكاملة
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-100 leading-relaxed">
+                    الحلول الشاملة لجميع احتياجات التكييف المركزي: تركيب، صيانة، إصلاح، تنظيف، وترقية أنظمة التبريد. خبرة 15+ عاماً في مجال التكييف المركزي.
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-10 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">3,500+</div>
+                        <div class="text-gray-200">مشروع تكييف مركزي</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">150+</div>
+                        <div class="text-gray-200">فني تكييف معتمد</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-gray-200">خدمة طوارئ وصيانة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">98%</div>
+                        <div class="text-gray-200">رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <!-- أزرار التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#installation" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-tools ml-2"></i>
+                        تركيب المكيفات
+                    </a>
+                    <a href="#maintenance" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-cogs ml-2"></i>
+                        صيانة دورية
+                    </a>
+                    <a href="#repair" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-wrench ml-2"></i>
+                        إصلاح الأعطال
+                    </a>
+                    <a href="#cleaning" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-broom ml-2"></i>
+                        تنظيف وتعقيم
+                    </a>
+                </div>
+                
+                <!-- دعوة للعمل -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="tel:01111263618" class="px-10 py-4 bg-secondary text-white rounded-xl font-bold text-lg hover:bg-secondary/90 transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-phone-alt ml-2"></i>
+                        طلب خدمة فورية
+                    </a>
+                    <a href="#consultation" class="px-10 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-comments ml-2"></i>
+                        استشارة مجانية
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f0f9ff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم أنواع أنظمة التكييف المركزي -->
+    <section id="systems" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        الأنظمة المتاحة
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        أنواع <span class="text-primary">أنظمة التكييف المركزي</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نقدم خدمات متكاملة لجميع أنواع أنظمة التكييف المركزي، مع حلول مصممة خصيصاً لكل نظام
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- نظام الـ Split System -->
+                    <div class="system-type-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1627873649412-7f61c8a5e4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="نظام الـ Split System" 
+                                 class="w-full h-56 object-cover">
+                            <span class="category-badge bg-primary text-white">الأكثر شيوعاً</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">نظام الـ Split System</h3>
+                            <p class="text-gray-600 mb-4">نظام منفصل يتكون من وحدة داخلية ووحدة خارجية، مناسب للمنازل والمكاتب الصغيرة</p>
+                            <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>كفاءة عالية في المساحات الصغيرة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>تكلفة تركيب منخفضة نسبياً</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>صيانة سهلة ومتاحة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- نظام الـ Packaged System -->
+                    <div class="system-type-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1562171439-5d7c6c5c2c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="نظام الـ Packaged System" 
+                                 class="w-full h-56 object-cover">
+                            <span class="category-badge bg-accent text-white">للمباني التجارية</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">نظام الـ Packaged System</h3>
+                            <p class="text-gray-600 mb-4">جميع المكونات في وحدة واحدة خارجية، مناسب للمباني التجارية والمتوسطة الحجم</p>
+                            <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>تركيب وتشغيل سريع</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>توفير مساحة داخلية</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>كفاءة عالية في التبريد</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- نظام الـ Central Air Conditioning -->
+                    <div class="system-type-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="نظام التكييف المركزي الكامل" 
+                                 class="w-full h-56 object-cover">
+                            <span class="category-badge bg-secondary text-white">للمباني الكبيرة</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">نظام التكييف المركزي الكامل</h3>
+                            <p class="text-gray-600 mb-4">نظام متكامل مع قنوات توزيع هواء، مناسب للمباني الكبيرة والفنادق والمستشفيات</p>
+                            <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>تبريد موحد لكامل المبنى</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>تحكم مركزي ذكي</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>كفاءة عالية جداً</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جدول مقارنة بين الأنظمة -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-16 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مقارنة بين <span class="text-primary">أنواع أنظمة التكييف المركزي</span>
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>المعيار</th>
+                                    <th>نظام الـ Split</th>
+                                    <th>نظام الـ Packaged</th>
+                                    <th>نظام التكييف المركزي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">السعة (طن تبريد)</td>
+                                    <td class="text-center">1 - 5 طن</td>
+                                    <td class="text-center">3 - 20 طن</td>
+                                    <td class="text-center">10 - 100+ طن</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">المساحة المناسبة</td>
+                                    <td class="text-center">منازل، مكاتب صغيرة</td>
+                                    <td class="text-center">متاجر، مكاتب متوسطة</td>
+                                    <td class="text-center">مباني كبيرة، فنادق</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">تكلفة التركيب</td>
+                                    <td class="text-center text-green-600">منخفضة</td>
+                                    <td class="text-center text-yellow-600">متوسطة</td>
+                                    <td class="text-center text-red-600">عالية</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">استهلاك الطاقة</td>
+                                    <td class="text-center">معتدل</td>
+                                    <td class="text-center">جيد</td>
+                                    <td class="text-center">كفاءة عالية</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الصيانة</td>
+                                    <td class="text-center">سهلة</td>
+                                    <td class="text-center">متوسطة</td>
+                                    <td class="text-center">متخصصة</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">العمر الافتراضي</td>
+                                    <td class="text-center">10-15 سنة</td>
+                                    <td class="text-center">12-18 سنة</td>
+                                    <td class="text-center">15-25 سنة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدمات التركيب -->
+    <section id="installation" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+                        خدمات التركيب
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">تركيب المكيفات المركزية</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نقدم حلول تركيب متكاملة لأنظمة التكييف المركزي، مع ضمان الجودة والكفاءة
+                    </p>
+                </div>
+
+                <!-- مراحل التركيب -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        مراحل <span class="text-primary">عملية التركيب</span> الاحترافية
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="timeline-vertical">
+                            <!-- مرحلة 1 -->
+                            <div class="timeline-item">
+                                <div class="bg-white p-6 rounded-xl shadow-lg">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">الدراسة والتصميم</h4>
+                                    <p class="text-gray-600 mb-3">تحليل المساحة وتحديد الاحتياجات، تصميم النظام الأمثل مع مراعاة التهوية والطاقة</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs">حساب الحمل الحراري</span>
+                                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs">تحديد مواقع الوحدات</span>
+                                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs">تصميم مسارات القنوات</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- مرحلة 2 -->
+                            <div class="timeline-item">
+                                <div class="bg-white p-6 rounded-xl shadow-lg">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">تجهيز الموقع</h4>
+                                    <p class="text-gray-600 mb-3">تحضير نقاط الكهرباء، حفر وتجهيز مسارات القنوات، تركيب الحوامل والمشايات</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs">تجهيز الكهرباء</span>
+                                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs">حفر المسارات</span>
+                                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs">تركيب الحوامل</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- مرحلة 3 -->
+                            <div class="timeline-item">
+                                <div class="bg-white p-6 rounded-xl shadow-lg">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">تركيب المعدات</h4>
+                                    <p class="text-gray-600 mb-3">تركيب الوحدات الداخلية والخارجية، مد القنوات، توصيل الأسلاك والأنابيب</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs">تركيب الوحدات</span>
+                                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs">مد القنوات</span>
+                                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs">توصيل الكهرباء</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-vertical">
+                            <!-- مرحلة 4 -->
+                            <div class="timeline-item">
+                                <div class="bg-white p-6 rounded-xl shadow-lg">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">التوصيل والاختبار</h4>
+                                    <p class="text-gray-600 mb-3">توصيل نظام التبريد، شحن الغاز، اختبار التسريبات، تشغيل النظام التجريبي</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs">شحن الغاز</span>
+                                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs">اختبار التسريبات</span>
+                                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs">تشغيل تجريبي</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- مرحلة 5 -->
+                            <div class="timeline-item">
+                                <div class="bg-white p-6 rounded-xl shadow-lg">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">الضبط والتعديل</h4>
+                                    <p class="text-gray-600 mb-3">ضبط درجات الحرارة، تعديل تدفق الهواء، برمجة النظام، تحقيق التوازن الحراري</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs">ضبط درجات الحرارة</span>
+                                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs">تعديل التدفق</span>
+                                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs">برمجة النظام</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- مرحلة 6 -->
+                            <div class="timeline-item">
+                                <div class="bg-white p-6 rounded-xl shadow-lg">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">التسليم والتدريب</h4>
+                                    <p class="text-gray-600 mb-3">التنظيف النهائي، تسليم النظام، تدريب المستخدمين، توقيع عقود الضمان</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs">التنظيف</span>
+                                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs">التدريب</span>
+                                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs">عقد الضمان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عوامل اختيار النظام المناسب -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        عوامل <span class="text-primary">اختيار نظام التكييف المركزي</span> المناسب
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="stat-box">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-ruler-combined text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">المساحة الكلية</h4>
+                            <p class="text-gray-600 text-sm">حساب المساحة بالمتر المربع لتحديد سعة التبريد المطلوبة</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-accent text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">عدد المستخدمين</h4>
+                            <p class="text-gray-600 text-sm">عدد الأشخاص الدائمين يؤثر على الحمل الحراري</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-lightbulb text-secondary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">الأجهزة الكهربائية</h4>
+                            <p class="text-gray-600 text-sm">الأجهزة تولد حرارة وتزيد من احتياجات التبريد</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-sun text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">التعرض الشمسي</h4>
+                            <p class="text-gray-600 text-sm">اتجاه النوافذ والتعرض للشمس يؤثر على الحمل الحراري</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدمات الصيانة -->
+    <section id="maintenance" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
+                        برامج الصيانة
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">الصيانة الدورية</span> للمكيفات المركزية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        برامج صيانة وقائية تحافظ على كفاءة النظام وتطيل عمره الافتراضي
+                    </p>
+                </div>
+
+                <!-- أنواع برامج الصيانة -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- برنامج الصيانة الأساسي -->
+                    <div class="price-card">
+                        <div class="p-6 text-center border-b border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">الصيانة الأساسية</h3>
+                            <div class="flex justify-center items-baseline mb-4">
+                                <span class="text-3xl font-bold text-primary">250</span>
+                                <span class="text-gray-600 mr-2">ريال/شهر</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">للأنظمة الصغيرة والمتوسطة</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>فحص شامل كل 3 أشهر</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تنظيف الفلاتر والمبادلات</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>فحص مستويات الغاز</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>اختبار الأداء</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-times text-red-500 ml-2"></i>
+                                    <span>صيانة الطوارئ المجانية</span>
+                                </li>
+                            </ul>
+                            <button class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                                اشترك الآن
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- برنامج الصيانة المتقدم -->
+                    <div class="price-card popular">
+                        <div class="p-6 text-center border-b border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">الصيانة المتقدمة</h3>
+                            <div class="flex justify-center items-baseline mb-4">
+                                <span class="text-3xl font-bold text-primary">450</span>
+                                <span class="text-gray-600 mr-2">ريال/شهر</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">للأنظمة المتوسطة والكبيرة</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>فحص شامل شهري</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تنظيف وتعقيم كامل</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>صيانة الطوارئ المجانية</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تقرير مفصل شهري</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>خصم 20% على قطع الغيار</span>
+                                </li>
+                            </ul>
+                            <button class="w-full py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
+                                اشترك الآن
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- برنامج الصيانة الشاملة -->
+                    <div class="price-card">
+                        <div class="p-6 text-center border-b border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">الصيانة الشاملة</h3>
+                            <div class="flex justify-center items-baseline mb-4">
+                                <span class="text-3xl font-bold text-primary">750</span>
+                                <span class="text-gray-600 mr-2">ريال/شهر</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">للمؤسسات والفنادق الكبيرة</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>مراقبة عن بعد 24/7</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>فريق دائم في الموقع</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>صيانة وقائية متقدمة</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>قطع غيار مجانية</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-2"></i>
+                                    <span>تأمين على النظام</span>
+                                </li>
+                            </ul>
+                            <button class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                                اشترك الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فوائد الصيانة الدورية -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        فوائد <span class="text-primary">الصيانة الدورية</span> للمكيفات المركزية
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-primary/10">
+                                <i class="fas fa-bolt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">توفير الطاقة</h4>
+                                <p class="text-gray-600">نظام نظيف يعمل بكفاءة أعلى ويوفر 20-30% من استهلاك الكهرباء</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-accent/10">
+                                <i class="fas fa-shield-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">إطالة العمر الافتراضي</h4>
+                                <p class="text-gray-600">الصيانة المنتظمة تطيل عمر النظام بنسبة 40% أو أكثر</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-secondary/10">
+                                <i class="fas fa-wind text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">تحسين جودة الهواء</h4>
+                                <p class="text-gray-600">تنظيف الفلاتر يقلل من الملوثات والبكتيريا في الهواء</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-primary/10">
+                                <i class="fas fa-tools text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">منع الأعطال المفاجئة</h4>
+                                <p class="text-gray-600">الكشف المبكر عن المشاكل يمنع الأعطال الكبيرة والتكاليف الباهظة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-accent/10">
+                                <i class="fas fa-temperature-low text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">كفاءة تبريد أعلى</h4>
+                                <p class="text-gray-600">نظام نظيف يعمل بكفاءة تبريد أعلى وتبريد أسرع</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-secondary/10">
+                                <i class="fas fa-file-contract text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">الحفاظ على الضمان</h4>
+                                <p class="text-gray-600">الصيانة الدورية تحافظ على شروط الضمان من الشركات المصنعة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأعطال الشائعة والإصلاح -->
+    <section id="repair" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-red-500/10 text-red-500 rounded-full text-sm font-semibold mb-4">
+                        خدمات الإصلاح
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        <span class="text-primary">الأعطال الشائعة</span> وإصلاح المكيفات المركزية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نتعامل مع جميع أنواع أعطال التكييف المركزي بسرعة وكفاءة عالية
+                    </p>
+                </div>
+
+                <!-- الأعطال الشائعة -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <!-- عطل 1 -->
+                    <div class="service-card" data-category="repair">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1562157633-5e1d6d3a7d3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="نقص غاز التبريد" 
+                                 class="w-full service-img">
+                            <span class="category-badge bg-red-500 text-white">عطل شائع</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                نقص غاز التبريد
+                            </h4>
+                            <p class="text-gray-600 mb-4 text-center text-sm">
+                                أهم وأكثر الأعطال شيوعاً في أنظمة التكييف المركزي
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الأعراض:</span>
+                                    <span class="text-red-500 font-medium">ضعف التبريد</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">العلاج:</span>
+                                    <span class="text-green-500 font-medium">كشف التسريبات وشحن الغاز</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الوقت:</span>
+                                    <span class="text-blue-500 font-medium">2-4 ساعات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عطل 2 -->
+                    <div class="service-card" data-category="repair">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تلف الكمبروسور" 
+                                 class="w-full service-img">
+                            <span class="category-badge bg-orange-500 text-white">عطل خطير</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                تلف الكمبروسور
+                            </h4>
+                            <p class="text-gray-600 mb-4 text-center text-sm">
+                                قلب نظام التكييف، وعند تلفه يتوقف النظام كاملاً
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الأعراض:</span>
+                                    <span class="text-red-500 font-medium">توقف كامل</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">العلاج:</span>
+                                    <span class="text-green-500 font-medium">استبدال الكمبروسور</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الوقت:</span>
+                                    <span class="text-blue-500 font-medium">4-8 ساعات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عطل 3 -->
+                    <div class="service-card" data-category="repair">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="انسداد الفلاتر" 
+                                 class="w-full service-img">
+                            <span class="category-badge bg-yellow-500 text-white">عطل بسيط</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                انسداد الفلاتر
+                            </h4>
+                            <p class="text-gray-600 mb-4 text-center text-sm">
+                                انسداد فلاتر الهواء يقلل من كفاءة النظام وجودة الهواء
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الأعراض:</span>
+                                    <span class="text-red-500 font-medium">ضعف تدفق الهواء</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">العلاج:</span>
+                                    <span class="text-green-500 font-medium">تنظيف أو استبدال الفلاتر</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الوقت:</span>
+                                    <span class="text-blue-500 font-medium">1-2 ساعات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جدول الأعطال الشائعة -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        جدول <span class="text-primary">الأعطال الشائعة</span> وحلولها
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>العطل</th>
+                                    <th>الأعراض</th>
+                                    <th>الأسباب المحتملة</th>
+                                    <th>الحل المقترح</th>
+                                    <th>التكلفة التقريبية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">تسريب الماء</td>
+                                    <td class="text-red-500">تساقط ماء من الوحدة الداخلية</td>
+                                    <td>انسداد أنابيب التصريف</td>
+                                    <td class="text-green-600">تنظيف أنابيب التصريف</td>
+                                    <td class="text-blue-600">150-300 ريال</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">ضغط منخفض</td>
+                                    <td class="text-red-500">ضعف تبريد مع صوت عالٍ</td>
+                                    <td>تسريب غاز أو عطل في الضاغط</td>
+                                    <td class="text-green-600">فحص التسريبات وإصلاحها</td>
+                                    <td class="text-blue-600">300-600 ريال</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">مروحة لا تعمل</td>
+                                    <td class="text-red-500">هواء بارد ولكن بدون تدفق</td>
+                                    <td>محرك مروحة تالف أو عطل كهربائي</td>
+                                    <td class="text-green-600">إصلاح أو استبدال المحرك</td>
+                                    <td class="text-blue-600">400-800 ريال</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">رائحة كريهة</td>
+                                    <td class="text-red-500">هواء بارد لكن برائحة عفنة</td>
+                                    <td>تراكم البكتيريا والفطريات</td>
+                                    <td class="text-green-600">تنظيف وتعقيم شامل</td>
+                                    <td class="text-blue-600">250-500 ريال</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">توقف مفاجئ</td>
+                                    <td class="text-red-500">توقف النظام فجأة</td>
+                                    <td>مشكلة في لوحة التحكم أو الأمان</td>
+                                    <td class="text-green-600">فحص وإصلاح الدوائر</td>
+                                    <td class="text-blue-600">200-500 ريال</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التنظيف والتعقيم -->
+    <section id="cleaning" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-green-500/10 text-green-500 rounded-full text-sm font-semibold mb-4">
+                        النظافة والصحة
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">تنظيف وتعقيم</span> المكيفات المركزية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        تنظيف شامل وتعقيم يضمن هواء نقي وصحة أفضل لجميع المستخدمين
+                    </p>
+                </div>
+
+                <!-- خطوات التنظيف -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        خطوات <span class="text-primary">التنظيف الاحترافي</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <!-- خطوة 1 -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <span class="text-xl font-bold text-primary">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">إيقاف التيار الكهربائي</h4>
+                                    <p class="text-gray-600">فصل التيار الكهربائي تماماً عن النظام للحفاظ على سلامة الفنيين</p>
+                                </div>
+                            </div>
+                            
+                            <!-- خطوة 2 -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <span class="text-xl font-bold text-accent">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تفكيك الأجزاء</h4>
+                                    <p class="text-gray-600">إزالة الفلاتر، ألواح التغطية، والأجزاء القابلة للإزالة</p>
+                                </div>
+                            </div>
+                            
+                            <!-- خطوة 3 -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <span class="text-xl font-bold text-secondary">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تنظيف المبادلات</h4>
+                                    <p class="text-gray-600">تنظيف ملفات المبادل الحراري باستخدام بخاخات خاصة ومعدات متخصصة</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <!-- خطوة 4 -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <span class="text-xl font-bold text-primary">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تنظيف القنوات</h4>
+                                    <p class="text-gray-600">شفط الأتربة والملوثات من قنوات توزيع الهواء باستخدام معدات عالية القوة</p>
+                                </div>
+                            </div>
+                            
+                            <!-- خطوة 5 -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <span class="text-xl font-bold text-accent">5</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">التعقيم الشامل</h4>
+                                    <p class="text-gray-600">رش معقمات ومطهرات طبية تقضي على 99.9% من الجراثيم والبكتيريا</p>
+                                </div>
+                            </div>
+                            
+                            <!-- خطوة 6 -->
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                    <span class="text-xl font-bold text-secondary">6</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">إعادة التركيب والاختبار</h4>
+                                    <p class="text-gray-600">إعادة جميع الأجزاء واختبار النظام للتأكد من عمله بكفاءة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فوائد التنظيف المنتظم -->
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        فوائد <span class="text-primary">التنظيف المنتظم</span> للمكيفات المركزية
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-lungs text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">صحة أفضل</h4>
+                                <p class="text-gray-600 text-sm">تقليل مسببات الحساسية والربو</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-bolt text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">توفير الطاقة</h4>
+                                <p class="text-gray-600 text-sm">تحسين الكفاءة وتقليل الفاتورة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-wind text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">هواء أنظف</h4>
+                                <p class="text-gray-600 text-sm">إزالة الروائح والملوثات</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-temperature-low text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">تبريد أفضل</h4>
+                                <p class="text-gray-600 text-sm">تحسين أداء التبريد والتوزيع</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-tools text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">تقليل الأعطال</h4>
+                                <p class="text-gray-600 text-sm">منع تراكم الأوساخ المسببة للأعطال</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-calendar-alt text-indigo-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">إطالة العمر</h4>
+                                <p class="text-gray-600 text-sm">الحفاظ على مكونات النظام لأطول فترة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاستشارة المجانية -->
+    <section id="consultation" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-semibold mb-4">
+                        استشارة مجانية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        احصل على <span class="text-primary">استشارة مجانية</span> لمكيفاتك المركزية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        خبراؤنا جاهزون لتقييم نظامك وتقديم الحلول المناسبة لاحتياجاتك
+                    </p>
+                </div>
+
+                <!-- نموذج الاستشارة -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">املأ النموذج للحصول على استشارة</h3>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">الاسم الكامل *</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="أدخل اسمك الكامل" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">رقم الهاتف *</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="05xxxxxxxx" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">البريد الإلكتروني</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="example@domain.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">نوع الخدمة المطلوبة *</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" required>
+                                    <option value="">اختر نوع الخدمة</option>
+                                    <option value="installation">تركيب نظام جديد</option>
+                                    <option value="maintenance">صيانة دورية</option>
+                                    <option value="repair">إصلاح أعطال</option>
+                                    <option value="cleaning">تنظيف وتعقيم</option>
+                                    <option value="consultation">استشارة فنية</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">وصف المشكلة أو الطلب</label>
+                                <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors" rows="4" placeholder="صف مشكلتك أو احتياجاتك بالتفصيل..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold text-lg hover:opacity-90 transition-opacity">
+                                <i class="fas fa-paper-plane ml-2"></i>
+                                إرسال طلب الاستشارة
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-gradient-to-br from-primary to-accent rounded-2xl p-8 text-white mb-8">
+                            <h3 class="text-2xl font-bold mb-6">ماذا تتضمن الاستشارة؟</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                    <span>فحص مجاني لنظام التكييف الحالي</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                    <span>تقييم شامل للأداء والكفاءة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                    <span>توصيات عملية لتحسين النظام</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                    <span>عروض أسعار مفصلة وشفافة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                    <span>مقترحات لتوفير الطاقة والتكاليف</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">معلومات الاتصال</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ml-3">
+                                        <i class="fas fa-phone-alt text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">الهاتف</h4>
+                                        <p class="text-gray-600">01111263618</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center ml-3">
+                                        <i class="fas fa-envelope text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">البريد الإلكتروني</h4>
+                                        <p class="text-gray-600">ac@goldenmoon.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center ml-3">
+                                        <i class="fas fa-clock text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">أوقات العمل</h4>
+                                        <p class="text-gray-600">24/7 - خدمة طوارئ متاحة</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-6">
+                                    <a href="tel:01111263618" class="block w-full py-4 bg-secondary text-white rounded-xl font-bold text-lg text-center hover:bg-secondary/90 transition-colors">
+                                        <i class="fas fa-phone-alt ml-2"></i>
+                                        اتصل الآن للحصول على استشارة
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    الأسئلة <span class="text-primary">الشائعة</span> عن المكيفات المركزية
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- سؤال 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(1)">
+                            <h4 class="text-lg font-bold text-gray-800">كم مرة يجب صيانة المكيف المركزي؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-1"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p class="text-gray-700">
+                                يوصى بإجراء صيانة دورية كل 3-6 أشهر حسب كثافة الاستخدام. في المناطق ذات الاستخدام العالي أو في المناخات الحارة، يفضل الصيانة كل 3 أشهر. يشمل ذلك تنظيف الفلاتر، فحص مستويات الغاز، واختبار الأداء العام.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(2)">
+                            <h4 class="text-lg font-bold text-gray-800">ما هي علامات احتياج المكيف المركزي للصيانة؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-2"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p class="text-gray-700">
+                                هناك عدة علامات تشير إلى حاجة المكيف المركزي للصيانة:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>ضعف تدفق الهواء من الفتحات</li>
+                                    <li>ارتفاع فاتورة الكهرباء بشكل ملحوظ</li>
+                                    <li>أصوات غير معتادة من الوحدة</li>
+                                    <li>رائحة عفنة أو غير محببة من الهواء</li>
+                                    <li>تسرب ماء من الوحدة الداخلية</li>
+                                    <li>عدم وصول المكيف لدرجة الحرارة المطلوبة</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(3)">
+                            <h4 class="text-lg font-bold text-gray-800">كم يعيش المكيف المركزي في المتوسط؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-3"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p class="text-gray-700">
+                                يعتمد العمر الافتراضي للمكيف المركزي على عدة عوامل:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>جودة التصنيع:</strong> الأنظمة عالية الجودة تعيش 15-25 سنة</li>
+                                    <li><strong>الصيانة الدورية:</strong> الصيانة المنتظمة تطيل العمر بنسبة 30-40%</li>
+                                    <li><strong>كثافة الاستخدام:</strong> الاستخدام المستمر يقلل العمر الافتراضي</li>
+                                    <li><strong>ظروف التشغيل:</strong> المناخ الحار والبيئة الملوثة تؤثر سلباً</li>
+                                </ul>
+                                في المتوسط، يمكن للمكيف المركزي أن يعمل بكفاءة لمدة 10-15 سنة مع الصيانة الجيدة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(4)">
+                            <h4 class="text-lg font-bold text-gray-800">كيف يمكن توفير استهلاك الطاقة في المكيف المركزي؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-4"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p class="text-gray-700">
+                                هناك عدة طرق لتوفير استهلاك الطاقة:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>ضبط درجة الحرارة على 24-26 درجة مئوية</li>
+                                    <li>استخدام الستائر والعوازل الحرارية للنوافذ</li>
+                                    <li>الصيانة الدورية للفلاتر والمكونات</li>
+                                    <li>إغلاق الأبواب والنوافذ أثناء التشغيل</li>
+                                    <li>استخدام أنظمة التحكم الذكية والبرمجة</li>
+                                    <li>ترقية النظام القديم إلى نظام حديث أكثر كفاءة</li>
+                                </ul>
+                                هذه الإجراءات يمكن أن توفر 20-40% من استهلاك الطاقة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(5)">
+                            <h4 class="text-lg font-bold text-gray-800">ما الفرق بين تنظيف المكيف العادي والتعقيم المتخصص؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-5"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p class="text-gray-700">
+                                <strong>التنظيف العادي:</strong> يشمل إزالة الأتربة والعوالق الظاهرة، تنظيف الفلاتر السطحية، وإزالة الأوساخ من الوحدات الظاهرة. وهو مناسب للصيانة الدورية البسيطة.
+                                <br><br>
+                                <strong>التعقيم المتخصص:</strong> يشمل تنظيف عميق لجميع المكونات الداخلية، استخدام معدات متخصصة لشفط الأتربة من القنوات، ورش معقمات ومطهرات طبية تقضي على 99.9% من البكتيريا والفطريات والعفن. وهذا ضروري للحفاظ على صحة المستخدمين وجودة الهواء الداخلي.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - خدمات المكيفات المركزية">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        منصتك الموثوقة لجميع خدمات المكيفات المركزية المتكاملة. نوفر حلولاً شاملة تشمل التركيب، الصيانة، الإصلاح، والتنظيف لأنظمة التكييف المركزي في جميع أنحاء الخليج العربي.
+                    </p>
+                </div>
+
+                <!-- خدمات المكيفات -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدماتنا</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#installation"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تركيب المكيفات المركزية
+                            </a></li>
+                        <li><a href="#maintenance"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                الصيانة الدورية
+                            </a></li>
+                        <li><a href="#repair"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                إصلاح الأعطال
+                            </a></li>
+                        <li><a href="#cleaning"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تنظيف وتعقيم
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- روابط مهمة -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركاؤنا المعتمدون
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                مدونة التكييف والصيانة
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                من نحن
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">دعم فني 24/7</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">ac@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - خدمات المكيفات المركزية. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الخدمة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الضمان</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // فلترة الخدمات حسب التصنيف
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter-btn');
+            const services = document.querySelectorAll('.service-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشاط للزر المضغوط
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // عرض/إخفاء الخدمات حسب التصنيف
+                    services.forEach(service => {
+                        const serviceCategories = service.getAttribute('data-category');
+                        if (category === 'all' || serviceCategories === category) {
+                            service.style.display = 'block';
+                            // تأثير الظهور
+                            setTimeout(() => {
+                                service.style.opacity = '1';
+                                service.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            service.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // تأثير تحميل الصفحة للخدمات
+            services.forEach(service => {
+                service.style.opacity = '0';
+                service.style.transform = 'translateY(20px)';
+                service.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            setTimeout(() => {
+                services.forEach(service => {
+                    service.style.opacity = '1';
+                    service.style.transform = 'translateY(0)';
+                });
+            }, 100);
+            
+            // تأثير عند المرور على أزرار CTA
+            const ctaButtons = document.querySelectorAll('.cta-btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // تأثير التمرير السلس للروابط
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // وظيفة الأسئلة الشائعة
+        function toggleFAQ(number) {
+            const answer = document.getElementById('faq-answer-' + number);
+            const icon = document.getElementById('faq-icon-' + number);
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // إغلاق القائمة المتنقلة عند النقر على رابط تنقل
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

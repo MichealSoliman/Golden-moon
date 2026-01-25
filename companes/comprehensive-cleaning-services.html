@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات تنظيف المنازل والشركات | تنظيف شامل • تعقيم • جلي بلاط | قمر الخليج الذهبي</title>
+    <meta name="description" content="خدمات تنظيف شاملة للمنازل، الشركات، الفلل، والشقق. تنظيف عميق، تعقيم، جلي بلاط، تنظيف السجاد والمفروشات. فريق محترف ومواد آمنة.">
+    <meta name="keywords" content="تنظيف منازل, تنظيف شركات, تنظيف فلل, تنظيف شقق, تنظيف عميق, تنظيف وتعقيم, جلي بلاط, تنظيف سجاد, تنظيف مفروشات, تنظيف مكاتب, تنظيف مطابخ, تنظيف حمامات, شركة تنظيف, خدمات تنظيف, تنظيف بعد التشطيب">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#f59f0a',
+                        accent: '#10b981',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.4s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 128, 128, 0.15);
+            border-color: #008080;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        
+        .service-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.08);
+        }
+        
+        .hero-section {
+            background: #008080;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%);
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 128, 128, 0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .process-step {
+            position: relative;
+            padding: 30px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.15);
+        }
+        
+        .process-step-number {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .package-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            border-color: #008080;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .package-card.popular {
+            border-color: #f59f0a;
+            position: relative;
+            transform: scale(1.05);
+        }
+        
+        .package-card.popular:before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f59f0a;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 10;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+        }
+        
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #008080, #059669);
+            color: white;
+            padding: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .area-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .area-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.1);
+        }
+        
+        .faq-item {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .cleaning-method-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .cleaning-method-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 128, 128, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - خدمات تنظيف المنازل والشركات">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">خدمات تنظيف المنازل والشركات الشاملة</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة للأجهزة الصغيرة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل للأجهزة الكبيرة -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        خدمات التنظيف
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة للأجهزة الصغيرة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-broom ml-3 w-6 text-center"></i>
+                        خدمات التنظيف
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+                <li class="pt-4 border-t border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600">متابعتنا على:</span>
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon" class="text-gray-500 hover:text-sky-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA==" class="text-gray-500 hover:text-pink-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // تغيير الأيقونة عند فتح/إغلاق القائمة
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<style>
+    @media (max-width: 640px) {
+        header .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #mobile-menu {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            max-height: calc(100vh - 64px);
+            overflow-y: auto;
+        }
+    }
+</style>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-24 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    خدمات <span class="text-secondary">تنظيف</span> شاملة للمنازل والشركات
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-100 leading-relaxed">
+                    نحول الأماكن المتسخة إلى مساحات نظيفة وصحية. تنظيف عميق، تعقيم متكامل، جلي بلاط، وتنظيف المفروشات باحترافية عالية.
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-10 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">5,000+</div>
+                        <div class="text-gray-200">منزل تم تنظيفه</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">2,500+</div>
+                        <div class="text-gray-200">شركة واجهة عمل</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">200+</div>
+                        <div class="text-gray-200">فريق تنظيف محترف</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">99%</div>
+                        <div class="text-gray-200">رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <!-- أزرار التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#homes" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-home ml-2"></i>
+                        تنظيف المنازل
+                    </a>
+                    <a href="#companies" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-building ml-2"></i>
+                        تنظيف الشركات
+                    </a>
+                    <a href="#villas" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-warehouse ml-2"></i>
+                        تنظيف الفلل
+                    </a>
+                    <a href="#deep-cleaning" class="px-6 py-3 rounded-full bg-white/20 border-2 border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 font-medium">
+                        <i class="fas fa-broom ml-2"></i>
+                        تنظيف عميق
+                    </a>
+                </div>
+                
+                <!-- دعوة للعمل -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="tel:01111263618" class="px-10 py-4 bg-secondary text-white rounded-xl font-bold text-lg hover:bg-secondary/90 transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-phone-alt ml-2"></i>
+                        طلب خدمة تنظيف
+                    </a>
+                    <a href="#consultation" class="px-10 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calculator ml-2"></i>
+                        حساب التكلفة
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f0fdf4"></path>
+            </svg>
+        </div>
+    </section>
+
+
+    <!-- قسم أهمية وفوائد عملية التنظيف -->
+<section id="cleaning-benefits" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                    لماذا التنظيف مهم؟
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    أهمية <span class="text-primary">عملية التنظيف</span> وفوائدها المتعددة
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    التنظيف ليس مجرد رفاهية أو روتين يومي، بل هو استثمار في صحتك وحياتك وسعادتك
+                </p>
+            </div>
+
+            <!-- مقدمة سردية -->
+            <div class="mb-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10">
+                <h3 class="text-2xl font-bold text-primary mb-6">لماذا يعد التنظيف من أهم الاستثمارات في حياتك؟</h3>
+                <div class="space-y-6">
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        في عالمنا الحديث المليء بالضغوط والتحديات، قد يبدو التنظيف مجرد مهمة روتينية ثانوية. لكن الحقيقة أن <strong class="text-primary">عملية التنظيف المنظمة</strong> تحمل في طياتها فوائد تتجاوز بكثير مجرد إزالة الأتربة والبقع.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        تخيل معي: أن تستيقظ صباحاً على منزل نظيف مرتب، رائحته منعشة، هواؤه نقي. تشعر بالراحة النفسية والطمأنينة. هذا ليس مجرد حلم، بل هو واقع يمكن تحقيقه من خلال فهم أهمية التنظيف الحقيقية وتطبيقها في حياتك اليومية.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        الدراسات العلمية تثبت أن <strong class="text-primary">البيئة النظيفة</strong> تؤثر إيجابياً على الصحة النفسية والجسدية، تزيد الإنتاجية، تحسن العلاقات الأسرية، وتوفر وقتاً ومالاً على المدى الطويل.
+                    </p>
+                </div>
+            </div>
+
+            <!-- الفوائد الصحية -->
+            <div class="mb-16">
+                <div class="flex items-center mb-10">
+                    <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center ml-4">
+                        <i class="fas fa-heartbeat text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">الفوائد <span class="text-green-600">الصحية</span> للتنظيف المنتظم</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                <i class="fas fa-lungs text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">تحسين جودة الهواء الداخلي</h4>
+                                <p class="text-gray-600">
+                                    تتراكم الأتربة والعفن وحبوب اللقاح في المنازل غير النظيفة، مما يسبب مشاكل تنفسية وحساسية. التنظيف المنتظم يقلل من هذه الملوثات بنسبة تصل إلى 80%، ويوفر هواءً أنقى لجميع أفراد الأسرة.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                <i class="fas fa-shield-virus text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">منع انتشار الأمراض المعدية</h4>
+                                <p class="text-gray-600">
+                                    الأسطح الملوثة هي بيئة خصبة للبكتيريا والفيروسات. التنظيف والتعقيم المنتظم يقلل من انتشار الأمراض بنسبة 60-70%، خاصة في مواسم الإنفلونزا والفيروسات الموسمية.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                <i class="fas fa-bed text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">تحسين جودة النوم</h4>
+                                <p class="text-gray-600">
+                                    بيئة النوم النظيفة والمرتبة تؤثر إيجابياً على جودة النوم. الأسرّة النظيفة والغرف المرتبة تساعد على النوم العميق والاستيقاظ بنشاط، مما ينعكس إيجاباً على الصحة العامة.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mt-1 ml-4 flex-shrink-0">
+                                <i class="fas fa-brain text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">تقليل التوتر والقلق</h4>
+                                <p class="text-gray-600">
+                                    الفوضى والبيئة غير النظيفة تزيد من مستويات الكورتيزول (هرمون التوتر). العيش في بيئة نظيفة ومنظمة يقلل من التوتر بنسبة 30% ويحسن المزاج العام.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الفوائد النفسية والعاطفية -->
+            <div class="mb-16">
+                <div class="flex items-center mb-10">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center ml-4">
+                        <i class="fas fa-smile text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">الفوائد <span class="text-blue-600">النفسية والعاطفية</span></h3>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">كيف يؤثر التنظيف على صحتك النفسية؟</h4>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                هناك علاقة وثيقة بين البيئة المحيطة بنا وحالتنا النفسية. عندما تكون مساحتنا المعيشية نظيفة ومنظمة، نشعر بمزيد من التحكم والسيطرة على حياتنا.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                علم النفس البيئي يؤكد أن <strong class="text-blue-600">الفوضى البصرية</strong> تسبب إرهاقاً ذهنياً وتشتت الانتباه. بينما البيئة النظيفة المرتبة تعزز التركيز والصفاء الذهني.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">التنظيف كعلاج نفسي</h4>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                كثير من المعالجين النفسيين ينصحون بالتنظيف كوسيلة للتعامل مع القلق والتوتر. عملية التنظيف نفسها يمكن أن تكون <strong class="text-blue-600">علاجاً تأملياً</strong> يريح العقل.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                الشعور بالإنجاز بعد الانتهاء من تنظيف منطقة ما يفرز الدوبامين (هرمون السعادة)، مما يحسن المزاج ويعزز الثقة بالنفس.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الفوائد الاقتصادية -->
+            <div class="mb-16">
+                <div class="flex items-center mb-10">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-100 flex items-center justify-center ml-4">
+                        <i class="fas fa-chart-line text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">الفوائد <span class="text-yellow-600">الاقتصادية</span> للتنظيف المنتظم</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-couch text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">إطالة عمر الأثاث والممتلكات</h4>
+                        <p class="text-gray-600 text-center">
+                            التنظيف المنتظم يطيل عمر الأثاث بنسبة 40-50%، مما يوفر آلاف الريالات على المدى الطويل بدلاً من الاستبدال المتكرر.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-file-invoice-dollar text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">توفير فواتير الصيانة</h4>
+                        <p class="text-gray-600 text-center">
+                            المنزل النظيف يحتاج إلى صيانة أقل. التنظيف يمنع المشاكل قبل حدوثها، مما يوفر 20-30% من تكاليف الصيانة السنوية.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-briefcase text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">زيادة قيمة العقار</h4>
+                        <p class="text-gray-600 text-center">
+                            العقار النظيف والمحافظ عليه تزيد قيمته السوقية بنسبة 10-15% مقارنة بالمثيل غير النظيف عند البيع أو التأجير.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الفوائد الاجتماعية والأسرية -->
+            <div class="mb-16">
+                <div class="flex items-center mb-10">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center ml-4">
+                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">الفوائد <span class="text-purple-600">الاجتماعية والأسرية</span></h3>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center ml-6 flex-shrink-0">
+                            <i class="fas fa-home text-purple-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">تعزيز الروابط الأسرية</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                المنزل النظيف المرتب يصبح مكاناً جاذباً للاجتماعات العائلية وتبادل الزيارات. البيئة المريحة تعزز التواصل الإيجابي بين أفراد الأسرة وتقلل من التوترات الناتجة عن الفوضى.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mt-2">
+                                عندما يعيش الجميع في بيئة نظيفة، تتحسن العلاقات الأسرية وتقل المشاجرات حول المهام المنزلية، خاصة إذا تم توزيع المسؤوليات بشكل عادل ومنظم.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center ml-6 flex-shrink-0">
+                            <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">تحسين الصورة الاجتماعية</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                المنزل النظيف يعكس صورة إيجابية عن أهله، سواء للضيوف أو الجيران. هذه الصورة الإيجابية تنعكس على العلاقات الاجتماعية وتعزز الثقة والاحترام المتبادل.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mt-2">
+                                في الثقافات العربية بشكل خاص، يعتبر نظافة واستقبال المنزل انعكاساً للكرم وحسن الضيافة، مما يجعل التنظيف استثماراً في العلاقات الاجتماعية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الفوائد البيئية -->
+            <div class="mb-16">
+                <div class="flex items-center mb-10">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center ml-4">
+                        <i class="fas fa-leaf text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">الفوائد <span class="text-emerald-600">البيئية</span> للتنظيف المستدام</h3>
+                </div>
+                
+                <div class="bg-emerald-50 rounded-2xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الحفاظ على البيئة</h4>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                عند اختيار خدمات تنظيف تستخدم مواد صديقة للبيئة وطرق مستدامة، فإنك تساهم في:
+                            </p>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-500 text-sm mt-1 ml-2"></i>
+                                    <span>تقليل التلوث الكيميائي للمياه الجوفية</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-500 text-sm mt-1 ml-2"></i>
+                                    <span>الحفاظ على صحة التربة والنباتات</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-500 text-sm mt-1 ml-2"></i>
+                                    <span>تقليل النفايات الكيميائية الضارة</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الصحة العامة للمجتمع</h4>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                التنظيف الصحيح يمنع انتشار الحشرات والقوارض التي تنقل الأمراض، مما يحسن الصحة العامة للمجتمع بأكمله.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                عندما تلتزم الأسر والشركات بالتنظيف المنتظم، تنخفض معدلات الأمراض المعدية في المجتمع، وتقل التكلفة على النظام الصحي العام.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- خاتمة وتحفيزية -->
+            <div class="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-white text-center">
+                <h3 class="text-2xl font-bold mb-6">الاستثمار في النظافة هو استثمار في حياتك</h3>
+                <p class="text-white/90 text-lg mb-6 leading-relaxed">
+                    بعد استعراض كل هذه الفوائد، يصبح واضحاً أن التنظيف ليس مجرد رفاهية أو عبء إضافي، بل هو <strong class="text-secondary">استثمار حقيقي</strong> في صحتك، سعادتك، علاقاتك، ومالك.
+                </p>
+                <p class="text-white/90 text-lg mb-8 leading-relaxed">
+                    لا تنتظر حتى تتراكم الأوساخ أو تتفاقم المشاكل. ابدأ اليوم في جعل النظافة أولوية في حياتك، وستشعر بالفرق في كل جوانب حياتك.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:01111263618" class="px-8 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-phone-alt ml-2"></i>
+                        استشر خبراء التنظيف
+                    </a>
+                    <a href="#consultation" class="px-8 py-4 bg-secondary text-white rounded-xl font-bold text-lg hover:bg-secondary/90 transition-colors">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        خطط لبرنامج تنظيف منتظم
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- قسم أنواع خدمات التنظيف -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        خدماتنا
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        أنواع <span class="text-primary">خدمات التنظيف</span> المتاحة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نقدم مجموعة شاملة من خدمات التنظيف تلبي جميع احتياجاتك
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- تنظيف المنازل -->
+                    <div class="service-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المنازل" 
+                                 class="w-full service-img">
+                            <span class="category-badge bg-primary text-white">الأكثر طلباً</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">تنظيف المنازل</h3>
+                            <p class="text-gray-600 mb-4">خدمات تنظيف شاملة للمنازل والشقق بجميع أحجامها</p>
+                            <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف جميع الغرف والأرضيات</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف المطابخ والحمامات</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف النوافذ والزجاج</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary text-sm mt-1 ml-2"></i>
+                                    <span>إزالة الأتربة والعناية بالمفروشات</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-primary font-bold">بدءاً من 200 ريال</span>
+                                <a href="tel:01111263618" class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-colors">
+                                    اطلب الآن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- تنظيف الشركات -->
+                    <div class="service-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف الشركات" 
+                                 class="w-full service-img">
+                            <span class="category-badge bg-accent text-white">للمكاتب</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">تنظيف الشركات</h3>
+                            <p class="text-gray-600 mb-4">تنظيف متكامل للمكاتب والمباني التجارية</p>
+                            <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف المكاتب والممرات</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف دورات المياه المشتركة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>إزالة النفايات وإدارة المخلفات</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent text-sm mt-1 ml-2"></i>
+                                    <span>خدمات تنظيف دورية ومنتظمة</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-accent font-bold">بدءاً من 500 ريال</span>
+                                <a href="tel:01111263618" class="px-4 py-2 bg-accent text-white rounded-lg text-sm hover:bg-accent/90 transition-colors">
+                                    اطلب الآن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- تنظيف الفلل -->
+                    <div class="service-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف الفلل" 
+                                 class="w-full service-img">
+                            <span class="category-badge bg-secondary text-white">فلل وقصور</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">تنظيف الفلل والقصور</h3>
+                            <p class="text-gray-600 mb-4">تنظيف متخصص للفلل الكبيرة والقصور</p>
+                            <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف الغرف المتعددة والطوابق</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف الحدائق والمسابح</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>تنظيف السجاد والمفروشات الفاخرة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary text-sm mt-1 ml-2"></i>
+                                    <span>خدمات تنظيف الستائر والتحف</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-secondary font-bold">بدءاً من 800 ريال</span>
+                                <a href="tel:01111263618" class="px-4 py-2 bg-secondary text-white rounded-lg text-sm hover:bg-secondary/90 transition-colors">
+                                    اطلب الآن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- خدمات متخصصة -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="area-box">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-toilet-paper text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">تنظيف الحمامات</h4>
+                        <p class="text-gray-600 text-sm">تعقيم شامل وإزالة الرواسب والجراثيم</p>
+                    </div>
+                    
+                    <div class="area-box">
+                        <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-utensils text-accent text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">تنظيف المطابخ</h4>
+                        <p class="text-gray-600 text-sm">إزالة الدهون وتنظيف الأجهزة والخزائن</p>
+                    </div>
+                    
+                    <div class="area-box">
+                        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-couch text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">تنظيف المفروشات</h4>
+                        <p class="text-gray-600 text-sm">تنظيف السجاد، الكنب، الستائر</p>
+                    </div>
+                    
+                    <div class="area-box">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tint text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">جلي وتلميع البلاط</h4>
+                        <p class="text-gray-600 text-sm">إزالة البقع وإعادة اللمعان للأرضيات</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- قسم تنظيف المنازل الشامل -->
+<section id="homes" class="py-20 section-bg">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                    بيئة نظيفة.. حياة أفضل
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    فن <span class="text-primary">التنظيف الشامل</span> لمنزلك
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    نصنع لمنزلك قصة جديدة من النظافة والنظام، حيث تتحول كل ركن إلى مساحة تنعم بالصفاء والأناقة
+                </p>
+            </div>
+
+            <!-- فلسفة التنظيف الشامل -->
+            <div class="mb-20">
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            رحلتنا مع منزلك تبدأ بفهم عميق
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                            نحن لا ننظف المساحات فقط، بل نعيد الحياة إليها. كل منزل له قصته، وكل ركن يحمل ذكرياته، 
+                            ونحن نتعامل مع هذا الإرث باحترام وأمانة.
+                        </p>
+                    </div>
+
+                    <!-- قصة التنظيف -->
+                    <div class="space-y-8">
+                        <div class="story-section">
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                    <i class="fas fa-seedling text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">بداية الرحلة: الفهم والاستماع</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نبدأ بجولة صامتة في منزلك، نقرأ مساحاته، نفهم تدفق الضوء، نستشعر أماكن الراحة 
+                                        وأركان العمل. نستمع لقصتك مع المنزل، ما الذي تريده أن يصبح بعد زيارتنا؟
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-section">
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                    <i class="fas fa-hands text-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">لمسة الخبير: الدقة والعناية</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        بأيدٍ تعرف سر كل سطح، وعينٍ تدرك قيمة كل تفصيل، نتعامل مع منزلك وكأنه لوحة فنية 
+                                        تحتاج للعناية. نبدأ من الأعلى إلى الأسفل، من الداخل إلى الخارج، بخطوات مدروسة 
+                                        كحركات راقص باليه محترف.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-section">
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                    <i class="fas fa-magic text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">سحر التحول: من العادي إلى الاستثنائي</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        نشهد معاً تحول الغبار إلى لمعان، والفوضى إلى نظام، والقديم إلى متجدد. نعيد للنوافذ 
+                                        شفافيتها، للأرضيات بريقها، للجدران نقاءها. كل ضربة فرشاة، كل مسحة قماش، تحمل 
+                                        رسالة عناية واحترام.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-section">
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 ml-4">
+                                    <i class="fas fa-home text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-3">اللمسة الأخيرة: إعادة الروح</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        لا نغادر قبل أن نطمئن أن كل شيء في مكانه الصحيح. نترك لك منزلاً يتنفس نظافة، 
+                                        يهمس براحة، يروي قصة العناية. رائحة النظافة تداعب أنفك، وترتيب المساحات يسرّ عينيك، 
+                                        وهدوء المكان يلامس روحك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- اقتباس -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <div class="text-center">
+                            <i class="fas fa-quote-right text-3xl text-gray-300 mb-4"></i>
+                            <p class="text-xl italic text-gray-700 max-w-2xl mx-auto">
+                                "النظافة ليست مجرد روتين، بل هي احتفاء بالحياة في مساحتها الأثيرة: المنزل"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لماذا نختلف؟ -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                    لماذا تختلف <span class="text-primary">قصتنا</span> مع النظافة؟
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="difference-card">
+                        <div class="difference-icon">
+                            <i class="fas fa-heart text-primary"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">ننظف بالقلب</h4>
+                        <p class="text-gray-600">
+                            نرى في منزلك أكثر من مجرد جدران وأثاث. نرى ذكريات تتراكم في الزوايا، 
+                            ضحكات تعلق على الجدران، وحكايات ترويها الأرضيات.
+                        </p>
+                    </div>
+                    
+                    <div class="difference-card">
+                        <div class="difference-icon">
+                            <i class="fas fa-eye text-accent"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">عين ترى ما لا يراه الآخرون</h4>
+                        <p class="text-gray-600">
+                            لا نكتفي بما هو ظاهر. نبحث عن الغبار في الأماكن المستترة، البقع المختبئة، 
+                            والأتربة المتسللة. كل تفصيل صغير له أهمية كبيرة في قصتنا.
+                        </p>
+                    </div>
+                    
+                    <div class="difference-card">
+                        <div class="difference-icon">
+                            <i class="fas fa-history text-secondary"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">احترام الزمن والذكريات</h4>
+                        <p class="text-gray-600">
+                            نتعامل مع أثاثك بحنان الأمهات، مع تحفك برقة العاشقين، مع كتبك باحترام العلماء. 
+                            كل قطعة تحكي تاريخاً، ونحن حراس هذا التاريخ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الدعوة للبدء -->
+            <div class="text-center bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                    دع منزلك يحكي قصته الجديدة
+                </h3>
+                <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                    امنحنا فرصة كتابة فصل جديد من النظافة في قصة منزلك. لنبدأ الرحلة معاً، 
+                    من أول نظرة إلى آخر لمسة.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg">
+                        ابدأ قصة التنظيف الشامل
+                    </button>
+                    <button class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-lg font-semibold text-lg hover:bg-primary/5 transition-colors">
+                        استمع إلى قصص منازل أخرى
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.story-section {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+.story-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.difference-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.difference-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.difference-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.difference-card:nth-child(2) .difference-icon {
+    background: linear-gradient(135deg, var(--accent), var(--secondary));
+}
+.difference-card:nth-child(3) .difference-icon {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+</style>
+
+<style>
+.size-option.active,
+.service-item.active {
+    border-color: var(--primary) !important;
+    background-color: rgba(var(--primary-rgb), 0.05);
+}
+.service-item.active i {
+    color: var(--primary) !important;
+}
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+</style>
+
+<script>
+// تفاعلية اختيار حجم المنزل
+document.querySelectorAll('.size-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.size-option').forEach(opt => {
+            opt.classList.remove('active');
+            opt.querySelector('div').classList.remove('border-2', 'border-primary', 'bg-primary/5');
+            opt.querySelector('div').classList.add('border');
+        });
+        
+        this.classList.add('active');
+        this.querySelector('div').classList.add('border-2', 'border-primary', 'bg-primary/5');
+        this.querySelector('div').classList.remove('border');
+        
+        // تحديث السعر بناءً على الحجم
+        updatePrice(this.dataset.size);
+    });
+});
+
+// تفاعلية اختيار الخدمات
+document.querySelectorAll('.service-item').forEach(service => {
+    service.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (this.classList.contains('active')) {
+            icon.classList.remove('fa-circle', 'text-gray-300');
+            icon.classList.add('fa-check-circle', 'text-primary');
+        } else {
+            icon.classList.remove('fa-check-circle', 'text-primary');
+            icon.classList.add('fa-circle', 'text-gray-300');
+        }
+        updateTotalPrice();
+    });
+});
+
+function updatePrice(size) {
+    const priceElement = document.querySelector('.text-3xl.font-bold.text-primary');
+    const prices = {
+        'small': '200',
+        'medium': '350',
+        'large': '500',
+        'villa': '750'
+    };
+    if (priceElement && prices[size]) {
+        priceElement.textContent = prices[size];
+    }
+}
+
+function updateTotalPrice() {
+    // يمكن إضافة منطق لحساب السعر الإجمالي بناءً على الخدمات المختارة
+}
+</script>
+
+    <!-- قسم تنظيف الشركات -->
+    <section id="companies" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+                        الشركات والمكاتب
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">تنظيف الشركات</span> والمباني التجارية
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        حلول تنظيف متخصصة للمكاتب والمباني التجارية بجميع أحجامها
+                    </p>
+                </div>
+
+                <!-- أنواع تنظيف الشركات -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="cleaning-method-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المكاتب اليومي" 
+                                 class="w-full h-56 object-cover">
+                            <span class="category-badge bg-primary text-white">خدمة يومية</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">تنظيف المكاتب اليومي</h3>
+                            <p class="text-gray-600 mb-4">خدمات تنظيف يومية للمكاتب والمباني التجارية</p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">التكلفة:</span>
+                                    <span class="text-primary font-bold">500-2000 ريال/شهر</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الوقت:</span>
+                                    <span class="text-accent font-bold">بعد ساعات العمل</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">يشمل:</span>
+                                    <span class="text-green-500 font-medium">تطهير يومي شامل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cleaning-method-card">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المصانع والمستودعات" 
+                                 class="w-full h-56 object-cover">
+                            <span class="category-badge bg-accent text-white">مساحات كبيرة</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">تنظيف المصانع والمستودعات</h3>
+                            <p class="text-gray-600 mb-4">تنظيف متخصص للمساحات الصناعية والمخازن الكبيرة</p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">التكلفة:</span>
+                                    <span class="text-primary font-bold">1000-5000 ريال/شهر</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">الوقت:</span>
+                                    <span class="text-accent font-bold">أي وقت مناسب</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">يشمل:</span>
+                                    <span class="text-green-500 font-medium">تنظيف آلات ومعدات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جدول خدمات تنظيف الشركات -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-16 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        جدول <span class="text-primary">خدمات تنظيف الشركات</span>
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>نوع الخدمة</th>
+                                    <th>المساحة</th>
+                                    <th>التكلفة الشهرية</th>
+                                    <th>الجدول الزمني</th>
+                                    <th>الخدمات المضمنة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">مكتب صغير</td>
+                                    <td class="text-center">حتى 100م²</td>
+                                    <td class="text-primary text-center font-bold">500 - 800 ريال</td>
+                                    <td class="text-center">5 أيام أسبوعياً</td>
+                                    <td class="text-green-600">تنظيف أساسي، إزالة نفايات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">مكتب متوسط</td>
+                                    <td class="text-center">100 - 300م²</td>
+                                    <td class="text-primary text-center font-bold">800 - 1500 ريال</td>
+                                    <td class="text-center">6 أيام أسبوعياً</td>
+                                    <td class="text-green-600">تنظيف شامل، تعقيم، صيانة دورية</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">مكتب كبير</td>
+                                    <td class="text-center">300 - 500م²</td>
+                                    <td class="text-primary text-center font-bold">1500 - 2500 ريال</td>
+                                    <td class="text-center">يومياً</td>
+                                    <td class="text-green-600">تنظيف عميق، صيانة، إدارة نفايات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">مبنى تجاري</td>
+                                    <td class="text-center">500 - 1000م²</td>
+                                    <td class="text-primary text-center font-bold">2500 - 5000 ريال</td>
+                                    <td class="text-center">24/7 فريق متواجد</td>
+                                    <td class="text-green-600">جميع الخدمات، فريق مخصص</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">مصنع/مستودع</td>
+                                    <td class="text-center">1000م²+</td>
+                                    <td class="text-primary text-center font-bold">5000 ريال+</td>
+                                    <td class="text-center">مخصص حسب العمل</td>
+                                    <td class="text-green-600">تنظيف صناعي، معدات خاصة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- فوائد تنظيف الشركات -->
+                <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        فوائد <span class="text-primary">تنظيف الشركات</span> المنتظم
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-primary/10">
+                                <i class="fas fa-chart-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">زيادة الإنتاجية</h4>
+                                <p class="text-gray-600">بيئة عمل نظيفة تزيد إنتاجية الموظفين بنسبة 15-20%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-accent/10">
+                                <i class="fas fa-user-md text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">تقليل الأمراض</h4>
+                                <p class="text-gray-600">التنظيف المنتظم يقلل من انتشار الأمراض والعدوى</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-secondary/10">
+                                <i class="fas fa-building text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">صورة مهنية</h4>
+                                <p class="text-gray-600">مكان عمل نظيف يعطي انطباعاً إيجابياً للعملاء والزوار</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-primary/10">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">الامتثال للقوانين</h4>
+                                <p class="text-gray-600">الالتزام بمعايير الصحة والسلامة المهنية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-accent/10">
+                                <i class="fas fa-tools text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">إطالة عمر الممتلكات</h4>
+                                <p class="text-gray-600">العناية بالأثاث والمعدات تطيل عمرها الافتراضي</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon bg-secondary/10">
+                                <i class="fas fa-smile text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-2">رضا الموظفين</h4>
+                                <p class="text-gray-600">بيئة عمل مريحة تزيد من رضا واستقرار الموظفين</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تنظيف الفلل -->
+    <section id="villas" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
+                        الفلل والقصور
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">تنظيف الفلل</span> والقصور الفاخرة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        حلول تنظيف متخصصة للفلل الكبيرة والقصور بمواد ومعدات فاخرة
+                    </p>
+                </div>
+
+                <!-- ميزات تنظيف الفلل -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">مميزات تنظيف الفلل معنا</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-users text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">فريق متخصص</h4>
+                                    <p class="text-gray-600">فريق مدرب على التعامل مع المنازل الفاخرة والمقتنيات الثمينة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-pump-soap text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">مواد تنظيف فاخرة</h4>
+                                    <p class="text-gray-600">استخدام مواد تنظيف عالية الجودة وآمنة على جميع الأسطح</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">مرونة في المواعيد</h4>
+                                    <p class="text-gray-600">نعمل وفقاً لجدولك الزمني وعدم إزعاجك أثناء التواجد</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">خدمات تنظيف الفلل الخاصة</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium text-gray-700">تنظيف الغرف والطوابق</span>
+                                <span class="text-primary font-bold">مُضمن</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium text-gray-700">تنظيف المسابح والجاكوزي</span>
+                                <span class="text-primary font-bold">مُضمن</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium text-gray-700">تنظيف الحدائق والنوافير</span>
+                                <span class="text-primary font-bold">مُضمن</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium text-gray-700">تنظيف السجاد الفاخر</span>
+                                <span class="text-primary font-bold">مُضمن</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium text-gray-700">تنظيف الستائر القماشية</span>
+                                <span class="text-primary font-bold">مُضمن</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium text-gray-700">تنظيف وتلميع الرخام</span>
+                                <span class="text-primary font-bold">مُضمن</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أسعار تنظيف الفلل -->
+                <div class="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-white mb-16">
+                    <h3 class="text-2xl font-bold mb-6 text-center">أسعار تنظيف الفلل</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">فلة صغيرة</h4>
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-3xl font-bold">800</span>
+                                <span class="mr-2">ريال</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>حتى 400م²</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>4 غرف نوم</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>خدمة تنظيف أساسية</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/20 p-6 rounded-xl backdrop-blur-sm border-2 border-secondary">
+                            <h4 class="text-lg font-bold mb-3">فلة متوسطة</h4>
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-3xl font-bold">1,200</span>
+                                <span class="mr-2">ريال</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>حتى 600م²</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>6 غرف نوم</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>خدمة تنظيف متكاملة</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3">فلة كبيرة/قصر</h4>
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-3xl font-bold">2,000+</span>
+                                <span class="mr-2">ريال</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>600م²+</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>8+ غرف نوم</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check ml-2"></i>
+                                    <span>خدمة تنظيف فاخرة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التنظيف العميق -->
+    <section id="deep-cleaning" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-5 py-2 bg-green-500/10 text-green-500 rounded-full text-sm font-semibold mb-4">
+                        تنظيف عميق
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        خدمات <span class="text-primary">التنظيف العميق</span> والتعقيم
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        تنظيف متخصص يصل إلى أصغر التفاصيل ويعقم كل زاوية في منزلك
+                    </p>
+                </div>
+
+                <!-- ما هو التنظيف العميق -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">ما هو التنظيف العميق؟</h3>
+                        <p class="text-gray-600 mb-4">
+                            التنظيف العميق هو عملية تنظيف شاملة تصل إلى الأماكن التي لا تصل إليها عمليات التنظيف العادية. 
+                            إنها عملية منهجية تستغرق وقتاً أطول ولكنها تقدم نتائج مذهلة.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            الفرق بين التنظيف العادي والتنظيف العميق يشبه الفرق بين الاستحمام اليومي والذهاب إلى السبا 
+                            للحصول على رعاية شاملة للبشرة والجسم.
+                        </p>
+                        
+                        <div class="bg-primary/5 p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-gray-800 mb-3">متى تحتاج للتنظيف العميق؟</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                    <span>قبل الانتقال إلى منزل جديد</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                    <span>بعد الانتهاء من أعمال التشطيب أو الترميم</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                    <span>بعد الإصابة بالأمراض المعدية في المنزل</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                    <span>قبل وبعد المناسبات الكبيرة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                    <span>مرة أو مرتين سنوياً للصيانة الوقائية</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="التنظيف العميق" 
+                             class="w-full h-full object-cover rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <!-- خطوات التنظيف العميق -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                        خطوات <span class="text-primary">التنظيف العميق</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="process-step">
+                            <div class="process-step-number bg-primary">1</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-search text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التقييم والتحضير</h4>
+                                <p class="text-gray-600 text-sm">فحص شامل للمنطقة، تحديد البقع الصعبة، وتحضير المعدات المتخصصة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number bg-accent">2</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-spray-can text-accent text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التنظيف بالبخار</h4>
+                                <p class="text-gray-600 text-sm">استخدام بخار الماء عالي الحرارة لإزالة الأوساخ والجراثيم من المفروشات</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number bg-secondary">3</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-bacteria text-secondary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التعقيم المتقدم</h4>
+                                <p class="text-gray-600 text-sm">استخدام معقمات طبية تقضي على 99.9% من الفيروسات والبكتيريا</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number bg-primary">4</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-wind text-primary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">تنظيف مجاري الهواء</h4>
+                                <p class="text-gray-600 text-sm">شفط الأتربة والعفن من مجاري التكييف والتهوية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number bg-accent">5</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-tint text-accent text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">جلي وتلميع الأرضيات</h4>
+                                <p class="text-gray-600 text-sm">إزالة البقع القديمة وإعادة اللمعان للرخام والسيراميك</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="process-step-number bg-secondary">6</div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-clipboard-check text-secondary text-2xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-3">التفتيش النهائي</h4>
+                                <p class="text-gray-600 text-sm">فحص شامل بموازين الضوء للتأكد من إزالة جميع الأتربة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مقارنة بين أنواع التنظيف -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مقارنة بين <span class="text-primary">أنواع التنظيف</span>
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full">
+                            <thead>
+                                <tr>
+                                    <th>المعيار</th>
+                                    <th>التنظيف العادي</th>
+                                    <th>التنظيف العميق</th>
+                                    <th>التنظيف المتخصص</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">المدة</td>
+                                    <td class="text-center">2-4 ساعات</td>
+                                    <td class="text-center">4-8 ساعات</td>
+                                    <td class="text-center">8+ ساعات</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">التكلفة</td>
+                                    <td class="text-center text-green-600">منخفضة</td>
+                                    <td class="text-center text-yellow-600">متوسطة</td>
+                                    <td class="text-center text-red-600">عالية</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">المعدات</td>
+                                    <td class="text-center">أدوات تقليدية</td>
+                                    <td class="text-center">معدات متوسطة</td>
+                                    <td class="text-center">معدات متخصصة</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">التعقيم</td>
+                                    <td class="text-center">بسيط</td>
+                                    <td class="text-center">شامل</td>
+                                    <td class="text-center">طبي متقدم</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">التكرار</td>
+                                    <td class="text-center">أسبوعي/شهري</td>
+                                    <td class="text-center">كل 3-6 أشهر</td>
+                                    <td class="text-center">حسب الحاجة</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="font-medium text-gray-700">الفريق</td>
+                                    <td class="text-center">1-2 أشخاص</td>
+                                    <td class="text-center">2-4 أشخاص</td>
+                                    <td class="text-center">3-6 أشخاص</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- قسم فلسفة النظافة ودورها في الحياة -->
+<section id="clean-philosophy" class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                    فلسفة النظافة
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    النظافة ليست روتيناً.. 
+                    <span class="text-primary">بل هي فلسفة حياة</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    في كل ذرة غبار نزيلها، وكل سطح نلمعه، نصنع عالماً أفضل
+                </p>
+            </div>
+
+            <!-- مقدمة فلسفية -->
+            <div class="prose prose-lg mx-auto mb-16 text-center">
+                <p class="text-gray-700 text-xl leading-relaxed mb-8">
+                    منذ فجر التاريخ، والنظافة تحكي قصة تطور الإنسان. 
+                    ليست مجرد ماء وصابون، بل هي حوار بين الإنسان ومساحته، 
+                    بين الجسد والروح، بين الفرد والمجتمع.
+                </p>
+            </div>
+
+            <!-- العوامل الأساسية للنظافة -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-gray-800 mb-12 text-center">
+                    عوامل النظافة: <span class="text-primary">الأعمدة الخمسة</span>
+                </h3>
+                
+                <div class="space-y-12">
+                    <!-- عامل 1 -->
+                    <div class="factor-card">
+                        <div class="factor-number bg-[#008080]">١</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">النظافة الجسدية: حوار الجسد مع ذاته</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    حين يلتقي الماء بالجسد، لا يغسله فقط، بل يجدد وعيه. 
+                                    كل حمام هو فرصة للبدء من جديد، كل تنظيف هو محو للقديم وفتح صفحة جديدة.
+                                </p>
+                                <p>
+                                    النظافة الشخصية ليست رفاهية، بل هي احترام للذات. 
+                                    هي اللغة التي يخبر بها الجسد نفسه: "أنت تستحق العناية".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عامل 2 -->
+                    <div class="factor-card">
+                        <div class="factor-number bg-[#008080]">٢</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">نظافة المسكن: المرآة التي تعكس الروح</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    المنزل النظيف ليس مجرد مكان خالٍ من الغبار، بل هو مساحة تتحدث عن ساكنيها. 
+                                    كل ركن نظيف يروي قصة اهتمام، كل زاوية مرتبة تعكس حالة من السلام الداخلي.
+                                </p>
+                                <p>
+                                    البيئة المنزلية النظيفة تخلق حالة ذهنية صافية. 
+                                    كما أن الفوضى الخارجية تسبب فوضى داخلية، فإن النظافة الخارجية تخلق تناغماً داخلياً.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عامل 3 -->
+                    <div class="factor-card">
+                        <div class="factor-number bg-[#008080]">٣</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">نظافة المجتمع: نسيج العلاقات الإنسانية</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    المجتمع النظيف هو مجتمع يهتم بعضه ببعض. 
+                                    الشوارع النظيفة ليست فقط جميلة للنظر، بل هي رسالة: "نحن نهتم ببعضنا".
+                                </p>
+                                <p>
+                                    النظافة العامة تعكس مستوى الوعي الجماعي. 
+                                    مجتمع ينظف حدائقه العامة، هو مجتمع يعرف قيمة المشاركة والمسؤولية المشتركة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عامل 4 -->
+                    <div class="factor-card">
+                        <div class="factor-number bg-[#008080]">٤</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">نظافة العقل: صفاء الفكر والإبداع</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    كما ننظف بيوتنا، نحتاج لتنظيف عقولنا. 
+                                    النظافة العقلية هي التخلص من الأفكار السلبية، شحنات الماضي، وتوقعات المستقبل المقلقة.
+                                </p>
+                                <p>
+                                    العقل النظيف هو العقل القادر على الإبداع، 
+                                    كما أن الغرفة النظيفة هي الأكثر استعداداً لاستقبال الأفكار الجديدة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- عامل 5 -->
+                    <div class="factor-card">
+                        <div class="factor-number bg-[#008080]">٥</div>
+                        <div class="mr-16">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4">النظافة الروحية: نقاء القلب والنية</h4>
+                            <div class="text-gray-700 leading-relaxed space-y-4">
+                                <p>
+                                    أعلى مستويات النظافة هي نظافة القلب. 
+                                    حين يكون القلب نقياً، تنعكس هذه النقاوة على كل جوانب الحياة.
+                                </p>
+                                <p>
+                                    النظافة الروحية هي أساس كل نظافة. 
+                                    من القلب النظيف تخرج الأفعال النظيفة، والأقوال النظيفة، والحياة النظيفة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تأثير النظافة على الحياة -->
+            <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-12 mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-10 text-center">
+                    كيف <span class="text-primary">تغير النظافة</span> مسار الحياة؟
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- تأثير 1 -->
+                    <div class="impact-item">
+                        <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-brain text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">الصحة النفسية</h4>
+                        <p class="text-gray-700">
+                            المساحة النظيفة تخفف التوتر، تزيد الإنتاجية، وتخلق بيئة مثالية للاسترخاء والإبداع
+                        </p>
+                    </div>
+                    
+                    <!-- تأثير 2 -->
+                    <div class="impact-item">
+                        <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-heartbeat text-accent text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">الصحة الجسدية</h4>
+                        <p class="text-gray-700">
+                            تقليل الأمراض، منع انتشار العدوى، وتعزيز المناعة من خلال بيئة نظيفة خالية من الملوثات
+                        </p>
+                    </div>
+                    
+                    <!-- تأثير 3 -->
+                    <div class="impact-item">
+                        <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-secondary text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">العلاقات الاجتماعية</h4>
+                        <p class="text-gray-700">
+                            البيئة النظيفة تشجع على التواصل الاجتماعي، وتخلق مساحات للقاءات العائلية والصداقات
+                        </p>
+                    </div>
+                    
+                    <!-- تأثير 4 -->
+                    <div class="impact-item">
+                        <div class="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-leaf text-green-500 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">الاستدامة البيئية</h4>
+                        <p class="text-gray-700">
+                            النظافة الواعية تحمي البيئة، تحافظ على الموارد، وتخلق مستقبلاً أكثر استدامة للأجيال القادمة
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- خاتمة -->
+            <div class="text-center">
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                        النظافة: <span class="text-primary">فن الحياة الراقية</span>
+                    </h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-10">
+                        النظافة ليست مهمة نكملها، بل هي رحلة نعيشها. 
+                        كل يوم نختار النظافة، نختار الصحة، نختار الجمال، نختار الحياة.
+                        <br><br>
+                        في النهاية، النظافة ليست شيئاً نفعله لمنازلنا فقط، 
+                        بل هي شيء نفعله لأنفسنا، لأحبائنا، وللعالم من حولنا.
+                    </p>
+                    
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+                    
+                    <p class="text-gray-600 italic">
+                        "النظافة هي أول فصول قصة الإنسان المتحضر"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.factor-card {
+    position: relative;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.factor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.factor-number {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 60px;
+    height: 60px;
+    background: #008080;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.factor-card:nth-child(2) .factor-number {
+    background: #008080;
+}
+
+.factor-card:nth-child(3) .factor-number {
+    background: #008080;
+}
+
+.factor-card:nth-child(4) .factor-number {
+    background: #008080;
+}
+
+.factor-card:nth-child(5) .factor-number {
+    background: #008080;
+}
+
+.impact-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.impact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .factor-card {
+        padding: 2rem 1.5rem 2rem 2rem;
+        mr-16: 0;
+    }
+    
+    .factor-number {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-bottom: 1.5rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+</style>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    الأسئلة <span class="text-primary">الشائعة</span> عن خدمات التنظيف
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- سؤال 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(1)">
+                            <h4 class="text-lg font-bold text-gray-800">كم تستغرق عملية تنظيف المنزل المتوسط؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-1"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p class="text-gray-700">
+                                تختلف المدة حسب حجم المنزل ونوع الخدمة:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>شقة صغيرة (100م²):</strong> 2-3 ساعات للتنظيف العادي، 4-5 ساعات للتنظيف العميق</li>
+                                    <li><strong>منزل متوسط (200م²):</strong> 3-4 ساعات للتنظيف العادي، 5-7 ساعات للتنظيف العميق</li>
+                                    <li><strong>فلة كبيرة (400م²):</strong> 5-7 ساعات للتنظيف العادي، 8-12 ساعة للتنظيف العميق</li>
+                                    <li><strong>مكتب تجاري:</strong> حسب المساحة والجدول الزمني المتفق عليه</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(2)">
+                            <h4 class="text-lg font-bold text-gray-800">هل تقدمون مواد التنظيف أم يجلبها العميل؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-2"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p class="text-gray-700">
+                                نقدم جميع مواد التنظيف والمعدات اللازمة كجزء من الخدمة. نستخدم:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>مواد تنظيف عالية الجودة وآمنة على جميع الأسطح</li>
+                                    <li>معقمات ومطهرات طبية معتمدة</li>
+                                    <li>معدات متخصصة للتنظيف العميق</li>
+                                    <li>أدوات فردية معقمة لكل مهمة</li>
+                                </ul>
+                                يمكن للعملاء طلب استخدام مواد معينة إذا كان لديهم حساسية أو تفضيلات خاصة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(3)">
+                            <h4 class="text-lg font-bold text-gray-800">ما الفرق بين التنظيف العادي والتنظيف العميق؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-3"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p class="text-gray-700">
+                                <strong>التنظيف العادي:</strong> يركز على الأسطح الظاهرة والأماكن الأساسية. يشمل كنس الأرضيات، مسح الأسطح، تنظيف الحمامات والمطابخ الأساسي.
+                                <br><br>
+                                <strong>التنظيف العميق:</strong> يشمل جميع ما في التنظيف العادي بالإضافة إلى:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>تنظيف خلف وخلف الأجهزة والأثاث</li>
+                                    <li>تنظيف وتلميع النوافذ من الداخل والخارج</li>
+                                    <li>تنظيف المفروشات والسجاد بالبخار</li>
+                                    <li>تنظيف مجاري التكييف والمراوح</li>
+                                    <li>تعقيم شامل لجميع الأسطح</li>
+                                    <li>تنظيف الخزائن والدواليب من الداخل</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(4)">
+                            <h4 class="text-lg font-bold text-gray-800">هل يمكن الحصول على خصم للخدمات المتكررة؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-4"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p class="text-gray-700">
+                                نعم، نقدم خصومات خاصة للخدمات المتكررة والعقود الدورية:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li><strong>خصم 10%:</strong> للخدمات الأسبوعية</li>
+                                    <li><strong>خصم 15%:</strong> للخدمات مرتين أسبوعياً</li>
+                                    <li><strong>خصم 20%:</strong> للعقود الشهرية</li>
+                                    <li><strong>خصم 25%:</strong> للعقود الربع سنوية</li>
+                                    <li><strong>خصم 30%:</strong> للعقود السنوية</li>
+                                </ul>
+                                كما نقدم خصومات خاصة للعملاء الدائمين والشركات التي تتعاقد معنا لفترات طويلة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(5)">
+                            <h4 class="text-lg font-bold text-gray-800">كيف يتم التعامل مع القطع الثمينة والأشياء الحساسة؟</h4>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-5"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p class="text-gray-700">
+                                نتبع بروتوكولاً خاصاً للتعامل مع المقتنيات الثمينة والأشياء الحساسة:
+                                <ul class="list-disc pr-5 mt-2 space-y-1 text-gray-700">
+                                    <li>التواصل المسبق مع العميل لتحديد القطع التي تحتاج عناية خاصة</li>
+                                    <li>استخدام مواد تنظيف مخصصة للأسطح الحساسة</li>
+                                    <li>وجود فنيين مدربين على التعامل مع التحف والقطع الفنية</li>
+                                    <li>إمكانية تنظيف القطع تحت إشراف العميل مباشرة</li>
+                                    <li>التأمين على القطع الثمينة خلال فترة التنظيف</li>
+                                    <li>التوثيق المصور للقطع قبل وبعد التنظيف</li>
+                                </ul>
+                                يمكن للعملاء طلب خدمة تنظيف متخصصة للقطع الثمينة إذا لزم الأمر.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - خدمات تنظيف المنازل والشركات">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        منصتك الموثوقة لجميع خدمات التنظيف الشاملة. نقدم حلول تنظيف متكاملة للمنازل، الشركات، الفلل، والشقق بفريق محترف ومواد آمنة.
+                    </p>
+                </div>
+
+                <!-- خدمات التنظيف -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدماتنا</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#homes"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تنظيف المنازل
+                            </a></li>
+                        <li><a href="#companies"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تنظيف الشركات
+                            </a></li>
+                        <li><a href="#villas"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تنظيف الفلل
+                            </a></li>
+                        <li><a href="#deep-cleaning"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تنظيف عميق
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- روابط مهمة -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركاؤنا المعتمدون
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                مدونة النظافة والصحة
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                من نحن
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">استشارات تركيب مجانية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">installation@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - خدمات تنظيف المنازل والشركات. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الخدمة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الضمان</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // فلترة الخدمات حسب التصنيف
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter-btn');
+            const services = document.querySelectorAll('.service-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشاط للزر المضغوط
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // عرض/إخفاء الخدمات حسب التصنيف
+                    services.forEach(service => {
+                        const serviceCategories = service.getAttribute('data-category');
+                        if (category === 'all' || serviceCategories === category) {
+                            service.style.display = 'block';
+                            // تأثير الظهور
+                            setTimeout(() => {
+                                service.style.opacity = '1';
+                                service.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            service.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // تأثير تحميل الصفحة للخدمات
+            services.forEach(service => {
+                service.style.opacity = '0';
+                service.style.transform = 'translateY(20px)';
+                service.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            setTimeout(() => {
+                services.forEach(service => {
+                    service.style.opacity = '1';
+                    service.style.transform = 'translateY(0)';
+                });
+            }, 100);
+            
+            // تأثير عند المرور على أزرار CTA
+            const ctaButtons = document.querySelectorAll('.cta-btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // تأثير التمرير السلس للروابط
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // حاسبة التكلفة
+            const costForm = document.querySelector('form');
+            const estimatedCost = document.getElementById('estimated-cost');
+            const costDetails = document.getElementById('cost-details');
+            
+            if(costForm) {
+                costForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const propertyType = document.getElementById('property-type').value;
+                    const area = parseInt(document.getElementById('area').value) || 0;
+                    const serviceType = document.getElementById('service-type').value;
+                    
+                    if(!propertyType || !area || !serviceType) {
+                        estimatedCost.textContent = '0';
+                        costDetails.innerHTML = '<p class="text-center">أدخل جميع البيانات للحصول على تكلفة دقيقة</p>';
+                        return;
+                    }
+                    
+                    // حساب التكلفة الأساسية
+                    let baseCost = 0;
+                    
+                    // حسب نوع العقار
+                    switch(propertyType) {
+                        case 'apartment':
+                            baseCost = 200;
+                            break;
+                        case 'house':
+                            baseCost = 300;
+                            break;
+                        case 'villa':
+                            baseCost = 500;
+                            break;
+                        case 'office':
+                            baseCost = 400;
+                            break;
+                        case 'company':
+                            baseCost = 600;
+                            break;
+                    }
+                    
+                    // حسب المساحة
+                    if(area > 100) baseCost += Math.floor((area - 100) / 50) * 50;
+                    
+                    // حسب نوع الخدمة
+                    switch(serviceType) {
+                        case 'deep':
+                            baseCost *= 1.5;
+                            break;
+                        case 'specialized':
+                            baseCost *= 2;
+                            break;
+                        case 'regular':
+                            baseCost *= 0.8; // خصم 20% للخدمات الدورية
+                            break;
+                    }
+                    
+                    // الخدمات الإضافية
+                    const additionalServices = document.querySelectorAll('input[type="checkbox"]:checked');
+                    additionalServices.forEach(service => {
+                        switch(service.value) {
+                            case 'windows':
+                                baseCost += 50;
+                                break;
+                            case 'furniture':
+                                baseCost += 100;
+                                break;
+                            case 'carpet':
+                                baseCost += 80;
+                                break;
+                            case 'disinfection':
+                                baseCost += 70;
+                                break;
+                        }
+                    });
+                    
+                    // عرض التكلفة
+                    estimatedCost.textContent = Math.round(baseCost);
+                    
+                    // عرض التفاصيل
+                    let details = `
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>نوع العقار:</span>
+                                <span>${document.getElementById('property-type').options[document.getElementById('property-type').selectedIndex].text}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>المساحة:</span>
+                                <span>${area} م²</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>نوع الخدمة:</span>
+                                <span>${document.getElementById('service-type').options[document.getElementById('service-type').selectedIndex].text}</span>
+                            </div>
+                            <div class="border-t border-white/20 pt-2 mt-2">
+                                <div class="flex justify-between font-bold">
+                                    <span>التكلفة الإجمالية:</span>
+                                    <span>${Math.round(baseCost)} ريال</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    costDetails.innerHTML = details;
+                });
+            }
+        });
+        
+        // وظيفة الأسئلة الشائعة
+        function toggleFAQ(number) {
+            const answer = document.getElementById('faq-answer-' + number);
+            const icon = document.getElementById('faq-icon-' + number);
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // إغلاق القائمة المتنقلة عند النقر على رابط تنقل
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

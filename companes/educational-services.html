@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات التعليم المتكاملة | منصة التعليم الذكي | قمر الخليج الذهبي</title>
+    <meta name="description" content="منصة متكاملة لجميع خدمات التعليم. حلول تعليمية ذكية، منصات تعليم إلكتروني، تدريب وتأهيل، استشارات تربوية. نساعد المؤسسات التعليمية والطلاب في تحقيق أقصى استفادة من العملية التعليمية.">
+    <meta name="keywords" content="خدمات التعليم, منصات تعليمية, التعليم الإلكتروني, تدريب المعلمين, استشارات تربوية, تطوير المناهج, حلول تعليمية, برامج تدريبية, تعليم ذكي, تكنولوجيا التعليم">
+    <meta name="author" content="قمر الخليج الذهبي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008080',
+                        secondary: '#10B981',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .service-img {
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        
+        .category-filter-btn.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        
+        .cta-btn {
+            background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+            color: white;
+        }
+        
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #2563EB 0%, #059669 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        .special-badge {
+            background: linear-gradient(45deg, #F59E0B, #FBBF24);
+            color: #333;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        
+        .hero-section {
+            background: #008080;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background-color: #f8fafc;
+        }
+        
+        .info-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #3B82F6;
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            right: 9px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #3B82F6;
+        }
+        
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+<!-- الهيدر -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <!-- اللوجو والعنوان -->
+            <div class="flex items-center flex-shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mr-2 md:mr-3">
+                    <img class="rounded-full w-full h-full object-cover" 
+                         src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" 
+                         alt="قمر الخليج الذهبي - خدمات التعليم المتكاملة">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                        قمر الخليج <span class="text-secondary">الذهبي</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-gray-600">منصة التعليم الذكي المتكاملة</p>
+                </div>
+            </div>
+            
+            <!-- زر القائمة المتنقلة للأجهزة الصغيرة -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- روابط التنقل للأجهزة الكبيرة -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="../index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الرئيسية
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../about.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        من نحن
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="../services.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        الخدمات
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="../companes.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        شركاؤنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                    <li><a href="#" class="text-primary font-bold relative">
+                        خدمات التعليم
+                        <span class="absolute bottom-0 right-0 w-full h-0.5 bg-primary"></span>
+                    </a></li>
+                    <li><a href="../blog/index.html" class="text-gray-700 hover:text-primary font-medium transition-colors relative group">
+                        المدونة
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="tel:01111263618" class="text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center">
+                        <i class="fas fa-phone-alt ml-1 text-sm"></i>
+                        اتصل بنا
+                        <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <!-- زر الاتصال للأجهزة المتوسطة -->
+            <a href="tel:01111263618" class="hidden sm:flex lg:hidden items-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                <i class="fas fa-phone-alt ml-2"></i>
+                <span class="text-sm font-medium">اتصل بنا</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- القائمة المتنقلة للأجهزة الصغيرة -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li>
+                    <a href="../index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-home ml-3 w-6 text-center"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li>
+                    <a href="../about.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-info-circle ml-3 w-6 text-center"></i>
+                        من نحن
+                    </a>
+                </li>
+                <li>
+                    <a href="../services.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-concierge-bell ml-3 w-6 text-center"></i>
+                        الخدمات
+                    </a>
+                </li>
+                <li>
+                    <a href="../companes.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-handshake ml-3 w-6 text-center"></i>
+                        شركاؤنا
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-primary font-bold py-2">
+                        <i class="fas fa-graduation-cap ml-3 w-6 text-center"></i>
+                        خدمات التعليم
+                        <span class="mr-auto text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">الحالي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../blog/index.html" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-newspaper ml-3 w-6 text-center"></i>
+                        المدونة
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:01111263618" class="flex items-center text-gray-700 hover:text-primary font-medium py-2 transition-colors">
+                        <i class="fas fa-phone-alt ml-3 w-6 text-center"></i>
+                        اتصل بنا
+                        <span class="mr-auto text-xs">01111263618</span>
+                    </a>
+                </li>
+                <li class="pt-4 border-t border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600">متابعتنا على:</span>
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon" class="text-gray-500 hover:text-sky-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA==" class="text-gray-500 hover:text-pink-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    // التحكم في القائمة المتنقلة
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // تغيير الأيقونة عند فتح/إغلاق القائمة
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+    
+    <!-- قسم البطل -->
+    <section class="hero-section relative py-20 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">حلول <span class="text-yellow-300">تعليمية متكاملة</span> لمستقبل أفضل</h1>
+                <p class="text-xl mb-8 text-gray-100 leading-relaxed">
+                    نقدم مجموعة شاملة من خدمات التعليم الذكي التي تلبي احتياجات الطلاب والمعلمين والمؤسسات التعليمية. منصات تعليمية، تدريب متخصص، استشارات تربوية، وتطوير مناهج مبتكرة.
+                </p>
+                
+                <!-- إحصائيات -->
+                <div class="flex flex-wrap justify-center gap-8 mb-10">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-300 mb-2">100+</div>
+                        <div class="text-gray-200">مؤسسة تعليمية</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-300 mb-2">50,000+</div>
+                        <div class="text-gray-200">طالب وطالبة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-300 mb-2">5,000+</div>
+                        <div class="text-gray-200">معلم مدرب</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-300 mb-2">98%</div>
+                        <div class="text-gray-200">رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <!-- فلاتر التصنيفات -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn active" data-category="all">
+                        جميع خدمات التعليم
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="elearning">
+                        التعليم الإلكتروني
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="training">
+                        التدريب والتأهيل
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="consultation">
+                        استشارات تربوية
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="curriculum">
+                        تطوير المناهج
+                    </button>
+                    <button class="px-5 py-2 rounded-full bg-white/20 border border-white/30 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 category-filter-btn" data-category="technology">
+                        تكنولوجيا التعليم
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زخرفة -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                      fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- قسم أهمية التعليم المتكامل -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    لماذا يعتبر <span class="gradient-text">التعليم المتكامل</span> أساسياً للمستقبل؟
+                </h2>
+                
+                <!-- مقدمة -->
+                <div class="mb-12 bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-2xl border border-primary/10">
+                    <h3 class="text-2xl font-bold text-primary mb-4">التعليم الشامل: مفتاح النجاح في العصر الرقمي</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        في عالم يتغير بسرعة، لم يعد التعليم التقليدي كافياً لإعداد الأجيال للتحديات المستقبلية. <strong class="text-primary">87%</strong> من الوظائف المستقبلية تتطلب مهارات رقمية ومرنة لم تغطيها المناهج التقليدية.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        من خلال منصة <strong class="text-primary">قمر الخليج الذهبي</strong>، نوفر حزمة متكاملة من خدمات التعليم التي تجمع بين الأصالة والابتكار، وتلبي احتياجات جميع الفئات العمرية والمستويات التعليمية.
+                    </p>
+                </div>
+                
+                <!-- تحديات التعليم التقليدي -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">تحديات تواجه التعليم التقليدي</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="info-card p-6 border-l-4 border-red-500">
+                            <div class="service-icon bg-red-50">
+                                <i class="fas fa-exclamation-triangle text-2xl text-red-500"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">عدم مواكبة العصر</h4>
+                            <p class="text-gray-600">مناهج لا تلبي متطلبات سوق العمل الحديث والمهارات الرقمية.</p>
+                        </div>
+                        <div class="info-card p-6 border-l-4 border-orange-500">
+                            <div class="service-icon bg-orange-50">
+                                <i class="fas fa-user-graduate text-2xl text-orange-500"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">تفاوت الفرص</h4>
+                            <p class="text-gray-600">عدم توفر فرص تعليمية متساوية لجميع الطلاب في مختلف المناطق.</p>
+                        </div>
+                        <div class="info-card p-6 border-l-4 border-yellow-500">
+                            <div class="service-icon bg-yellow-50">
+                                <i class="fas fa-chalkboard-teacher text-2xl text-yellow-500"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">نقص التأهيل</h4>
+                            <p class="text-gray-600">عدم كفاية برامج تأهيل وتطوير المعلمين للمستجدات التربوية.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مزايا التعليم المتكامل -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">مزايا التعليم الشامل والمتكامل</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-primary/10">
+                                    <i class="fas fa-laptop-code text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">دمج التقنية</h4>
+                                    <p class="text-gray-600">استخدام أحدث التقنيات في العملية التعليمية لتعزيز التعلم.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-primary/10">
+                                    <i class="fas fa-users text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تخصيص التعليم</h4>
+                                    <p class="text-gray-600">توفير تجارب تعليمية مخصصة تناسب احتياجات كل طالب.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-primary/10">
+                                    <i class="fas fa-brain text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تنمية المهارات</h4>
+                                    <p class="text-gray-600">تركيز على المهارات الحياتية والتفكير النقدي والإبداعي.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-secondary/10">
+                                    <i class="fas fa-globe text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">وصول عالمي</h4>
+                                    <p class="text-gray-600">توفير فرص تعليمية عالية الجودة للجميع بغض النظر عن الموقع.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-secondary/10">
+                                    <i class="fas fa-chart-line text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">تتبع التقدم</h4>
+                                    <p class="text-gray-600">أنظمة متابعة وتحليل تقدم الطلاب وتقييم الأداء.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="feature-icon bg-secondary/10">
+                                    <i class="fas fa-handshake text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">شراكات استراتيجية</h4>
+                                    <p class="text-gray-600">تعاون مع مؤسسات تعليمية عالمية لتحسين المخرجات.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الكلمات المفتاحية وأهميتها -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">الكلمات المفتاحية في مجال خدمات التعليم</h3>
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <p class="text-gray-700 mb-4">
+                            عند البحث عن خدمات تعليمية متكاملة، هذه أهم الكلمات المفتاحية التي تساعد في الوصول للحلول المناسبة:
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">خدمات التعليم الإلكتروني</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">منصات تعليمية ذكية</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">تدريب المعلمين وتأهيلهم</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">استشارات تربوية متخصصة</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">تطوير المناهج التعليمية</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">حلول تعليمية متكاملة</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">برامج تدريبية احترافية</span>
+                            <span class="px-4 py-2 bg-secondary text-white rounded-full text-sm font-medium">تكنولوجيا التعليم الحديثة</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">تعليم عن بعد متكامل</span>
+                            <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">تقييم وتطوير الأداء التعليمي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم أنواع خدمات التعليم -->
+    <section class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <!-- العنوان الرئيسي -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                        خدماتنا التعليمية
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        أنواع <span class="text-primary">خدمات التعليم</span> المتكاملة
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        نغطي جميع جوانب العملية التعليمية من مرحلة التخطيط إلى التنفيذ والتقييم
+                    </p>
+                </div>
+
+                <!-- أنواع خدمات التعليم -->
+                <div class="mb-16">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="service-card bg-white" data-category="elearning">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-primary text-white">تعليم إلكتروني</span>
+                                <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="منصات التعليم الإلكتروني" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    منصات التعليم الإلكتروني
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تصميم وتطوير منصات تعليمية متكاملة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>فصول افتراضية تفاعلية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>نظم إدارة التعلم (LMS)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تطبيقات تعليمية للهواتف الذكية</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white" data-category="training">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-secondary text-white">تدريب وتأهيل</span>
+                                <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="برامج تدريب المعلمين" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    برامج تدريب وتأهيل
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تدريب المعلمين على التقنيات الحديثة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>برامج تأهيل القيادات التربوية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>ورش عمل تطوير المهارات</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>شهادات احترافية معتمدة</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white" data-category="consultation">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-primary text-white">استشارات تربوية</span>
+                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="استشارات تربوية متخصصة" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    استشارات تربوية متخصصة
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>استشارات تطوير المؤسسات التعليمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تحليل وتقييم الأداء التعليمي</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>حلول للطلاب ذوي الصعوبات التعليمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تخطيط استراتيجي للمؤسسات التعليمية</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white" data-category="curriculum">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-secondary text-white">تطوير المناهج</span>
+                                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="تطوير المناهج التعليمية" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    تطوير المناهج التعليمية
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تصميم مناهج دراسية مبتكرة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تطوير مواد تعليمية رقمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>إعداد محتوى تعليمي تفاعلي</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>مواءمة المناهج مع متطلبات العصر</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white" data-category="technology">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-primary text-white">تكنولوجيا التعليم</span>
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="حلول تكنولوجيا التعليم" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    حلول تكنولوجيا التعليم
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>أدوات تعليمية ذكية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>واقع معزز وافتراضي في التعليم</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>أنظمة اختبار وتقييم إلكترونية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-primary text-xs mt-1 ml-2"></i>
+                                        <span>حلول الأمن السيبراني للمؤسسات التعليمية</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card bg-white" data-category="special">
+                            <div class="relative overflow-hidden">
+                                <span class="category-badge bg-secondary text-white">برامج خاصة</span>
+                                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="برامج تعليمية خاصة" 
+                                     class="w-full service-img">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+                                    برامج تعليمية خاصة
+                                </h4>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4 pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>برامج الموهوبين والمتفوقين</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تعليم الكبار ومحو الأمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>برامج الدعم النفسي والاجتماعي</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>توجيه مهني واستكشاف الميول</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عملية تنفيذ خدمات التعليم -->
+                <div class="mb-16">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                            عملية <span class="text-primary">تنفيذ الخدمات التعليمية</span>
+                        </h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            نتبع منهجية علمية في تقديم جميع خدماتنا التعليمية
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- المرحلة 1 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary">1</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التشخيص والتحليل</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تحليل الاحتياجات التعليمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تقييم الوضع الحالي</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>دراسة الموارد المتاحة</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- المرحلة 2 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-secondary">2</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التخطيط والتصميم</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>وضع الأهداف التعليمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تصميم البرامج والحلول</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>إعداد الجدول الزمني</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- المرحلة 3 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary">3</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التنفيذ والتطبيق</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>تنفيذ البرامج التعليمية</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>توفير الدعم والتدريب</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-primary text-xs mt-1 ml-2"></i>
+                                        <span>متابعة التنفيذ أولاً بأول</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- المرحلة 4 -->
+                        <div class="timeline-item">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-secondary">4</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">التقييم والتطوير</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm pr-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>قياس النتائج والأثر</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>تحليل التغذية الراجعة</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-secondary text-xs mt-1 ml-2"></i>
+                                        <span>التطوير المستمر للبرامج</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جدول مقارنة -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                        مقارنة بين <span class="text-primary">التعليم المتكامل</span> والتعليم التقليدي
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="border border-gray-200 p-4 text-right font-bold text-gray-700">المعيار</th>
+                                    <th class="border border-gray-200 p-4 text-center font-bold text-primary">التعليم المتكامل</th>
+                                    <th class="border border-gray-200 p-4 text-center font-bold text-gray-600">التعليم التقليدي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">المرونة</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        مرن ومتاح في أي وقت
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-gray-600">
+                                        <i class="fas fa-clock ml-2"></i>
+                                        مقيد بزمان ومكان محدد
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">التفاعلية</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        عالية التفاعل والمشاركة
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-gray-600">
+                                        <i class="fas fa-user ml-2"></i>
+                                        محدودة التفاعل
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">التتبع والتقييم</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        تتبع دقيق وتحليل فوري
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-gray-600">
+                                        <i class="fas fa-chart-bar ml-2"></i>
+                                        تقييم تقليدي محدود
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">التخصيص</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        مخصص حسب احتياجات كل طالب
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-gray-600">
+                                        <i class="fas fa-users ml-2"></i>
+                                        موحد لجميع الطلاب
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-200 p-4 text-gray-700">الوصولية</td>
+                                    <td class="border border-gray-200 p-4 text-center text-green-600">
+                                        <i class="fas fa-check-circle ml-2"></i>
+                                        متاح للجميع في كل مكان
+                                    </td>
+                                    <td class="border border-gray-200 p-4 text-center text-gray-600">
+                                        <i class="fas fa-map-marker-alt ml-2"></i>
+                                        محدود بالمكان الجغرافي
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- دعوة للعمل -->
+                <div class="text-center">
+                    <div class="inline-block p-1 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+                        <div class="bg-white rounded-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                                مستعد لتطوير مؤسستك التعليمية؟
+                            </h3>
+                            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                                اختر من بين حزمة خدماتنا التعليمية المتكاملة التي تناسب احتياجات مؤسستك التعليمية أو طلابك. نحن هنا لمساعدتك في تحقيق أقصى استفادة من العملية التعليمية.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="../companes.html" class="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                                    <i class="fas fa-graduation-cap mr-2"></i>
+                                    استعرض خدماتنا التعليمية
+                                </a>
+                                <a href="tel:01111263618" class="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    احصل على استشارة مجانية
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم خدمات الدعم والمتابعة -->
+    <section class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <!-- عنوان القسم -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    خدمات <span class="text-primary">الدعم والمتابعة</span> المستمرة
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    نضمن لك دعمًا فنيًا وتربويًا مستمرًا لضمان نجاح و استمرارية العملية التعليمية
+                </p>
+            </div>
+            
+            <!-- خدمات الدعم -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">دعم فني 24/7</h4>
+                    <p class="text-gray-600 text-sm">دعم فني متواصل للمنصات والتقنيات التعليمية</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chalkboard-teacher text-secondary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">تطوير مهني مستمر</h4>
+                    <p class="text-gray-600 text-sm">برامج تطويرية مستمرة للكوادر التعليمية</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">تقارير وتحليلات</h4>
+                    <p class="text-gray-600 text-sm">تقارير دورية وتحليلات أداء مفصلة</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">تحديثات مستمرة</h4>
+                    <p class="text-gray-600 text-sm">تحديث المحتوى والمنصات باستمرار</p>
+                </div>
+            </div>
+            
+            <!-- معلومات إضافية -->
+            <div class="mt-16 p-8 bg-gradient-to-r from-primary to-secondary rounded-2xl text-white">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-4">تبحث عن حلول تعليمية متكاملة؟</h3>
+                        <p class="text-white/90">
+                            منصة قمر الخليج الذهبي توفر لك حزمة متكاملة من خدمات التعليم الذكي التي تلبي احتياجات المؤسسات التعليمية والطلاب على حد سواء. نحن نعمل مع أفضل الخبراء والمتخصصين في مجال التعليم والتقنية.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 text-center">
+                        <a href="tel:01111263618" class="inline-block px-8 py-4 bg-white text-primary rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            ابدأ رحلتك التعليمية
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                الأسئلة <span class="text-primary">الشائعة</span> حول خدمات التعليم
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">كم تستغرق عملية تطوير منصة تعليمية إلكترونية؟</h4>
+                        <p class="text-gray-700">
+                            تختلف المدة حسب حجم المنصة وتعقيدها. بشكل عام، تستغرق المنصة الأساسية من 2-3 أشهر، بينما قد تستغرق المنصات المتكاملة الكبيرة من 6-12 شهرًا. نقدم حلولاً مرحلية تسمح لك بالبدء سريعًا والتطوير تدريجيًا.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">هل تقدمون تدريبًا للمعلمين على استخدام التقنيات الجديدة؟</h4>
+                        <p class="text-gray-700">
+                            نعم، نقدم برامج تدريبية متخصصة للمعلمين والإداريين تغطي جميع الجوانب التقنية والتربوية. تتضمن البرامج تدريبًا عمليًا وورش عمل وتدريبًا مستمرًا لضمان إتقان استخدام التقنيات الحديثة في التعليم.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">ما هي مدة الدعم الفني المقدم بعد انتهاء المشروع؟</h4>
+                        <p class="text-gray-700">
+                            نقدم عادةً ضمانًا ودعمًا فنيًا لمدة عام كامل بعد التسليم. بعد انتهاء فترة الضمان، يمكن توقيع عقود صيانة ودعم سنوية. نوفر أيضًا خطط دعم مرنة تناسب احتياجات وميزانيات جميع العملاء.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">هل يمكن دمج منصتكم مع الأنظمة الحالية في المؤسسة التعليمية؟</h4>
+                        <p class="text-gray-700">
+                            نعم، جميع حلولنا مصممة لتكون قابلة للدمج مع الأنظمة الحالية. يمكن دمج منصاتنا مع أنظمة إدارة التعلم (LMS)، وأنظمة التسجيل، وقواعد البيانات، وغيرها من الأنظمة المستخدمة في المؤسسات التعليمية.
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <h4 class="text-xl font-bold text-primary mb-3">ما هي تكلفة خدماتكم التعليمية؟</h4>
+                        <p class="text-gray-700">
+                            تختلف التكلفة حسب نوع الخدمة وحجم المشروع ومتطلبات العميل. نقدم عروض أسعار مخصصة بعد دراسة الاحتياجات بدقة. كما نوفر خطط دفع مرنة وخيارات مختلفة تناسب الميزانيات المختلفة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- فوتر -->
+    <footer class="bg-[#161f30] text-white relative">
+        <div class="container mx-auto px-4 pt-16 pb-8 relative z-10">
+            <!-- المحتوى الرئيسي للفوتر -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 text-2xl font-bold mb-4">
+                        <div class="moon-icon w-10 h-10 rounded-full flex items-center justify-center">
+                            <img class="rounded-full" src="../img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="قمر الخليج الذهبي - خدمات التعليم المتكاملة">
+                        </div>
+                        <span>قمر الخليج الذهبي</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        منصتك الموثوقة لخدمات التعليم المتكاملة والذكية في الخليج العربي. نوفر حلولاً تعليمية مبتكرة تجمع بين الأصالة والحداثة لتحقيق أفضل النتائج التعليمية.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">خدمات التعليم</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                منصات التعليم الإلكتروني
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تدريب وتأهيل المعلمين
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                استشارات تربوية متخصصة
+                            </a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                تطوير المناهج التعليمية
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">روابط مهمة</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="../companes.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                شركاؤنا في التعليم
+                            </a></li>
+                        <li><a href="../services.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                جميع خدماتنا
+                            </a></li>
+                        <li><a href="../blog/index.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                مدونة التعليم والتقنية
+                            </a></li>
+                        <li><a href="../about.html"
+                                class="footer-link text-gray-400 hover:text-secondary transition-colors flex items-center gap-2">
+                                <i class="fas fa-chevron-left text-xs text-secondary"></i>
+                                عن منصتنا
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                 <div>
+                    <h3 class="text-xl font-bold mb-4 relative inline-block">
+                        <span class="relative z-10">تواصل معنا</span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-phone text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">01111263618</span>
+                                <span class="text-sm text-gray-500">استشارات تعليمية مجانية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 group">
+                            <div class="social-icon w-10 h-10 bg-primary/50 group-hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fas fa-envelope text-secondary group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block">education@goldenmoon.com</span>
+                                <span class="text-sm text-gray-500">البريد الإلكتروني</span>
+                            </div>
+                        </li>
+                     
+                        <li class="flex gap-3 mt-4">
+                            <a href="https://www.facebook.com/Golden.Gulf.Moon/"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/golden_gulf_mon"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/golden_gulf_moon?igsh=MWNxN2J1bzd0Y2I5dA=="
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
+                                target="_blank"
+                                aria-label="Snapchat"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
+                                target="_blank"
+                                aria-label="TikTok"
+                                class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-tiktok text-white"></i>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 قمر الخليج الذهبي - خدمات التعليم المتكاملة. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-secondary transition-colors">شروط الخدمة</a>
+                    <a href="#" class="hover:text-secondary transition-colors">سياسة الجودة</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // فلترة الخدمات حسب التصنيف
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter-btn');
+            const services = document.querySelectorAll('.service-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشاط للزر المضغوط
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // عرض/إخفاء الخدمات حسب التصنيف
+                    services.forEach(service => {
+                        const serviceCategories = service.getAttribute('data-category');
+                        if (category === 'all' || serviceCategories === category) {
+                            service.style.display = 'block';
+                            // تأثير الظهور
+                            setTimeout(() => {
+                                service.style.opacity = '1';
+                                service.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            service.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // تأثير تحميل الصفحة
+            services.forEach(service => {
+                service.style.opacity = '0';
+                service.style.transform = 'translateY(20px)';
+                service.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            setTimeout(() => {
+                services.forEach(service => {
+                    service.style.opacity = '1';
+                    service.style.transform = 'translateY(0)';
+                });
+            }, 100);
+            
+            // تأثير عند المرور على أزرار CTA
+            const ctaButtons = document.querySelectorAll('.cta-btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

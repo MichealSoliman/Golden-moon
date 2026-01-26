@@ -7,7 +7,11 @@
     <title>قمر الخليج الذهبي - مدونة الخدمات</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
     <script>
         tailwind.config = {
@@ -26,7 +30,6 @@
     </script>
     <!-- style hero section -->
     <style>
-
         :root {
             --primary: #197e8a;
             --primary-dark: #146974;
@@ -34,13 +37,15 @@
             --accent: #f59e0b;
             --accent-hover: #eab308;
         }
+
         * {
-                    font-family: 'Cairo', sans-serif;
-                }
+            font-family: 'Cairo', sans-serif;
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
         }
-       
+
 
         .hero-gradient {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #0f4a52 100%);
@@ -216,7 +221,6 @@
         }
     </style>
     <style>
-
         * {
             font-family: 'Cairo', sans-serif;
         }
@@ -361,7 +365,6 @@
     </style>
     <!-- style footer -->
     <style>
-
         :root {
             --primary: #0f172a;
             --secondary: #1e293b;
@@ -372,10 +375,12 @@
         body {
             font-family: 'Cairo', sans-serif;
         }
-        html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
         .footer-bg {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -531,23 +536,23 @@
             filter: grayscale(0);
             transform: translateY(-3px);
         }
-        
     </style>
 
 
- 
+
 </head>
 
 <body>
-    
+
 
     <!-- Header Navigation -->
-    
+
     <header class="bg-primary text-white header-shadow fixed w-full top-0 z-50">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center gap-3 text-2xl font-bold">                   <di1v4 class="flex items-center justify-center w-14 h-14 bg-white rounded-full overflow-hidden">
+                <div class="flex items-center gap-3 text-2xl font-bold">
+                    <di1v4 class="flex items-center justify-center w-14 h-14 bg-white rounded-full overflow-hidden">
                         <img src="./img/بروفايل قمر الخليـــــــــــــــج الذهبي.png" alt="logo"
                             class="w-full h-full object-cover">
                     </di1v4>
@@ -559,11 +564,15 @@
                 <ul class="hidden md:flex gap-8 text-lg font-semibold">
                     <li><a href="#home" class="hover:text-accent transition-colors duration-300">الرئيسية</a></li>
                     <li><a href="./about.html" class="hover:text-accent transition-colors duration-300">من نحن</a></li>
-                    <li><a href="./services.html" class="hover:text-accent transition-colors duration-300">خدماتنا</a></li>
-                    <li><a href="./companes.html" class="hover:text-accent transition-colors duration-300">الشركات المشتركة
+                    <li><a href="./services.html" class="hover:text-accent transition-colors duration-300">خدماتنا</a>
+                    </li>
+                    <li><a href="./companes.html" class="hover:text-accent transition-colors duration-300">الشركات
+                            المشتركة
                             معنا </a></li>
-                    <li><a href="./blog/index.html" class="hover:text-accent transition-colors duration-300"> المدونة </a></li>
-                    <li><a href="tel:01111263618" class="hover:text-accent transition-colors duration-300">تواصل معنا</a></li>
+                    <li><a href="./blog/index.html" class="hover:text-accent transition-colors duration-300"> المدونة
+                        </a></li>
+                    <li><a href="tel:01111263618" class="hover:text-accent transition-colors duration-300">تواصل
+                            معنا</a></li>
                 </ul>
 
                 <!-- Language Switcher & Mobile Menu Button -->
@@ -584,15 +593,19 @@
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <ul class="flex flex-col gap-3 text-lg font-semibold">
                     <li><a href="#home" class="block hover:text-accent transition-colors duration-300">الرئيسية</a></li>
-                    <li><a href="./about.html" class="block hover:text-accent transition-colors duration-300">من نحن</a></li>
-                    <li><a href="./services.html" class="block hover:text-accent transition-colors duration-300">خدماتنا</a>
+                    <li><a href="./about.html" class="block hover:text-accent transition-colors duration-300">من نحن</a>
+                    </li>
+                    <li><a href="./services.html"
+                            class="block hover:text-accent transition-colors duration-300">خدماتنا</a>
                     </li>
                     <li><a href="./companes.html" class="block hover:text-accent transition-colors duration-300">شركاؤنا
                             المشتركة معنا </a></li>
-                    <li><a href="./blog/index.html" class="block hover:text-accent transition-colors duration-300"> المدونة </a>
+                    <li><a href="./blog/index.html" class="block hover:text-accent transition-colors duration-300">
+                            المدونة </a>
                     </li>
 
-                    <li><a href="tel:01111263618" class="block hover:text-accent transition-colors duration-300">تواصل معنا</a>
+                    <li><a href="tel:01111263618" class="block hover:text-accent transition-colors duration-300">تواصل
+                            معنا</a>
                     </li>
                 </ul>
             </div>
@@ -600,7 +613,7 @@
     </header>
 
 
-7
+    7
     <!-- Hero Section -->
     <section id="home" class="hero-gradient  text-white py-24 md:py-32 relative">
         <!-- Floating Elements -->
@@ -647,7 +660,6 @@
 
 
                         <a href="tel:01111263618"
-
                             class="btn-hover-effect px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl text-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3">
                             <i class="fas fa-headset"></i>
                             <span>تواصل معنا</span>
@@ -732,211 +744,238 @@
     </script>
 
     <!-- Services Section with 2 Text Cards Below Big Image - Safety Systems -->
-<section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
-    <div class="container mx-auto px-4">
-        <!-- Header Section -->
-        <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                أنظمة <span class="text-accent">السلامة والأمن</span> المتكاملة
-            </h2>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                نوفر حلول أمنية متكاملة لحماية المنشآت والأفراد مع أحدث أنظمة المراقبة والإنذار والحماية
-            </p>
-        </div>
-
-        <!-- Big Image at Top - أنظمة السلامة -->
-        <div class="mb-12 slide-in-right">
-            <a href="./companes/safety-and-security-systems.html" class="block group">
-                <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[40vh] min-h-[400px] max-h-[600px]">
-                    <img src="./img/B 11.png" alt="أنظمة السلامة والأمن المتكاملة"
-                        class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
-                    
-                    <!-- Gradient Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
-                    
-                    <!-- Overlay Content -->
-                    <div class="absolute bottom-8 left-8 text-white max-w-xl">
-                        <h3 class="text-3xl font-bold mb-3">حلول أمنية متكاملة</h3>
-                        <p class="text-gray-200 text-lg">أنظمة مراقبة حديثة، كاميرات ذكية، أنظمة إنذار، وحماية شاملة</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- 2 Text Cards Below Image -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            
-            <!-- Text Card 1 - أنظمة المراقبة -->
-            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 card-hover">
-                <div class="flex items-start gap-4 mb-4">
-                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center">
-                        <i class="fas fa-video text-blue-500 text-2xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary mb-2">أنظمة المراقبة بالكاميرات</h3>
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                                الأكثر طلباً
-                            </span>
-                            <span class="text-blue-500 text-sm font-bold">● مراقبة 24/7</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    كاميرات مراقبة عالية الدقة مع تقنية الرؤية الليلية والتسجيل السحابي. أنظمة مراقبة ذكية تشمل كاميرات ثابتة، دوارة، وكاميرات خفية مع مراقبة عن بعد عبر الهاتف.
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+        <div class="container mx-auto px-4">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    أنظمة <span class="text-accent">السلامة والأمن</span> المتكاملة
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    نوفر حلول أمنية متكاملة لحماية المنشآت والأفراد مع أحدث أنظمة المراقبة والإنذار والحماية
                 </p>
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <span class="text-blue-500 font-bold">تثبيت مجاني</span>
-                        <span class="text-gray-400">|</span>
-                        <span class="text-sm text-gray-500">مراقبة عن بعد</span>
-                    </div>
-                    <a href="/services/cctv-systems"
-                        class="text-blue-500 hover:text-blue-600 font-bold flex items-center gap-2">
-                        اكتشف المزيد
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
             </div>
 
-            <!-- Text Card 2 - أنظمة الإنذار -->
-            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 card-hover">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center">
-                        <i class="fas fa-bell text-red-500 text-2xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary mb-2">أنظمة الإنذار والأمان</h3>
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                                الحماية المثلى
-                            </span>
-                            <span class="text-red-500 text-sm font-bold">● استجابة فورية</span>
+            <!-- Big Image at Top - أنظمة السلامة -->
+            <div class="mb-12 slide-in-right">
+                <a href="./companes/safety-and-security-systems.html" class="block group">
+                    <div
+                        class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[40vh] min-h-[400px] max-h-[600px]">
+                        <img src="./img/B 11.png" alt="أنظمة السلامة والأمن المتكاملة"
+                            class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+
+                        <!-- Overlay Content -->
+                        <div class="absolute bottom-8 left-8 text-white max-w-xl">
+                            <h3 class="text-3xl font-bold mb-3">حلول أمنية متكاملة</h3>
+                            <p class="text-gray-200 text-lg">أنظمة مراقبة حديثة، كاميرات ذكية، أنظمة إنذار، وحماية شاملة
+                            </p>
                         </div>
                     </div>
-                </div>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    أنظمة إنذار متطورة للحماية من السرقة والحرائق. تشمل مستشعرات حركة، كاشفات دخان، أنظمة إنذار مسموعة ومرئية، وربط مع شركات الأمن للاستجابة الفورية.
-                </p>
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <span class="text-red-500 font-bold">ضمان 3 سنوات</span>
-                        <span class="text-gray-400">|</span>
-                        <span class="text-sm text-gray-500">ربط مع الأمن</span>
-                    </div>
-                    <a href="/services/alarm-systems"
-                        class="text-red-500 hover:text-red-600 font-bold flex items-center gap-2">
-                        اكتشف المزيد
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
+                </a>
             </div>
 
-        </div>
+            <!-- 2 Text Cards Below Image -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
-        <!-- 2 Image Cards with Hover Content -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Text Card 2 - أضف موقعك هنا | أنظمة السلامة -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 card-hover">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-bullhorn text-red-500 text-2xl"></i>
 
-            <!-- Card 1 - أنظمة التحكم في الدخول -->
-            <a href="/services/access-control" class="block group">
-                <div class="rounded-2xl overflow-hidden card-hover relative h-80">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"
-                        alt="أنظمة التحكم في الدخول"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-
-                    <!-- Hover Overlay -->
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-fingerprint text-white text-xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold">التحكم في الدخول</h4>
-                            </div>
-                            <p class="text-white/80 mb-4 text-sm leading-relaxed">
-                                أنظمة تحكم ذكية باستخدام البصمة، البطاقات، أو التعرف على الوجه مع سجلات دقيقة للدخول والخروج
-                            </p>
-                            <div class="flex items-center justify-between text-sm">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-user-shield text-accent"></i>
-                                    تحكم ذكي
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">
+                                أضف موقعك على منصة أنظمة السلامة
+                            </h3>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                    فرصة ترويجية
                                 </span>
-                                <span class="text-accent font-bold">تتبع كامل</span>
+                                <span class="text-red-500 text-sm font-bold">● وصول أكبر</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Default Badge -->
-                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        أمن متطور
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        هل تمتلك موقعًا أو شركة متخصصة في <strong>أنظمة السلامة ومكافحة الحرائق</strong>؟
+                        هذه المنصة تتيح لك فرصة مميزة لإضافة موقعك وعرض خدماتك أمام عملاء
+                        يبحثون عن حلول إنذار الحريق، أنظمة الإطفاء، معدات السلامة،
+                        مع تعزيز ظهورك وزيادة الثقة في علامتك التجارية.
+                    </p>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-red-500 font-bold">ترويج فعّال</span>
+                            <span class="text-gray-400">|</span>
+                            <span class="text-sm text-gray-500">جمهور مستهدف</span>
+                        </div>
+                        <a href="#add-your-site"
+                            class="text-red-500 hover:text-red-600 font-bold flex items-center gap-2">
+                            أضف موقعك الآن
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
                     </div>
                 </div>
-            </a>
 
-            <!-- Card 2 - أنظمة إطفاء الحريق -->
-            <a href="/services/fire-safety" class="block group">
-                <div class="rounded-2xl overflow-hidden card-hover relative h-80">
-                    <img src="https://images.unsplash.com/photo-1611597617014-9970403724e9?w=400"
-                        alt="أنظمة إطفاء الحريق"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 
-                    <!-- Hover Overlay -->
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-fire-extinguisher text-white text-xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold">أنظمة إطفاء الحريق</h4>
-                            </div>
-                            <p class="text-white/80 mb-4 text-sm leading-relaxed">
-                                أنظمة إطفاء متكاملة تشمل كاشفات دخان، طفايات حريق، أنظمة رش أوتوماتيكية، وتدريب على الإخلاء
-                            </p>
-                            <div class="flex items-center justify-between text-sm">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-shield-alt text-accent"></i>
-                                    حماية شاملة
+                <!-- Text Card 2 - أنظمة إنذار الحريق -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 card-hover">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center">
+                            <img src="./img/icon.webp" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">
+                                نظرة الإبداع لمكافحة الحرائق
+                            </h3>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                    أمان متكامل
                                 </span>
-                                <span class="text-accent font-bold">شهادة معتمدة</span>
+                                <span class="text-red-500 text-sm font-bold">● إنذار مبكر</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Default Badge -->
-                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        سلامة مضمونة
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        تقدم شركة <strong>نظرة الإبداع لمكافحة الحرائق</strong> أحدث أنظمة إنذار الحريق المعتمدة،
+                        والتي تشمل كواشف الدخان والحرارة، لوحات تحكم ذكية، أجراس وإنذارات ضوئية،
+                        مع ربط مباشر بأنظمة الإطفاء لضمان سرعة الاستجابة وتقليل الخسائر.
+                    </p>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-red-500 font-bold">ضمان معتمد</span>
+                            <span class="text-gray-400">|</span>
+                            <span class="text-sm text-gray-500">تركيب وفق اشتراطات السلامة</span>
+                        </div>
+                        <a href="https://nazretelebdaa.com/"
+                            class="text-red-500 hover:text-red-600 font-bold flex items-center gap-2">
+                            زيارة الموقع
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
                     </div>
                 </div>
-            </a>
+
+
+            </div>
+
+            <!-- 2 Image Cards with Hover Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1 - أضف شعار موقعك -->
+                <a href="#add-your-logo" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+
+                        <!-- Lottie Background -->
+                        <lottie-player src="./lottie/Marketing.json" background="transparent" speed="1" loop autoplay
+                            class="absolute inset-0 w-full h-full object-cover">
+                        </lottie-player>
+
+                        <!-- Hover Overlay -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+
+                                <h4 class="text-xl font-bold mb-3">أضف شعار موقعك</h4>
+
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    اعرض شعار موقعك أو شركتك المتخصصة في <strong>أنظمة السلامة ومكافحة الحرائق</strong>
+                                    داخل المنصة لزيادة المصداقية، تعزيز العلامة التجارية،
+                                    والوصول المباشر إلى عملاء مهتمين بمجال السلامة.
+                                </p>
+
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-eye text-accent"></i>
+                                        ظهور أقوى
+                                    </span>
+                                    <span class="text-accent font-bold">تعزيز الثقة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Default Badge -->
+                        <div
+                            class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-20">
+                            أضف هنا شعار موقعك
+                        </div>
+
+                    </div>
+                </a>
+
+
+
+
+                <!-- Card 2 - أنظمة إطفاء الحريق -->
+                <a href="https://nazretelebdaa.com/blog/index.html" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                        <img src="./img/465223330_122101826828601982_2786684295988196917_n.png" alt="أنظمة إطفاء الحريق"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                        <!-- Hover Overlay -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-fire-extinguisher text-white text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold"> الدليل الشامل لأنظمة مكافحة الحريق في الرياض</h4>
+                                </div>
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    أنظمة إطفاء متكاملة تشمل كاشفات دخان، طفايات حريق، أنظمة رش أوتوماتيكية، وتدريب على
+                                    الإخلاء
+                                </p>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-shield-alt text-accent"></i>
+                                        حماية شاملة
+                                    </span>
+                                    <span class="text-accent font-bold">شهادة معتمدة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Default Badge -->
+                        <div
+                            class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            نظرة الابداع
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
 
         </div>
-
-       
-
-    </div>
-</section>
+    </section>
 
 
     <!-- New Services Section with 4 Cards (2x2) and Side Card -->
     <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
 
-           <!-- Header Section -->
-<div class="text-center mb-16 fade-in">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
 
-    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-        حلول متكاملة <span class="text-accent">لتركيب الأنظمة الأمنية</span>
-    </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    حلول متكاملة <span class="text-accent">لتركيب الأنظمة الأمنية</span>
+                </h2>
 
-    <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-        خدمات متخصصة في تركيب الأنظمة الأمنية الحديثة تشمل كاميرات المراقبة، أنظمة الإنذار، التحكم في الدخول، وأنظمة الحماية للمنازل والشركات، مع تنفيذ احترافي يضمن أعلى مستويات الأمان والجودة.
-    </p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات متخصصة في تركيب الأنظمة الأمنية الحديثة تشمل كاميرات المراقبة، أنظمة الإنذار، التحكم في
+                    الدخول، وأنظمة الحماية للمنازل والشركات، مع تنفيذ احترافي يضمن أعلى مستويات الأمان والجودة.
+                </p>
 
-</div>
+            </div>
 
 
             <div class="mb-20 slide-in-left">
@@ -960,45 +999,63 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
 
                 <!-- Left Card - 1/3 width, takes height of both right cards -->
-                <a href="#" class="block group slide-in-right delay-1">
-                    <div
-                        class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
-                        <!-- صورة في الأعلى -->
-                        <div class="relative h-90 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400"
-                                alt="الباقة المميزة"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                        </div>
+                <div class="block group slide-in-right delay-1">
+    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+        
+        <!-- صورة في الأعلى -->
+        <div class="relative h-60 overflow-hidden">
+            <img src="./img/speed​-and-solutions.png" alt="شركة السرعة والحلول للكاميرات"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+        </div>
 
-                        <!-- المحتوى -->
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-crown text-primary text-xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">الباقة المميزة</h4>
-                            </div>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                احصل على جميع خدماتنا في باقة واحدة شاملة بخصم حصري. حلول متكاملة تلبي جميع احتياجاتك.
-                            </p>
-                            <div class="flex items-center justify-between text-sm text-gray-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-clock text-accent"></i>
-                                    خدمة سريعة
-                                </span>
-                                <span class="text-accent font-bold">خصم 40%</span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- المحتوى -->
+        <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-video text-primary text-xl"></i>
+                </div>
+                <h4 class="text-xl font-bold text-primary">شركة السرعة والحلول للكاميرات</h4>
+            </div>
+
+            <p class="text-gray-600 mb-4 leading-relaxed">
+                نوفر أحدث أنظمة المراقبة والكاميرات الأمنية مع حلول ذكية للمنازل، الشركات، والمصانع.
+                تركيب سريع، متابعة مستمرة، ودعم فني متكامل لضمان أمانك الكامل.
+            </p>
+
+            <!-- قائمة الخدمات -->
+            <ul class="list-disc list-inside text-gray-600 mb-4">
+                <li>تركيب كاميرات مراقبة للمنازل والشركات</li>
+                <li>أنظمة المراقبة بالفيديو على مدار الساعة</li>
+                <li>كاميرات IP عالية الجودة مع تسجيل مستمر</li>
+                <li>حلول مراقبة ذكية مع تطبيقات الموبايل</li>
+                <li>صيانة دورية ودعم فني سريع</li>
+            </ul>
+
+            <!-- الأزرار -->
+            <div class="flex gap-3 mt-4">
+                <a href="#read-more"
+                   class="flex-1 text-center bg-primary text-white px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition">
+                    قراءة المزيد
                 </a>
+                <a href="https://solutionsinspeed.com/" target="_blank"
+                   class="flex-1 text-center border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-primary hover:text-white transition">
+                    زيارة الموقع
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 
 
                 <!-- Right Column - 2/3 width for 4 cards (2x2 grid) -->
                 <div class="lg:col-span-2">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                         <!-- Card 1 -->
-                        <a href="/services/service-1" class="block group slide-in-top delay-1">
+                        <a href="#" class="block group slide-in-top delay-1">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1033,7 +1090,7 @@
                         </a>
 
                         <!-- Card 2 -->
-                        <a href="/services/service-2" class="block group slide-in-top delay-2">
+                        <a href="#" class="block group slide-in-top delay-2">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1068,7 +1125,7 @@
                         </a>
 
                         <!-- Card 3 -->
-                        <a href="/services/service-3" class="block group slide-in-bottom delay-3">
+                        <a href="#" class="block group slide-in-bottom delay-3">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1103,7 +1160,7 @@
                         </a>
 
                         <!-- Card 4 -->
-                        <a href="/services/service-4" class="block group slide-in-bottom delay-4">
+                        <a href="#" class="block group slide-in-bottom delay-4">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1145,198 +1202,251 @@
         </div>
     </section>
 
-       <!-- Main Services Section -->
-<section id="services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
-    <div class="container mx-auto px-4">
+    <!-- Main Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+        <div class="container mx-auto px-4">
 
-        <!-- Header Section -->
-        <div class="text-center mb-16 fade-in">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
 
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                خدمات <span class="text-accent">المكيفات المركزية</span> باحترافية متكاملة
-            </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    خدمات <span class="text-accent">المكيفات المركزية</span> باحترافية متكاملة
+                </h2>
 
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                خدمات متخصصة في صيانة وتنظيف وتركيب المكيفات المركزية، تشمل فحص الأنظمة، تنظيف مجاري الهواء، معالجة
-                الأعطال، تحسين كفاءة التبريد، وتركيب أنظمة تكييف مركزي حديثة للمباني السكنية والتجارية.
-            </p>
-
-        </div>
-
-        <!-- Grid Container -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-
-            <!-- Left Column -->
-            <div class="lg:col-span-2 space-y-8">
-
-                <!-- Big Image Card -->
-                <div class="side-in-right">
-                    <a href="./companes/central-air-conditioning-services.html" class="block group">
-                        <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[450px] lg:h-[500px]">
-                            <img src="./img/B 2.png" alt="المكيفات المركزية"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
-
-                            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                <h3 class="text-3xl font-bold mb-3">
-                                    تركيب وصيانة المكيفات المركزية
-                                </h3>
-                                <p class="text-white/80 leading-relaxed max-w-xl">
-                                    حلول متكاملة لأنظمة التكييف المركزي تشمل التركيب الاحترافي، الصيانة الدورية،
-                                    وتنظيف الدكتات لضمان تبريد متوازن واستهلاك أقل للطاقة.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Two Small Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                    <!-- Small Card 1 -->
-                    <a href="/services/central-ac-installation" class="block group slide-in-top delay-1">
-                        <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
-                            <div class="relative h-52 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600"
-                                    alt="تركيب مكيفات مركزية"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                            </div>
-                            <div class="p-6">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                        <i class="fas fa-tools text-primary text-xl"></i>
-                                    </div>
-                                    <h4 class="text-xl font-bold text-primary">تركيب المكيفات المركزية</h4>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    تركيب أنظمة تكييف مركزي للمباني والفلل والشركات وفق أعلى معايير الجودة والهندسة.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Small Card 2 -->
-                    <a href="/services/central-ac-cleaning" class="block group slide-in-bottom delay-2">
-                        <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
-                            <div class="relative h-52 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
-                                    alt="تنظيف المكيفات المركزية"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                            </div>
-                            <div class="p-6">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                        <i class="fas fa-wind text-primary text-xl"></i>
-                                    </div>
-                                    <h4 class="text-xl font-bold text-primary">تنظيف وصيانة الدكتات</h4>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    تنظيف مجاري الهواء والفلاتر وصيانة المكيفات المركزية لتحسين جودة الهواء وكفاءة التبريد.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات متخصصة في صيانة وتنظيف وتركيب المكيفات المركزية، تشمل فحص الأنظمة، تنظيف مجاري الهواء، معالجة
+                    الأعطال، تحسين كفاءة التبريد، وتركيب أنظمة تكييف مركزي حديثة للمباني السكنية والتجارية.
+                </p>
 
             </div>
 
-            <!-- Emergency Service -->
-            <a href="/services/central-ac-emergency" class="block group slide-in-bottom delay-4">
-                <div class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
-                    <div class="relative h-[700px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581092160613-1dbd0d8d5b47?w=600"
-                            alt="طوارئ المكيفات المركزية"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                    </div>
+            <!-- Grid Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
 
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-clock text-primary text-xl"></i>
+                <!-- Left Column -->
+                <div class="lg:col-span-2 space-y-8">
+
+                    <!-- Big Image Card -->
+                    <div class="side-in-right">
+                        <a href="./companes/central-air-conditioning-services.html" class="block group">
+                            <div
+                                class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[450px] lg:h-[500px]">
+                                <img src="./img/B 2.png" alt="المكيفات المركزية"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
+                                </div>
+
+                                
                             </div>
-                            <h4 class="text-xl font-bold text-primary">طوارئ المكيفات المركزية</h4>
-                        </div>
-
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            خدمة طوارئ على مدار الساعة لإصلاح أعطال المكيفات المركزية وضمان عودة التبريد بأسرع وقت.
-                        </p>
-
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <span class="flex items-center gap-1">
-                                <i class="fas fa-bolt"></i>
-                                استجابة فورية
-                            </span>
-                            <span class="text-accent font-bold">24/7</span>
-                        </div>
+                        </a>
                     </div>
-                </div>
-            </a>
 
+                    <!-- Two Small Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- Small Card 1 -->
+                <a href="#add-your-logo" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80 py-6">
+
+                        <!-- Lottie Background -->
+                        <lottie-player src="./lottie/Creative 3D Visual Animation - Website Development.json" background="transparent" speed="1" loop autoplay
+                            class="absolute inset-0 w-full h-full object-cover">
+                        </lottie-player>
+
+                        <!-- Hover Overlay -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+
+                                <h4 class="text-xl font-bold mb-3">أضف موقعك الإلكتروني هنا</h4>
+
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    اعرض موقعك الإلكتروني أو شركتك على منصتنا لزيادة المصداقية، تعزيز العلامة التجارية،
+                                    والوصول المباشر إلى عملاء مهتمين بمجالك. هذه فرصتك لتكون مرئيًا أمام جمهور مهتم بالخدمات التي تقدمها.
+                                </p>
+
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-eye text-accent"></i>
+                                        ظهور أقوى
+                                    </span>
+                                    <span class="text-accent font-bold">تعزيز الثقة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Default Badge -->
+                        <div
+                            class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-20">
+                            أضف موقعك الآن
+                        </div>
+
+                    </div>
+                </a>
+
+
+
+
+                        <!-- Small Card 2 -->
+                        <a href="#add-your-site" class="block group">
+    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+
+        <!-- صورة ثابتة -->
+        <div class="relative h-52 overflow-hidden">
+            <img src="./img/istockphoto-1437896577-612x612.webp"
+                 alt="مساحة إعلانية لعرض موقعك"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
         </div>
-    </div>
-</section>
 
+        <!-- المحتوى -->
+        <div class="p-6">
+            <h4 class="text-xl font-bold mb-3 text-primary">مساحة إعلانية لعرض موقعك</h4>
 
-
-<!-- Cleaning Services Section -->
-<section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
-    <div class="container mx-auto px-4">
-
-        <!-- Header Section -->
-        <div class="text-center mb-16 fade-in">
-
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                خدمات <span class="text-accent">تنظيف المنازل والشركات</span> باحترافية عالية
-            </h2>
-
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                خدمات تنظيف شاملة للمنازل، الشقق، الفلل، المكاتب، والشركات باستخدام معدات حديثة ومواد تنظيف آمنة،
-                مع حلول مخصصة تضمن بيئة نظيفة وصحية وجودة تنفيذ تلبي أعلى المعايير.
+            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                يمكنك عرض موقعك الإلكتروني أو شركتك في هذه المساحة الإعلانية داخل منصتنا.
+                هذه فرصة رائعة للوصول إلى عملاء مهتمين وزيادة ظهور علامتك التجارية.
             </p>
 
+            <div class="flex items-center justify-between text-sm">
+                <span class="flex items-center gap-1">
+                    <i class="fas fa-eye text-accent"></i>
+                    ظهور أقوى
+                </span>
+                <span class="text-accent font-bold">تعزيز العلامة التجارية</span>
+            </div>
         </div>
 
-        <!-- Large Service Card -->
-        <div class="mb-20 slide-in-left">
-            <a href="./companes/comprehensive-cleaning-services.html" class="block group">
+        <!-- Default Badge -->
+        <div
+            class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-20">
+            أضف موقعك هنا
+        </div>
 
-                <div class="service-card-large rounded-none shadow-2xl overflow-hidden card-hover">
-                    <div class="relative w-full h-[60vh] lg:h-[40vh] overflow-hidden">
-                        <img src="./img/B 3.png" alt="تنظيف المنازل والشركات"
-                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+    </div>
+</a>
 
-                        <div class="absolute inset-0 gradient-overlay"></div>
 
-                        <div class="absolute bottom-6 right-6 z-10">
-                            <span class="badge-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
-                                <i class="fas fa-star ml-2"></i>
-                                نظافة مثالية
-                            </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Emergency Service -->
+                <div class="block group slide-in-right delay-1">
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                        
+                        <!-- صورة في الأعلى -->
+                        <div class="relative h-90 overflow-hidden">
+                            <img src="./img/iron-cool.webp" alt="شركة إيرون كول للمكيفات بالرياض"
+                                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                        </div>
+
+                        <!-- المحتوى -->
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-fan text-primary text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary">شركة إيرون كول للمكيفات بالرياض</h4>
+                            </div>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نوفر أفضل خدمات المكيفات في الرياض، تشمل التركيب، الصيانة، والتنظيف الكامل لأنظمة التكييف
+                                لجميع المنازل والشركات مع فريق متخصص وسريع لضمان راحتك طوال العام.
+                            </p>
+
+                            <!-- قائمة الخدمات -->
+                            <ul class="list-disc list-inside text-gray-600 mb-4">
+                                <li>تركيب جميع أنواع المكيفات (سبليت، شباك، مركزي)</li>
+                                <li>صيانة دورية وتنظيف شامل للمكيفات</li>
+                                <li>إصلاح أعطال التكييف وضبط الأداء</li>
+                                <li>فحص شامل للغاز والكمبريسور</li>
+                                <li>خدمة سريعة داخل الرياض وضواحيها</li>
+                            </ul>
+
+                            <!-- الأزرار -->
+                            <div class="flex gap-3 mt-4">
+                                <a href="#read-more"
+                                class="flex-1 text-center bg-primary text-white px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition">
+                                    قراءة المزيد
+                                </a>
+                                <a href="https://ironcool.net/" target="_blank"
+                                class="flex-1 text-center border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-primary hover:text-white transition">
+                                    زيارة الموقع
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-            </a>
+
+            </div>
         </div>
+    </section>
 
-        <!-- Cards Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16">
 
-            <!-- Card 1 -->
-            <div class="lg:col-span-1 slide-in-right">
-                <a href="/services/home-cleaning" class="block group h-full">
+
+    <!-- Cleaning Services Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+        <div class="container mx-auto px-4">
+
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    خدمات <span class="text-accent">تنظيف المنازل والشركات</span> باحترافية عالية
+                </h2>
+
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات تنظيف شاملة للمنازل، الشقق، الفلل، المكاتب، والشركات باستخدام معدات حديثة ومواد تنظيف آمنة،
+                    مع حلول مخصصة تضمن بيئة نظيفة وصحية وجودة تنفيذ تلبي أعلى المعايير.
+                </p>
+
+            </div>
+
+            <!-- Large Service Card -->
+            <div class="mb-20 slide-in-left">
+                <a href="./companes/comprehensive-cleaning-services.html" class="block group">
+
+                    <div class="service-card-large rounded-none shadow-2xl overflow-hidden card-hover">
+                        <div class="relative w-full h-[60vh] lg:h-[40vh] overflow-hidden">
+                            <img src="./img/B 3.png" alt="تنظيف المنازل والشركات"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            <div class="absolute inset-0 gradient-overlay"></div>
+
+                            <div class="absolute bottom-6 right-6 z-10">
+                                <span
+                                    class="badge-accent text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
+                                    <i class="fas fa-star ml-2"></i>
+                                    نظافة مثالية
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16">
+
+                <!-- Card 1 -->
+               <div class="lg:col-span-1 slide-in-right">
+                <a href="https://www.freshcleanly.net/" class="block group h-full">
                     <div class="rounded-2xl overflow-hidden card-hover h-full relative">
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400"
-                            alt="تنظيف المنازل"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
+                        <img src="./img/fresh-clean-logo.webp"
+                            alt="شركة فريش كلين للنظافة بالرياض"
+                            class="w-full h-full object-contain px-3 transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <h4 class="text-xl font-bold mb-2">تنظيف المنازل</h4>
+                            <h4 class="text-xl font-bold mb-2">شركة فريش كلين للنظافة بالرياض</h4>
                             <p class="text-white/80 text-sm">
                                 تنظيف شامل للشقق والفلل مع عناية بالتفاصيل
                             </p>
@@ -1345,107 +1455,113 @@
                 </a>
             </div>
 
-            <!-- Card 2 -->
-            <a href="/services/office-cleaning" class="block group h-full">
-                <div class="rounded-2xl overflow-hidden card-hover h-full relative">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400"
-                        alt="تنظيف المكاتب"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h4 class="text-xl font-bold mb-2">تنظيف المكاتب</h4>
-                        <p class="text-white/80 text-sm">
-                            بيئة عمل نظيفة ومنظمة لزيادة الإنتاجية
-                        </p>
-                    </div>
-                </div>
-            </a>
 
-            <!-- Card 3 -->
-            <a href="/services/company-cleaning" class="block group h-full">
-                <div class="rounded-2xl overflow-hidden card-hover h-full relative">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400"
-                        alt="تنظيف الشركات"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h4 class="text-xl font-bold mb-2">تنظيف الشركات</h4>
-                        <p class="text-white/80 text-sm">
-                            حلول تنظيف مخصصة للمؤسسات والمقار التجارية
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Card 4 -->
-            <div class="lg:col-span-1 slide-in-left">
-                <a href="/services/deep-cleaning" class="block group h-full">
-                    <div class="rounded-2xl overflow-hidden card-hover h-full relative">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400"
-                            alt="تنظيف عميق"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <h4 class="text-xl font-bold mb-2">تنظيف عميق</h4>
-                            <p class="text-white/80 text-sm">
-                                تنظيف شامل لإزالة الأوساخ والبقع الصعبة
-                            </p>
-                        </div>
-                    </div>
-                </a>
+                <!-- Card 2 -->
+                <a href="https://www.freshcleanly.net/" class="block group h-full">
+        <div class="rounded-2xl overflow-hidden card-hover h-full relative">
+            <img src="./img/lama-clean-logo.webp"
+                alt="لمعه كلين للنظافة بجدة"
+                class="w-full h-full object-contain px-3 transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h4 class="text-xl font-bold mb-2">لمعه كلين للنظافة بجدة</h4>
+                <p class="text-white/80 text-sm">
+                    بيئة عمل نظيفة ومنظمة لزيادة الإنتاجية
+                </p>
             </div>
-
         </div>
+    </a>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
 
-            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift">
-                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-leaf text-primary text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-primary mb-2">مواد تنظيف آمنة</h4>
-                <p class="text-gray-600 text-sm">منتجات فعالة وصديقة للبيئة</p>
-            </div>
-
-            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift">
-                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-user-shield text-primary text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-primary mb-2">عمالة مدربة</h4>
-                <p class="text-gray-600 text-sm">فريق محترف بخبرة في جميع أعمال التنظيف</p>
-            </div>
-
-            <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift">
-                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-headset text-primary text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-primary mb-2">دعم مستمر</h4>
-                <p class="text-gray-600 text-sm">خدمة عملاء ومتابعة مستمرة</p>
-            </div>
-
+                <!-- Card 3 -->
+                <a href="https://lamsa-clean.com/" class="block group h-full">
+    <div class="rounded-2xl overflow-hidden card-hover h-full relative">
+        <img src="./img/lamsa-clean-logo.webp"
+             alt="لمسة كلين للنظافة بالرياض"
+             class="w-full h-full object-contain px-3 transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h4 class="text-xl font-bold mb-2">لمسة كلين للنظافة بالرياض</h4>
+            <p class="text-white/80 text-sm">
+                بيئة عمل نظيفة ومنظمة لزيادة الإنتاجية
+            </p>
         </div>
-
     </div>
-</section>
+</a>
 
-   <!-- Furniture Moving Services Section -->
+
+                <!-- Card 4 -->
+          <div class="lg:col-span-1 slide-in-left">
+    <a href="#add-your-site" class="block group h-full">
+        <div class="rounded-2xl overflow-hidden card-hover h-full relative">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400"
+                 alt="أضف موقعك"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 min-h-[400px]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h4 class="text-xl font-bold mb-2">أضف موقعك الإلكتروني هنا</h4>
+                <p class="text-white/80 text-sm">
+                    هل لديك شركة أو متجر متخصص في مجال التنظيف أو أي خدمات أخرى؟ يمكنك عرض موقعك هنا في منصتنا للوصول إلى عملاء مهتمين، زيادة المصداقية، وتعزيز علامتك التجارية.
+                </p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+            </div>
+
+            <!-- Features -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+
+                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-primary mb-2">مواد تنظيف آمنة</h4>
+                    <p class="text-gray-600 text-sm">منتجات فعالة وصديقة للبيئة</p>
+                </div>
+
+                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-shield text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-primary mb-2">عمالة مدربة</h4>
+                    <p class="text-gray-600 text-sm">فريق محترف بخبرة في جميع أعمال التنظيف</p>
+                </div>
+
+                <div class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-primary mb-2">دعم مستمر</h4>
+                    <p class="text-gray-600 text-sm">خدمة عملاء ومتابعة مستمرة</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Furniture Moving Services Section -->
     <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
 
+   
             <!-- Header Section -->
-           <!-- Header Section -->
-<div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 fade-in">
 
-    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-        أفضل <span class="text-accent">شركات نقل العفش</span> بخدمة آمنة ومضمونة
-    </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    أفضل <span class="text-accent">شركات نقل العفش</span> بخدمة آمنة ومضمونة
+                </h2>
 
-    <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-        خدمات نقل عفش متكاملة تشمل نقل الأثاث المنزلي والمكتبي، الفك والتركيب، التغليف الاحترافي، ونقل العفش داخل المدن وبين المحافظات، مع الاعتماد على عمالة مدرّبة وسيارات مجهزة لضمان نقل آمن وسريع بأفضل الأسعار.
-    </p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات نقل عفش متكاملة تشمل نقل الأثاث المنزلي والمكتبي، الفك والتركيب، التغليف الاحترافي، ونقل العفش
+                    داخل المدن وبين المحافظات، مع الاعتماد على عمالة مدرّبة وسيارات مجهزة لضمان نقل آمن وسريع بأفضل
+                    الأسعار.
+                </p>
 
-</div>
+            </div>
 
 
             <!-- Big Image Section -->
@@ -1470,7 +1586,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
 
                 <!-- Left Card - الباقة المميزة -->
-                <a href="/services/premium-moving" class="block group slide-in-right delay-1">
+                <a href="#" class="block group slide-in-right delay-1">
                     <div
                         class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                         <!-- صورة في الأعلى -->
@@ -1507,7 +1623,7 @@
                 <div class="lg:col-span-2">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                         <!-- Card 1 - تغليف العفش -->
-                        <a href="/services/packaging" class="block group slide-in-top delay-1">
+                        <a href="#" class="block group slide-in-top delay-1">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1543,7 +1659,7 @@
                         </a>
 
                         <!-- Card 2 - النقل المحلي -->
-                        <a href="/services/local-moving" class="block group slide-in-top delay-2">
+                        <a href="#" class="block group slide-in-top delay-2">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1579,7 +1695,7 @@
                         </a>
 
                         <!-- Card 3 - فك وتركيب -->
-                        <a href="/services/assembly" class="block group slide-in-bottom delay-3">
+                        <a href="#" class="block group slide-in-bottom delay-3">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1615,7 +1731,7 @@
                         </a>
 
                         <!-- Card 4 - نقل القطع الثمينة -->
-                        <a href="/services/valuables-moving" class="block group slide-in-bottom delay-4">
+                        <a href="#" class="block group slide-in-bottom delay-4">
                             <div
                                 class="bg-white rounded-2xl overflow-hidden card-hover h-full border border-gray-200 shadow-lg">
                                 <div class="relative h-48 overflow-hidden">
@@ -1660,21 +1776,22 @@
 
 
 
-     <!-- Medical Services Section -->
+    <!-- Medical Services Section -->
     <section id="medical-services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
         <div class="container mx-auto px-4">
-           <!-- Header Section -->
-<div class="text-center mb-16 fade-in">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
 
-    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-        خدمات <span class="text-accent">العيادات الطبية</span> والرعاية الصحية
-    </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    خدمات <span class="text-accent">العيادات الطبية</span> والرعاية الصحية
+                </h2>
 
-    <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-        خدمات طبية متكاملة تشمل العيادات الطبية المتخصصة، الفحوصات والتشخيص، المتابعة العلاجية، والرعاية الصحية للمرضى، مع الاعتماد على أطباء مؤهلين وتجهيزات طبية حديثة لضمان أفضل مستوى من العناية.
-    </p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات طبية متكاملة تشمل العيادات الطبية المتخصصة، الفحوصات والتشخيص، المتابعة العلاجية، والرعاية
+                    الصحية للمرضى، مع الاعتماد على أطباء مؤهلين وتجهيزات طبية حديثة لضمان أفضل مستوى من العناية.
+                </p>
 
-</div>
+            </div>
 
 
 
@@ -1709,7 +1826,7 @@
                     <!-- Two Small Cards in 2 columns -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Small Card 1 - العيادات الخارجية -->
-                        <a href="/services/outpatient-clinics" class="block group slide-in-top delay-1">
+                        <a href="#" class="block group slide-in-top delay-1">
                             <div
                                 class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
                                 <div class="relative h-52 overflow-hidden">
@@ -1745,7 +1862,7 @@
                         </a>
 
                         <!-- Small Card 2 - الفحوصات المخبرية -->
-                        <a href="/services/lab-tests" class="block group slide-in-bottom delay-2">
+                        <a href="#" class="block group slide-in-bottom delay-2">
                             <div
                                 class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
                                 <div class="relative h-52 overflow-hidden">
@@ -1782,7 +1899,7 @@
                 <!-- Right Column - 1/3 width for Emergency Service Card -->
                 <div class="lg:col-span-1">
                     <!-- خدمة الرعاية المنزلية -->
-                    <a href="/services/home-care" class="block group slide-in-left delay-3">
+                    <a href="#" class="block group slide-in-left delay-3">
                         <div
                             class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
                             <!-- Image -->
@@ -1837,7 +1954,7 @@
                     </a>
 
                     <!-- خدمة الاستشارات التخصصية -->
-                    <a href="/services/specialist-consultation" class="block group slide-in-left delay-4 mt-6">
+                    <a href="#" class="block group slide-in-left delay-4 mt-6">
                         <div
                             class="service-card-small rounded-2xl overflow-hidden card-hover h-full border border-gray-200">
                             <!-- Image -->
@@ -1930,18 +2047,19 @@
     <!-- New Services Section with Custom Layout -->
     <section id="services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
         <div class="container mx-auto px-4">
-           <!-- Header Section -->
-<div class="text-center mb-16 fade-in">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
 
-    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-        خدمات <span class="text-accent">المنصات التعليمية</span> والتعلم الإلكتروني
-    </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    خدمات <span class="text-accent">المنصات التعليمية</span> والتعلم الإلكتروني
+                </h2>
 
-    <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-        خدمات تعليمية رقمية متكاملة تشمل منصات التعليم الإلكتروني، الدورات التدريبية أونلاين، التعليم عن بُعد، إدارة المحتوى التعليمي، وحلول التعلم التفاعلي للطلاب والمعلمين والمؤسسات التعليمية.
-    </p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات تعليمية رقمية متكاملة تشمل منصات التعليم الإلكتروني، الدورات التدريبية أونلاين، التعليم عن
+                    بُعد، إدارة المحتوى التعليمي، وحلول التعلم التفاعلي للطلاب والمعلمين والمؤسسات التعليمية.
+                </p>
 
-</div>
+            </div>
 
 
 
@@ -1953,7 +2071,7 @@
                 <div class="w-full space-y-6">
 
                     <!-- Top Card Above Image -->
-                    <a href="/services/top-service" class="block group slide-in-top">
+                    <!-- <a href="/services/top-service" class="block group slide-in-top">
                         <div
                             class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg h-40">
                             <div class="grid grid-cols-3 gap-0 h-full">
@@ -1971,7 +2089,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
 
                     <!-- Big Image Card -->
                     <div class="slide-in-right">
@@ -2001,7 +2119,7 @@
                     </div>
 
                     <!-- Bottom Card Under Image -->
-                    <a href="/services/bottom-service" class="block group slide-in-bottom">
+                    <!-- <a href="/services/bottom-service" class="block group slide-in-bottom">
                         <div
                             class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg h-40">
                             <div class="grid grid-cols-3 gap-0 h-full">
@@ -2019,7 +2137,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
 
                 </div>
 
@@ -2030,97 +2148,97 @@
         </div>
     </section>
 
-<!-- International Shipping Services Section -->
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
+    <!-- International Shipping Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
 
-        <!-- Header Section -->
-        <div class="text-center mb-16 fade-in">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
 
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                خدمات <span class="text-accent">الشحن الدولي</span> بجميع الطرق
-            </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    خدمات <span class="text-accent">الشحن الدولي</span> بجميع الطرق
+                </h2>
 
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                خدمات شحن دولي متكاملة تشمل الشحن الجوي، البحري، والبري لنقل الطرود والبضائع إلى جميع دول العالم،
-                مع حلول لوجستية احترافية، تتبع الشحنات، سرعة التخليص، وأسعار تنافسية تناسب الأفراد والشركات.
-            </p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات شحن دولي متكاملة تشمل الشحن الجوي، البحري، والبري لنقل الطرود والبضائع إلى جميع دول العالم،
+                    مع حلول لوجستية احترافية، تتبع الشحنات، سرعة التخليص، وأسعار تنافسية تناسب الأفراد والشركات.
+                </p>
+
+            </div>
+
+            <!-- Large Service Card -->
+            <div class="mb-16 slide-in-right">
+                <a href="#" class="block group">
+
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+
+                        <div class="relative w-full h-[55vh] lg:h-[60vh] overflow-hidden">
+                            <img src="./img/B 6.png" alt="خدمات الشحن الدولي"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            <div class="absolute inset-0 gradient-overlay"></div>
+                        </div>
+
+                    </div>
+
+                </a>
+            </div>
+
+            <!-- Small Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card 1: Air Shipping -->
+                <a href="#" class="block slide-in-top delay-1">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600"
+                                alt="الشحن الجوي" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">الشحن الجوي</h4>
+                            <p class="text-gray-600">
+                                أسرع حلول الشحن الدولي لنقل الطرود والبضائع الحساسة.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2: Sea Shipping -->
+                <a href="#" class="block slide-in-bottom delay-2">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
+                                alt="الشحن البحري" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">الشحن البحري</h4>
+                            <p class="text-gray-600">
+                                شحن الحاويات والبضائع الكبيرة بتكلفة اقتصادية.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3: Land Shipping -->
+                <a href="#" class="block slide-in-top delay-3">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600"
+                                alt="الشحن البري" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">الشحن البري</h4>
+                            <p class="text-gray-600">
+                                شحن بري دولي بين الدول المجاورة بخدمة آمنة ومنظمة.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
 
         </div>
-
-        <!-- Large Service Card -->
-        <div class="mb-16 slide-in-right">
-            <a href="./companes/shipping-services.html" class="block group">
-
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
-
-                    <div class="relative w-full h-[55vh] lg:h-[60vh] overflow-hidden">
-                        <img src="./img/B 6.png" alt="خدمات الشحن الدولي"
-                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-
-                        <div class="absolute inset-0 gradient-overlay"></div>
-                    </div>
-
-                </div>
-
-            </a>
-        </div>
-
-        <!-- Small Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            <!-- Card 1: Air Shipping -->
-            <a href="/services/air-shipping" class="block slide-in-top delay-1">
-                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover h-full">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600"
-                            alt="الشحن الجوي" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-primary mb-2">الشحن الجوي</h4>
-                        <p class="text-gray-600">
-                            أسرع حلول الشحن الدولي لنقل الطرود والبضائع الحساسة.
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Card 2: Sea Shipping -->
-            <a href="/services/sea-shipping" class="block slide-in-bottom delay-2">
-                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover h-full">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
-                            alt="الشحن البحري" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-primary mb-2">الشحن البحري</h4>
-                        <p class="text-gray-600">
-                            شحن الحاويات والبضائع الكبيرة بتكلفة اقتصادية.
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Card 3: Land Shipping -->
-            <a href="/services/land-shipping" class="block slide-in-top delay-3">
-                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover h-full">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600"
-                            alt="الشحن البري" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-primary mb-2">الشحن البري</h4>
-                        <p class="text-gray-600">
-                            شحن بري دولي بين الدول المجاورة بخدمة آمنة ومنظمة.
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-
-    </div>
-</section>
+    </section>
 
 
 
@@ -2146,7 +2264,7 @@
             <!-- 4 Column Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Service Card 1 -->
-                <a href="/services/plumbing" class="block scale-in delay-1">
+                <a href="#" class="block scale-in delay-1">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover h-full">
                         <div class="relative h-40">
                             <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400" alt="السباكة"
@@ -2163,7 +2281,7 @@
                 </a>
 
                 <!-- Service Card 2 -->
-                <a href="/services/electrical" class="block scale-in delay-2">
+                <a href="#" class="block scale-in delay-2">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover h-full">
                         <div class="relative h-40">
                             <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400" alt="الكهرباء"
@@ -2180,7 +2298,7 @@
                 </a>
 
                 <!-- Service Card 3 -->
-                <a href="/services/carpentry" class="block scale-in delay-3">
+                <a href="#" class="block scale-in delay-3">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover h-full">
                         <div class="relative h-40">
                             <img src="https://images.unsplash.com/photo-1581858726788-75bc0f1a4eaf?w=400" alt="النجارة"
@@ -2197,7 +2315,7 @@
                 </a>
 
                 <!-- Service Card 4 -->
-                <a href="/services/painting" class="block scale-in delay-4">
+                <a href="#" class="block scale-in delay-4">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover h-full">
                         <div class="relative h-40">
                             <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400" alt="الدهانات"
@@ -2221,17 +2339,18 @@
     <section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
         <div class="container mx-auto px-4">
             <!-- Header Section -->
-<div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 fade-in">
 
-    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-        حلول متكاملة <span class="text-accent">للتشطيبات والديكورات</span>
-    </h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    حلول متكاملة <span class="text-accent">للتشطيبات والديكورات</span>
+                </h2>
 
-    <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-        خدمات تشطيبات وديكورات متكاملة تشمل تشطيب الشقق والفلل، الديكورات الداخلية، أعمال الجبس بورد، الدهانات، الأرضيات، والتصميم الداخلي باحترافية عالية وجودة تنفيذ تلبي جميع الأذواق والميزانيات.
-    </p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات تشطيبات وديكورات متكاملة تشمل تشطيب الشقق والفلل، الديكورات الداخلية، أعمال الجبس بورد،
+                    الدهانات، الأرضيات، والتصميم الداخلي باحترافية عالية وجودة تنفيذ تلبي جميع الأذواق والميزانيات.
+                </p>
 
-</div>
+            </div>
 
 
             <!-- Big Image at Top -->
@@ -2251,149 +2370,156 @@
             </div>
 
             <!-- 4 Image Cards Below with Hover Content -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    <!-- Card 1: بيع العقارات -->
-    <a href="/services/real-estate-sale" class="block group">
-        <div class="rounded-2xl overflow-hidden card-hover relative h-80">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400" alt="بيع العقارات"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Card 1: بيع العقارات -->
+                <a href="#" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400" alt="بيع العقارات"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 
-            <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <div
-                    class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-home text-white text-xl"></i>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-home text-white text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold">بيع العقارات</h4>
+                                </div>
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    عروض بيع شقق وفلل وأراضي سكنية وتجارية بأفضل الأسعار مع تسويق عقاري احترافي.
+                                </p>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-check-circle text-accent"></i>
+                                        فرص مميزة
+                                    </span>
+                                    <span class="text-accent font-bold">أفضل سعر</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-bold">بيع العقارات</h4>
-                    </div>
-                    <p class="text-white/80 mb-4 text-sm leading-relaxed">
-                        عروض بيع شقق وفلل وأراضي سكنية وتجارية بأفضل الأسعار مع تسويق عقاري احترافي.
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="flex items-center gap-1">
-                            <i class="fas fa-check-circle text-accent"></i>
-                            فرص مميزة
-                        </span>
-                        <span class="text-accent font-bold">أفضل سعر</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">
-                الأكثر طلبًا
-            </div>
-        </div>
-    </a>
-
-    <!-- Card 2: شراء العقارات -->
-    <a href="/services/real-estate-buy" class="block group">
-        <div class="rounded-2xl overflow-hidden card-hover relative h-80">
-            <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?w=400" alt="شراء العقارات"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-
-            <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <div
-                    class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-search-dollar text-white text-xl"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">
+                            الأكثر طلبًا
                         </div>
-                        <h4 class="text-xl font-bold">شراء العقارات</h4>
                     </div>
-                    <p class="text-white/80 mb-4 text-sm leading-relaxed">
-                        مساعدة في شراء العقارات السكنية والاستثمارية مع مقارنة الأسعار واختيار الأنسب.
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="flex items-center gap-1">
-                            <i class="fas fa-user-check text-accent"></i>
-                            خبراء عقار
-                        </span>
-                        <span class="text-accent font-bold">استشارة</span>
-                    </div>
-                </div>
-            </div>
+                </a>
 
-            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
-                موثوق
-            </div>
-        </div>
-    </a>
+                <!-- Card 2: شراء العقارات -->
+                <a href="#" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?w=400"
+                            alt="شراء العقارات"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 
-    <!-- Card 3: إيجار العقارات -->
-    <a href="/services/real-estate-rent" class="block group">
-        <div class="rounded-2xl overflow-hidden card-hover relative h-80">
-            <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=400" alt="إيجار العقارات"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-
-            <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <div
-                    class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-key text-white text-xl"></i>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-search-dollar text-white text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold">شراء العقارات</h4>
+                                </div>
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    مساعدة في شراء العقارات السكنية والاستثمارية مع مقارنة الأسعار واختيار الأنسب.
+                                </p>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-user-check text-accent"></i>
+                                        خبراء عقار
+                                    </span>
+                                    <span class="text-accent font-bold">استشارة</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-bold">إيجار العقارات</h4>
-                    </div>
-                    <p class="text-white/80 mb-4 text-sm leading-relaxed">
-                        شقق وفلل ومكاتب للإيجار بعقود مرنة وخيارات تناسب الأفراد والشركات.
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="flex items-center gap-1">
-                            <i class="fas fa-calendar-check text-accent"></i>
-                            جاهز للسكن
-                        </span>
-                        <span class="text-accent font-bold">عقود مرنة</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">
-                متاح الآن
-            </div>
-        </div>
-    </a>
-
-    <!-- Card 4: التسويق العقاري -->
-    <a href="/services/real-estate-marketing" class="block group">
-        <div class="rounded-2xl overflow-hidden card-hover relative h-80">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400" alt="التسويق العقاري"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-
-            <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <div
-                    class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-bullhorn text-white text-xl"></i>
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            موثوق
                         </div>
-                        <h4 class="text-xl font-bold">التسويق العقاري</h4>
                     </div>
-                    <p class="text-white/80 mb-4 text-sm leading-relaxed">
-                        تسويق احترافي للعقارات عبر المنصات الرقمية لزيادة فرص البيع أو الإيجار بسرعة.
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="flex items-center gap-1">
-                            <i class="fas fa-chart-line text-accent"></i>
-                            انتشار واسع
-                        </span>
-                        <span class="text-accent font-bold">نتائج سريعة</span>
+                </a>
+
+                <!-- Card 3: إيجار العقارات -->
+                <a href="#" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=400"
+                            alt="إيجار العقارات"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-key text-white text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold">إيجار العقارات</h4>
+                                </div>
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    شقق وفلل ومكاتب للإيجار بعقود مرنة وخيارات تناسب الأفراد والشركات.
+                                </p>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-calendar-check text-accent"></i>
+                                        جاهز للسكن
+                                    </span>
+                                    <span class="text-accent font-bold">عقود مرنة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">
+                            متاح الآن
+                        </div>
                     </div>
-                </div>
-            </div>
+                </a>
 
-            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
-                احترافي
-            </div>
-        </div>
-    </a>
+                <!-- Card 4: التسويق العقاري -->
+                <a href="#" class="block group">
+                    <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400"
+                            alt="التسويق العقاري"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 
-</div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-bullhorn text-white text-xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold">التسويق العقاري</h4>
+                                </div>
+                                <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                    تسويق احترافي للعقارات عبر المنصات الرقمية لزيادة فرص البيع أو الإيجار بسرعة.
+                                </p>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-chart-line text-accent"></i>
+                                        انتشار واسع
+                                    </span>
+                                    <span class="text-accent font-bold">نتائج سريعة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            احترافي
+                        </div>
+                    </div>
+                </a>
+
+            </div>
 
 
 
@@ -2404,279 +2530,310 @@
 
 
 
- <!-- Services Section with Different Layout -->
-<section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
-    <div class="container mx-auto px-4">
-        <!-- Header Section -->
-        <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                خدمات <span class="text-accent">بيع وشراء وإيجار العقارات</span>
-            </h2>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                خدمات عقارية متكاملة تشمل بيع وشراء العقارات، إيجار الشقق والفلل، التسويق العقاري، وإدارة الأملاك، مع توفير أفضل الفرص السكنية والاستثمارية للأفراد والشركات بأعلى مستويات المصداقية والاحترافية.
-            </p>
-        </div>
-
-        <!-- New Layout: Big Image First on Mobile, 4 Cards Below -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            
-            <!-- Big Image Card - First on Mobile, Right on Desktop -->
-            <div class="lg:col-span-2 slide-in-left order-1 lg:order-none">
-                <a href="/services/main-service" class="block group h-full">
-                    <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[300px] lg:h-[550px]">
-                        <img src="./img/B 10.png" alt="خدمات بيع وشراء وإيجار العقارات"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <!-- Gradient Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
-                    </div>
-                </a>
+    <!-- Services Section with Different Layout -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+        <div class="container mx-auto px-4">
+            <!-- Header Section -->
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                    خدمات <span class="text-accent">بيع وشراء وإيجار العقارات</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    خدمات عقارية متكاملة تشمل بيع وشراء العقارات، إيجار الشقق والفلل، التسويق العقاري، وإدارة الأملاك،
+                    مع توفير أفضل الفرص السكنية والاستثمارية للأفراد والشركات بأعلى مستويات المصداقية والاحترافية.
+                </p>
             </div>
 
-            <!-- 4 Small Cards - Below on Mobile, Left on Desktop -->
-            <div class="lg:col-span-1 space-y-6 order-2 lg:order-none">
-                
-                <!-- Card 1 - بيع العقارات -->
-                <a href="/services/sale" class="block group slide-in-right">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
-                        <div class="grid grid-cols-3 gap-0 h-32">
-                            <div class="relative col-span-1 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300"
-                                    alt="بيع العقارات"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 to-transparent"></div>
-                            </div>
-                            <div class="col-span-2 p-4 flex flex-col justify-center">
-                                <h4 class="text-lg font-bold text-primary mb-2">بيع العقارات</h4>
-                                <p class="text-gray-600 text-sm">بيع عقاراتك بأفضل الأسعار والتسويق الاحترافي</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+            <!-- New Layout: Big Image First on Mobile, 4 Cards Below -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
 
-                <!-- Card 2 - شراء العقارات -->
-                <a href="/services/buy" class="block group slide-in-right delay-1">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
-                        <div class="grid grid-cols-3 gap-0 h-32">
-                            <div class="relative col-span-1 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300"
-                                    alt="شراء العقارات"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-transparent"></div>
-                            </div>
-                            <div class="col-span-2 p-4 flex flex-col justify-center">
-                                <h4 class="text-lg font-bold text-primary mb-2">شراء العقارات</h4>
-                                <p class="text-gray-600 text-sm">أفضل العروض العقارية لشراء منزل أحلامك</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Card 3 - إيجار العقارات -->
-                <a href="/services/rent" class="block group slide-in-right delay-2">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
-                        <div class="grid grid-cols-3 gap-0 h-32">
-                            <div class="relative col-span-1 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300"
-                                    alt="إيجار العقارات"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent"></div>
-                            </div>
-                            <div class="col-span-2 p-4 flex flex-col justify-center">
-                                <h4 class="text-lg font-bold text-primary mb-2">إيجار العقارات</h4>
-                                <p class="text-gray-600 text-sm">شقق وفلل للإيجار بمواقع مميزة وأسعار تنافسية</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Card 4 - إدارة الأملاك -->
-                <a href="/services/property-management" class="block group slide-in-right delay-3">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
-                        <div class="grid grid-cols-3 gap-0 h-32">
-                            <div class="relative col-span-1 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300"
-                                    alt="إدارة الأملاك"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-transparent"></div>
-                            </div>
-                            <div class="col-span-2 p-4 flex flex-col justify-center">
-                                <h4 class="text-lg font-bold text-primary mb-2">إدارة الأملاك</h4>
-                                <p class="text-gray-600 text-sm">إدارة احترافية لعقاراتك وتحصيل الإيجارات</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-
-
-
-
-
-<!-- New Services Section with Custom Layout - Marketing Services -->
-<section id="marketing-services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
-    <div class="container mx-auto px-4">
-        <!-- Header Section -->
-        <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-                خدمات <span class="text-accent">التسويق الإلكتروني</span> والدعاية والإعلان
-            </h2>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                نقدم حلول تسويقية متكاملة لتعزيز حضورك الرقمي وزيادة مبيعاتك عبر استراتيجيات إعلانية مبتكرة وخدمات تسويق إلكتروني متخصصة.
-            </p>
-        </div>
-
-        <!-- Main Layout Grid -->
-        <div class="grid grid-cols-1 gap-6 mb-16">
-
-            <!-- Full Width Column -->
-            <div class="w-full space-y-6">
-
-                <!-- Top Card - إعلانات متميزة -->
-                <a href="/services/premium-ads" class="block group slide-in-top">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg h-40">
-                        <div class="grid grid-cols-3 gap-0 h-full">
-                            <div class="relative col-span-1 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400"
-                                    alt="إعلانات متميزة"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-transparent"></div>
-                            </div>
-                            <div class="col-span-2 p-6 flex flex-col justify-center">
-                                <h4 class="text-2xl font-bold text-primary mb-3">إعلانات متميزة</h4>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    إعلانات احترافية على منصات التواصل الاجتماعي ومحركات البحث لتحقيق أقصى وصول وجذب عملاء محتملين
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Big Image Card - التسويق الإلكتروني -->
-                <div class="slide-in-right">
-                    <a href="/services/digital-marketing" class="block group">
-                        <div class="rounded-2xl shadow-xl overflow-hidden card-hover relative h-[450px] w-full">
-                            <img src="./img/B 9.png" alt="التسويق الإلكتروني الشامل"
+                <!-- Big Image Card - First on Mobile, Right on Desktop -->
+                <div class="lg:col-span-2 slide-in-left order-1 lg:order-none">
+                    <a href="/services/main-service" class="block group h-full">
+                        <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[300px] lg:h-[550px]">
+                            <img src="./img/B 10.png" alt="خدمات بيع وشراء وإيجار العقارات"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-
-                            <!-- Content Overlay -->
-                            <div class="absolute inset-0 flex flex-col justify-end p-8">
-                                <h3 class="text-white text-3xl md:text-4xl font-bold mb-4">
-                                    التسويق الإلكتروني الشامل
-                                </h3>
-                                <p class="text-gray-200 text-lg max-w-xl mb-6">
-                                    حلول تسويقية متكاملة تشمل تصميم الحملات، تحليل البيانات، وإدارة الحسابات لتحقيق أقصى عائد على الاستثمار.
-                                </p>
-                            </div>
-
-                            <!-- Button -->
-                            <div class="absolute bottom-6 left-6">
-                                <button class="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center gap-3 pulse-glow">
-                                    <span>اطلب الخدمة الآن</span>
-                                    <i class="fas fa-arrow-left"></i>
-                                </button>
-                            </div>
-
-                            <!-- Badge -->
-                            <div class="absolute top-6 right-6">
-                                <span class="bg-accent text-white px-4 py-2 rounded-full text-lg font-bold">
-                                    الأكثر طلباً
-                                </span>
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!-- Bottom Card - تصميم الحملات -->
-                <a href="/services/campaign-design" class="block group slide-in-bottom">
-                    <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg h-40">
-                        <div class="grid grid-cols-3 gap-0 h-full">
-                            <div class="col-span-2 p-6 flex flex-col justify-center">
-                                <h4 class="text-2xl font-bold text-primary mb-3">تصميم الحملات الإعلانية</h4>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    استراتيجيات إعلانية مخصصة لحملات ناجحة مع تحليل البيانات وقياس النتائج لتحسين الأداء باستمرار
-                                </p>
-                            </div>
-                            <div class="relative col-span-1 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400"
-                                    alt="تصميم الحملات"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-gradient-to-l from-purple-500/20 to-transparent"></div>
+                <!-- 4 Small Cards - Below on Mobile, Left on Desktop -->
+                <div class="lg:col-span-1 space-y-6 order-2 lg:order-none">
+
+                    <!-- Card 1 - بيع العقارات -->
+                    <a href="#" class="block group slide-in-right">
+                        <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                            <div class="grid grid-cols-3 gap-0 h-32">
+                                <div class="relative col-span-1 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300"
+                                        alt="بيع العقارات"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 to-transparent">
+                                    </div>
+                                </div>
+                                <div class="col-span-2 p-4 flex flex-col justify-center">
+                                    <h4 class="text-lg font-bold text-primary mb-2">بيع العقارات</h4>
+                                    <p class="text-gray-600 text-sm">بيع عقاراتك بأفضل الأسعار والتسويق الاحترافي</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <!-- Card 2 - شراء العقارات -->
+                    <a href="#" class="block group slide-in-right delay-1">
+                        <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                            <div class="grid grid-cols-3 gap-0 h-32">
+                                <div class="relative col-span-1 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300"
+                                        alt="شراء العقارات"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-transparent">
+                                    </div>
+                                </div>
+                                <div class="col-span-2 p-4 flex flex-col justify-center">
+                                    <h4 class="text-lg font-bold text-primary mb-2">شراء العقارات</h4>
+                                    <p class="text-gray-600 text-sm">أفضل العروض العقارية لشراء منزل أحلامك</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 - إيجار العقارات -->
+                    <a href="#" class="block group slide-in-right delay-2">
+                        <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                            <div class="grid grid-cols-3 gap-0 h-32">
+                                <div class="relative col-span-1 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300"
+                                        alt="إيجار العقارات"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent">
+                                    </div>
+                                </div>
+                                <div class="col-span-2 p-4 flex flex-col justify-center">
+                                    <h4 class="text-lg font-bold text-primary mb-2">إيجار العقارات</h4>
+                                    <p class="text-gray-600 text-sm">شقق وفلل للإيجار بمواقع مميزة وأسعار تنافسية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 - إدارة الأملاك -->
+                    <a href="#" class="block group slide-in-right delay-3">
+                        <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+                            <div class="grid grid-cols-3 gap-0 h-32">
+                                <div class="relative col-span-1 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300"
+                                        alt="إدارة الأملاك"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-transparent">
+                                    </div>
+                                </div>
+                                <div class="col-span-2 p-4 flex flex-col justify-center">
+                                    <h4 class="text-lg font-bold text-primary mb-2">إدارة الأملاك</h4>
+                                    <p class="text-gray-600 text-sm">إدارة احترافية لعقاراتك وتحصيل الإيجارات</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
+    </section>
 
-        <!-- Additional Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            
-            <!-- خدمة 1 - إدارة وسائل التواصل -->
-            <a href="/services/social-media-management" class="block group slide-in-top delay-1">
-                <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-hashtag text-blue-600 text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-primary">إدارة وسائل التواصل</h4>
-                    </div>
-                    <p class="text-gray-600">
-                        إدارة متكاملة لحسابات التواصل الاجتماعي مع إنشاء محتوى جاذب وجدولة المنشورات
-                    </p>
-                </div>
-            </a>
 
-            <!-- خدمة 2 - تحسين محركات البحث -->
-            <a href="/services/seo" class="block group slide-in-top delay-2">
-                <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-search text-green-600 text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-primary">تحسين محركات البحث (SEO)</h4>
-                    </div>
-                    <p class="text-gray-600">
-                        تحسين ظهور موقعك في نتائج محركات البحث وزيادة الزوار العضويين
-                    </p>
-                </div>
-            </a>
 
-            <!-- خدمة 3 - تسويق بالمحتوى -->
-            <a href="/services/content-marketing" class="block group slide-in-top delay-3">
-                <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-pen-fancy text-orange-600 text-2xl"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-primary">تسويق بالمحتوى</h4>
-                    </div>
-                    <p class="text-gray-600">
-                        إنشاء محتوى تسويقي إبداعي يجذب العملاء ويحقق التفاعل والتحويلات
-                    </p>
-                </div>
-            </a>
 
+
+
+
+    <!-- New Services Section with Custom Layout - Marketing Services -->
+  
+<section id="services" class="py-20 bg-gradient-to-b from-white to-gray-50/50">
+    <div class="container mx-auto px-4">
+
+        <!-- Header Section -->
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+                خدمات <span class="text-accent">التسويق الإلكتروني والدعاية والإعلان</span> باحترافية متكاملة
+            </h2>
+
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                نقدم خدمات متكاملة في التسويق الرقمي، إدارة الحملات الإعلانية، تصميم المحتوى، تحسين محركات البحث،
+                إدارة وسائل التواصل الاجتماعي، وتحليل البيانات لضمان وصول علامتك التجارية لجمهورك المستهدف بأعلى كفاءة.
+            </p>
         </div>
 
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Big Image Card -->
+                <div class="side-in-right">
+                    <a href="#add-your-site" class="block group">
+                        <div class="rounded-3xl shadow-2xl overflow-hidden card-hover relative h-[450px] lg:h-[500px]">
+                            <img src="./img/B 9.png" alt="التسويق الإلكتروني والدعاية"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Two Small Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Small Card 1 -->
+                    <a href="#add-your-site" class="block group">
+                        <div class="rounded-2xl overflow-hidden card-hover relative h-80 py-6">
+
+                            <!-- Lottie Background -->
+                            <lottie-player src="./lottie/Digital Marketing.json" background="transparent" speed="1" loop autoplay
+                                class="absolute inset-0 w-full h-full object-cover">
+                            </lottie-player>
+
+                            <!-- Hover Overlay -->
+                            <!-- <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+
+                                    <h4 class="text-xl font-bold mb-3">أضف موقعك الإلكتروني هنا</h4>
+
+                                    <p class="text-white/80 mb-4 text-sm leading-relaxed">
+                                        اعرض موقعك الإلكتروني أو شركتك على منصتنا لزيادة المصداقية، تعزيز العلامة التجارية،
+                                        والوصول المباشر إلى عملاء مهتمين بمجالك. هذه فرصتك لتكون مرئيًا أمام جمهور مهتم بالخدمات التي تقدمها.
+                                    </p>
+
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span class="flex items-center gap-1">
+                                            <i class="fas fa-eye text-accent"></i>
+                                            ظهور أقوى
+                                        </span>
+                                        <span class="text-accent font-bold">تعزيز الثقة</span>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- Default Badge -->
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-20">
+                                أضف موقعك الآن
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <!-- Small Card 2 -->
+                    <a href="#add-your-site" class="block group">
+                        <div class="rounded-2xl overflow-hidden card-hover relative h-80">
+
+                            <!-- صورة ثابتة -->
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="./img/marketing-ad-space.jpg"
+                                     alt="مساحة إعلانية لعرض موقعك"
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                            </div>
+
+                            <!-- المحتوى -->
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-3 text-primary">مساحة إعلانية لعرض موقعك</h4>
+
+                                <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                    يمكنك عرض موقعك الإلكتروني أو شركتك في هذه المساحة الإعلانية داخل منصتنا.
+                                    هذه فرصة رائعة للوصول إلى عملاء مهتمين وزيادة ظهور علامتك التجارية.
+                                </p>
+
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-eye text-accent"></i>
+                                        ظهور أقوى
+                                    </span>
+                                    <span class="text-accent font-bold">تعزيز العلامة التجارية</span>
+                                </div>
+                            </div>
+
+                            <!-- Default Badge -->
+                            <div
+                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-20">
+                                أضف موقعك هنا
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Company Example -->
+            <div class="block group slide-in-right delay-1">
+               <div class="bg-white rounded-2xl overflow-hidden card-hover border border-gray-200 shadow-lg">
+    
+    <!-- صورة في الأعلى -->
+    <div class="relative h-100 overflow-hidden">
+        <img src="./img/egypt-advertising-logo.webp" alt="شركة إيچبت للدعاية والإعلان"
+            class="w-full h-auto object- py-16 px-3 transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="p-6">
+        <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <i class="fas fa-bullhorn text-primary text-xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-primary">شركة إيچبت للدعاية والإعلان</h4>
+        </div>
+
+        <p class="text-gray-600 mb-4 leading-relaxed">
+            نقدم خدمات متكاملة في التسويق الرقمي والدعاية والإعلان للمؤسسات والشركات، تشمل تصميم الحملات الإعلانية، إنتاج المحتوى الرقمي، إدارة وسائل التواصل الاجتماعي، وتحليل الأداء لتعزيز نمو علامتك التجارية وزيادة وصولها لجمهورك المستهدف.
+        </p>
+
+        <!-- قائمة الخدمات -->
+        <ul class="list-disc list-inside text-gray-600 mb-4">
+            <li>إدارة الحملات الإعلانية عبر الإنترنت</li>
+            <li>تصميم وإنشاء المحتوى الرقمي والإعلانات</li>
+            <li>تحسين محركات البحث (SEO)</li>
+            <li>إدارة ومتابعة وسائل التواصل الاجتماعي</li>
+            <li>تحليل البيانات وتقديم تقارير الأداء</li>
+        </ul>
+
+        <!-- الأزرار -->
+        <div class="flex gap-3 mt-4">
+            <a href="#"
+            class="flex-1 text-center bg-primary text-white px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition">
+                قراءة المزيد
+            </a>
+            <a href="https://www.egypt-advertising.com/" target="_blank"
+            class="flex-1 text-center border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-primary hover:text-white transition">
+                زيارة الموقع
+            </a>
+        </div>
+
+    </div>
+</div>
+
+            </div>
+
+        </div>
     </div>
 </section>
 
 
-   
 
 
- 
+
+
+
 
     <!-- Footer المطور -->
     <footer class="footer-bg text-white relative">
@@ -2816,17 +2973,15 @@
                                 <i class="fab fa-instagram"></i>
                             </a>
                             <a href="https://profile.snapchat.com/f3af10ed-246c-4bde-8343-1a47afb43153/profiles/a667c07e-6d7a-4038-99b8-ee8b7f1c0325/details/spotlights"
-                                target="_blank"
-                                aria-label="Snapchat"
+                                target="_blank" aria-label="Snapchat"
                                 class="social-icon w-10 h-10 bg-primary/50 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors">
                                 <i class="fab fa-snapchat-ghost text-white"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar"
-                                target="_blank"
+                            <a href="https://www.tiktok.com/@golden_gulf_moon?lang=ar" target="_blank"
                                 aria-label="TikTok"
                                 class="social-icon w-10 h-10 bg-primary/50 hover:bg-black rounded-full flex items-center justify-center transition-colors">
                                 <i class="fab fa-tiktok text-white"></i>
-                             </a>
+                            </a>
 
                         </li>
                     </ul>
@@ -2852,7 +3007,6 @@
 
         <!-- Call Button -->
         <a href="tel:01111263618"
-
             class="w-14 h-14 flex items-center justify-center rounded-full bg-primary text-white shadow-lg hover:scale-110 transition-transform duration-300"
             aria-label="اتصال">
             <i class="fas fa-phone text-xl"></i>
@@ -2869,7 +3023,7 @@
     <script>
         // كود JavaScript للتفاعلية
 
-    
+
         document.addEventListener('DOMContentLoaded', function () {
             // زر العودة للأعلى
             const scrollTopBtn = document.getElementById('scrollTop');

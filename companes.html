@@ -64,8 +64,8 @@
         }
         
         .partner-img {
-            height: 180px;
-            object-fit: cover;
+            height: 200px;
+            object-fit: contain;
             transition: transform 0.5s ease;
         }
         
@@ -259,381 +259,413 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="partners-grid">
                 
                 <!-- شركة 1 -->
-                <article class="partner-card bg-white relative" data-category="security">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-primary text-white">أمن وسلامة</span>
-                        <span class="special-badge">شريك مميز</span>
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="أمن الوطن للأنظمة الأمنية" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                       
-                        
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            أمن الوطن للأنظمة الأمنية
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            شركة رائدة في مجال أنظمة الأمن والمراقبة، تقدم حلولاً متكاملة للمنازل والشركات 
-                            مع خدمات تركيب وصيانة على مدار الساعة.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-security.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+               <article class="partner-card bg-white relative" data-category="cleaning">
+     <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">خدمات تنظيف</span>
+        <span class="special-badge">شريك مميز</span>
+        <img src="./img/fresh-clean-logo.webp" 
+             alt="فريش كلين لخدمات التنظيف" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            فريش كلين
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة فريش كلين متخصصة في خدمات التنظيف الشامل للمنازل والشركات،
+            باستخدام أحدث المعدات ومواد تنظيف آمنة وصديقة للبيئة،
+            مع فريق محترف يضمن أعلى مستوى من النظافة والجودة.
+        </p>
+
+        <div class="text-center">
+            <a href="https://www.freshcleanly.net/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 2 -->
-                <article class="partner-card bg-white relative" data-category="maintenance">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-secondary text-white">صيانة</span>
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             altتكييف الخليج" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                        
-                        
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            تكييف الخليج المتميز
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            متخصصون في صيانة وتركيب المكيفات المركزية بأنواعها، مع فريق فني مدرب 
-                            وخدمة طوارئ متاحة 24/7 لتلبية جميع احتياجات العملاء.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-ac.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+               <article class="partner-card bg-white relative" data-category="cleaning">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-secondary text-white">خدمات تنظيف</span>
+        <img src="./img/lama-clean-logo.webp" 
+             alt="لمعة كلين لخدمات التنظيف" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            لمعة كلين
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            لمعة كلين شركة متخصصة في خدمات التنظيف الشامل للمنازل والمكاتب
+            والمنشآت، مع استخدام مواد آمنة وأجهزة حديثة تضمن أعلى مستوى
+            من النظافة والاهتمام بأدق التفاصيل.
+        </p>
+
+        <div class="text-center">
+            <a href="https://www.lama-clean.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 3 -->
-                <article class="partner-card bg-white relative" data-category="cleaning">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-primary text-white">تنظيف</span>
-                        <span class="special-badge">شريك جديد</span>
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="اللمعة الذهبية للتنظيف" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                      
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            اللمعة الذهبية للتنظيف
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            تقدم خدمات تنظيف متكاملة للمنازل والشركات باستخدام أحدث التقنيات 
-                            والمواد الآمنة، مع ضمان الجودة والالتزام بالمواعيد.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-cleaning.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+             <article class="partner-card bg-white relative" data-category="cleaning">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">تنظيف</span>
+        <span class="special-badge">شريك جديد</span>
+        <img src="./img/lamsa-clean-logo.webp" 
+             alt="لمسة كلين للنظافة" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            لمسة كلين للنظافة
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            لمسة كلين للنظافة تقدم خدمات تنظيف متكاملة للمنازل والشركات
+            باستخدام أحدث المعدات ومواد تنظيف آمنة وصديقة للبيئة،
+            مع الالتزام التام بالجودة والدقة في المواعيد.
+        </p>
+
+        <div class="text-center">
+            <a href="https://lamsa-clean.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 4 -->
-                <article class="partner-card bg-white relative" data-category="logistics">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-secondary text-white">لوجستية</span>
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="نقل الأمانة" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                       
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            نقل الأمانة الدولي
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            شركة متخصصة في خدمات النقل الدولي والشحن بجميع أنواعه، 
-                            مع حلول لوجستية متكاملة وخدمة تخليص جمركي سريعة.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-shipping.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+               <article class="partner-card bg-white relative" data-category="air-conditioning">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">مكيفات</span>
+        <span class="special-badge">شريك جديد</span>
+        <img src="./img/iron-cool.webp" 
+             alt="إيرون كول للمكيفات" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            إيرون كول للمكيفات
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            إيرون كول شركة متخصصة في صيانة وتركيب وتنظيف المكيفات
+            بجميع أنواعها، مع تقديم حلول تبريد فعالة، استجابة سريعة،
+            وفريق فني محترف يضمن أفضل أداء للمكيف طوال العام.
+        </p>
+
+        <div class="text-center">
+            <a href="https://ironcool.net/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 5 -->
-                <article class="partner-card bg-white relative" data-category="medical">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-primary text-white">طبية</span>
-                        <span class="special-badge">شريك استراتيجي</span>
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="الشفاء الطبية" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                      
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            مجموعة الشفاء الطبية
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            تقدم خدمات طبية متكاملة تشمل عيادات متخصصة، رعاية منزلية، 
-                            وفحوصات دورية مع نخبة من الأطباء الاستشاريين.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-medical.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                <article class="partner-card bg-white relative" data-category="plumbing">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">أدوات صحية</span>
+        <span class="special-badge">شريك جديد</span>
+        <img src="./img/rawae-eltashteeb.png" 
+             alt="روائع التشطيب للأدوات الصحية" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            روائع التشطيب
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة روائع التشطيب متخصصة في توريد وتركيب الأدوات الصحية
+            وتشطيبات الحمامات والمطابخ بأعلى جودة، مع الالتزام بالمواعيد
+            وتقديم حلول عملية تناسب جميع المشاريع السكنية والتجارية.
+        </p>
+
+        <div class="text-center">
+            <a href="https://rawae-eltashteeb.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 6 -->
-                <article class="partner-card bg-white relative" data-category="education">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-secondary text-white">تعليمية</span>
-                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="أكاديمية المستقبل" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                      
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            أكاديمية المستقبل التعليمية
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            منصة تعليمية إلكترونية متكاملة تقدم دورات تدريبية في مختلف المجالات 
-                            مع شهادات معتمدة ومدربين متخصصين.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-education.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+               <article class="partner-card bg-white relative" data-category="plumbing">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">سباكة وأدوات صحية</span>
+        <span class="special-badge">شريك جديد</span>
+        <img src="./img/asas.alwissam.jpg" 
+             alt="أساس الوسام للسباكة" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            أساس الوسام
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة أساس الوسام متخصصة في توريد وتركيب الأدوات الصحية
+            وأعمال السباكة بأنواعها، مع فريق فني محترف يضمن أعلى جودة
+            وحلول عملية تناسب جميع المشاريع السكنية والتجارية.
+        </p>
+
+        <div class="text-center">
+            <a href="https://www.asas-alwisam.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 7 -->
-                <article class="partner-card bg-white relative" data-category="realestate">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-primary text-white">عقارية</span>
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="الواحة العقارية" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                    
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            الواحة العقارية
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(3.5)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            شركة متخصصة في خدمات الوساطة العقارية، تمويل العقارات، 
-                            وإدارة الممتلكات مع فريق استشاري متخصص.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-realestate.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                <article class="partner-card bg-white relative" data-category="fire-safety">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-red-600 text-white">مكافحة الحرائق</span>
+        <span class="special-badge">شريك مميز</span>
+        <img src="./img/nazretelebdaa.png" 
+             alt="نظرة الإبداع لمكافحة الحرائق" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            نظرة الإبداع
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة نظرة الإبداع متخصصة في أنظمة مكافحة الحرائق والإنذار المبكر،
+            تقدم حلول حماية متكاملة للمنازل والشركات، مع تركيب وصيانة احترافية
+            وخدمة دعم متاحة على مدار الساعة لضمان أعلى مستوى من الأمان.
+        </p>
+
+        <div class="text-center">
+            <a href="https://nazretelebdaa.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 8 -->
-                <article class="partner-card bg-white relative" data-category="maintenance">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-secondary text-white">صيانة</span>
-                        <span class="special-badge">شريك ذهبي</span>
-                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="الرواد للتشطيبات" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                     
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            الرواد للتشطيبات والديكور
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            متخصصون في أعمال التشطيبات والديكور الداخلي بأحدث التصاميم 
-                            والمواد عالية الجودة، مع التزام بالجودة والمواعيد.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-finishing.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                <article class="partner-card bg-white relative" data-category="air-conditioning">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">مكيفات</span>
+        <span class="special-badge">شريك مميز</span>
+        <img src="./img/speed​-and-solutions.png" 
+             alt="السرعة والحلول للمكيفات" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            السرعة والحلول للمكيفات
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة السرعة والحلول للمكيفات متخصصة في صيانة وتركيب وتنظيف جميع أنواع المكيفات،
+            مع فريق فني محترف يضمن أفضل أداء للمكيف، استهلاك أقل للطاقة،
+            وحلول سريعة وفعالة لجميع العملاء.
+        </p>
+
+        <div class="text-center">
+            <a href="https://solutionsinspeed.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 9 -->
-                <article class="partner-card bg-white relative" data-category="security">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-primary text-white">أمن وسلامة</span>
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" 
-                             alt="الحارس الذكي" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                     
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            الحارس الذكي للأمن الإلكتروني
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(5.0)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            شركة متخصصة في حلول الأمن الإلكتروني وحماية البيانات 
-                            للشركات والأفراد، مع أنظمة متطورة للحماية من الهجمات.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-cybersecurity.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                <article class="partner-card bg-white relative" data-category="advertising">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-primary text-white">دعاية وإعلان</span>
+        <span class="special-badge">شريك مميز</span>
+        <img src="./img/egypt-advertising-logo.webp" 
+             alt="إيجبت للدعاية والإعلان" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            إيجبت للدعاية والإعلان
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة إيجبت للدعاية والإعلان تقدم حلول تسويقية متكاملة،
+            تصميم حملات إعلانية مبتكرة، وإدارة الحملات الرقمية
+            لتعزيز ظهور العلامات التجارية والوصول إلى الجمهور المستهدف بكفاءة.
+        </p>
+
+        <div class="text-center">
+            <a href="https://www.egypt-advertising.com/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
                 <!-- شركة 10 -->
-                <article class="partner-card bg-white relative" data-category="logistics">
-                    <div class="relative overflow-hidden">
-                        <span class="category-badge bg-secondary text-white">لوجستية</span>
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" 
-                             alt="سريع الشحن" 
-                             class="w-full partner-img">
-                    </div>
-                    <div class="p-6">
-                      
-                        
-                        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
-                            سريع الشحن والنقل
-                        </h4>
-                        
-                        <div class="flex justify-center mb-3 partner-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span class="text-gray-600 text-sm mr-2">(4.0)</span>
-                        </div>
-                        
-                        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
-                            متخصصون في خدمات النقل السريع والشحن الداخلي مع نظام تتبع 
-                            حديث وخدمة عملاء متاحة على مدار الساعة.
-                        </p>
-                        
-                        <div class="text-center">
-                            <a href="https://www.example-fastshipping.com" target="_blank" class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
-                                <i class="fas fa-external-link-alt mr-2"></i>
-                                زيارة الموقع
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <article class="partner-card bg-white relative" data-category="security-cameras">
+    <div class="relative overflow-hidden">
+        <span class="category-badge bg-red-600 text-white">كاميرات ومراقبة</span>
+        <span class="special-badge">شريك مميز</span>
+        <img src="./img/speed​-solutions.png" 
+             alt="السرعة والحلول للكاميرات" 
+             class="w-full partner-img">
+    </div>
+
+    <div class="p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3 text-center">
+            السرعة والحلول للكاميرات
+        </h4>
+
+        <div class="flex justify-center mb-3 partner-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="text-gray-600 text-sm mr-2">(4.5)</span>
+        </div>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+            شركة السرعة والحلول للكاميرات متخصصة في تركيب وصيانة أنظمة المراقبة
+            والكاميرات الأمنية لجميع المنشآت، مع حلول سريعة وفعالة،
+            وضمان جودة الأداء والاستجابة الفورية لأي طارئ.
+        </p>
+
+        <div class="text-center">
+            <a href="https://speed-solutions.net/" target="_blank"
+               class="inline-block px-6 py-3 visit-btn rounded-lg transition-all duration-300 font-medium">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                زيارة الموقع
+            </a>
+        </div>
+    </div>
+</article>
+
                 
             </div>
             
